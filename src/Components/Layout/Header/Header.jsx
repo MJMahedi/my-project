@@ -110,7 +110,7 @@ function Header() {
                 </div>
 
                 <div className="navbar-center">
-                    <div className="avatar lg:pl-[100px] mt-5 ">
+                    <div className="avatar lg:pl-[100px] lg:mt-5 ">
 
                         <Link to={"/"} style={{
                             backgroundImage: `url(${Logo})`,
@@ -156,7 +156,7 @@ function Header() {
 
                 </div>
 
-                <form className="navbar-end hidden sm:flex">
+                <form className="navbar-end hidden sm:flex lg:pr-[100px]">
                     <div className="relative">
                         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"

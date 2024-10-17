@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useStateValue, useProductValue } from '../../StateProvider'
-import ProductItem from '../../../public/ProductItem';
+import ProductItem from './ProductItem';
 
 
 
