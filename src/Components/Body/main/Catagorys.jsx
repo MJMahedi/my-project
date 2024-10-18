@@ -53,7 +53,7 @@ function Catagorys() {
                 })}
             </div>
 
-            <div className=" flex flex-col items-center border-y-[1px] my-1 py-3 ">
+            <div className=" flex flex-col items-center border-y-[1px] py-3 ">
                 <div className="w-2/3 text-center">
                     <h1 className="text-lg font-semibold pb-2 ">Do you know how JACKET-POINT got its name?</h1>
                     <p className="font-light">

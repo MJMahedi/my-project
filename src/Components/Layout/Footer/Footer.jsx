@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer>
-            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg text-md p-10">
+            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg bg-opacity-80 text-md p-10">
 
                 <nav className=''>
                     <h6 className="footer-title text-info text-lg">Services</h6>
@@ -14,22 +14,22 @@ const Footer = () => {
 
                 </nav>
                 <nav className=''>
-                    <h6 className="footer-title text-info text-lg">Company</h6>
+                    <h6 className="footer-title text-info text-lg">Millennial Clothing</h6>
                     <Link to={"/about-us"} className="link link-hover">About us</Link>
                     <Link to={"/contact-us"} className="link link-hover">Contact us</Link>
-                    <a className="link link-hover">Jobs</a>
+                    <a className="link link-hover">Career</a>
                     <a className="link link-hover">Press kit</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title text-info text-lg">Legal</h6>
-                    <Link to={"/terms-conditions"} className="link link-hover">Terms of use</Link>
+                    <Link to={"/terms-conditions"} className="link link-hover">Terms & Conditions</Link>
                     <Link to={"/privacy-policy"} className="link link-hover">Privacy Policy</Link>
-                    <Link to={"/terms-conditions"} className="link link-hover">Cookie policy</Link>
+                    <Link to={"/terms-conditions"} className="link link-hover">Return & Replacement  policy</Link>
                     <Link to={"/FAQs"} className="link link-hover">FAQS</Link>
                 </nav>
             </div>
 
-            <div className="sm:hidden footer justify-items-center bg-customBg text-md p-10">
+            <div className="sm:hidden footer justify-items-center bg-customBg bg-opacity-80 text-md p-10">
                 <nav className='w-full shadow-sm'>
 
                     <div className="collapse collapse-plus rounded-[3px] bg-sky-50">
@@ -49,12 +49,12 @@ const Footer = () => {
 
                     <div className="collapse collapse-plus rounded-[3px] bg-sky-50">
                         <input type="radio" name="my-accordion-4" checked="checked" />
-                        <div className="collapse-title font-medium footer-title text-sky-900">Company</div>
+                        <div className="collapse-title font-medium footer-title text-sky-900">Millenial Clothing</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
                             <p><Link to={"/about-us"} className="link link-hover">About us</Link></p>
                             <p><Link to={"/contact-us"} className="link link-hover">Contact us</Link></p>
-                            <p><a className="link link-hover">Jobs</a></p>
+                            <p><a className="link link-hover">Career</a></p>
                             <p><a className="link link-hover">Press kit</a></p>
                         </div>
                     </div>
@@ -74,9 +74,9 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <hr className='border-1 border-sky-900' />
+            {/* <hr className='border-1 border-sky-900' /> */}
 
-            <div className="footer bg-customBg flex items-center justify-around p-4">
+            <div className="footer bg-customBg  flex items-center justify-around p-4">
                 <aside className="grid-flow-col items-center">
                     <div className="text-[#12323a]">
                         <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -118,6 +118,10 @@ const Footer = () => {
                             </path>
                         </svg>
                     </a>
+                    <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                        <img src="/Tiktok.svg" alt="TikTok" className="h-8 w-8" />
+                    </a>
+
                 </nav>
             </div>
         </footer>

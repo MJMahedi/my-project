@@ -200,7 +200,7 @@ function Header() {
                         <circle cx="10.5" cy="18.5" r="1.5" />
                         <circle cx="17.5" cy="18.5" r="1.5" />
                     </svg>
-                    <Link to={"/shoping-cart"}>Shopping Cart</Link>
+                    <Link to={"/shoping-cart"}>Cart</Link>
                 </a>
 
                 <a className="flex pl-3 no-underline hover:text-black" href="#">
@@ -211,7 +211,7 @@ function Header() {
                         <circle cx="10.5" cy="18.5" r="1.5" />
                         <circle cx="17.5" cy="18.5" r="1.5" />
                     </svg>
-                    <Link to={"/whish-list"}>Whish List</Link>
+                    <Link to={"/whish-list"}>WishList</Link>
                 </a>
 
                 <a className="flex pl-3 no-underline hover:text-gray-500 text-black" href="#">
