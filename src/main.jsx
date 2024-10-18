@@ -31,6 +31,8 @@ import Payment from "./Components/pages/Payment";
 import Thankyou from "./Components/pages/Thankyou";
 import MinazDream from "./Components/pages/MinazDream";
 import Dashboard from "./Components/Dashboard";
+import PrivacyPolicy from "./Components/pages/PrivacyPolicy";
+import FAQs from "./Components/pages/Faqs";
 
 
 
@@ -196,6 +198,19 @@ const router = createBrowserRouter([
     element: (
       <Terms_comditions />
     )
+  },
+  {
+    path: "/privacy-policy",
+    element: (
+      <PrivacyPolicy />
+    )
+  },
+  {
+    path:"/FAQs",
+    element: (
+      <FAQs />
+    )
+
   },
   {
     path: "/dashboard",
