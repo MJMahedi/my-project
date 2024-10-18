@@ -6,7 +6,7 @@ import Logo from "./../../../assets/Website_Logo.svg"
 function Header() {
 
     return (
-        <nav className="bg-[#bae9f3]">
+        <nav className="bg-customBg">
 
             <div className="navbar md:flex justify-between p-0 sm:p-2">
 

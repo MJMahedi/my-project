@@ -4,7 +4,7 @@ function Question_accordion() {
     return (
         <div>
 
-            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-sky-50 text-gray-500">
+            <div className="md:flex md:p-4 gap-x-4 space-y-1 bg-customBg bg-opacity-40 text-gray-500">
                 <div className="md:size-[50%] space-y-1">
                     <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
                         <input type="radio" name="my-accordion-3" className='peer' checked="checked" />

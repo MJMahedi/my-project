@@ -50,7 +50,7 @@ function Products() {
 
   return (
 
-    <div className='bg-sky-50'>
+    <div className='bg-customBg bg-opacity-50'>
 
       <div className="py-2">
         <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">

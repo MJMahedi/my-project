@@ -9,12 +9,12 @@ import ProductItem from './ProductItem';
 function Category_products() {
 
   const { category } = useParams(); // Get category from URL
-  console.log("MJMJMJ")
-  console.log(category)
+  // console.log("MJMJMJ")
+  // console.log(category)
  
 
   const { products, loading, error } = useProductValue();
-  console.log(products)
+  // console.log(products)
 
   const [{ basket }, dispatch] = useStateValue();
 

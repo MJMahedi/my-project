@@ -7,8 +7,8 @@ import slider4 from './../../../assets/slide4.jpg'
 
 function Carousel_div() {
     return (
-        <div>
-            <div className="carousel w-full h-72 md:h-80">
+        <div className="bg-[#bae9f3] bg-opacity-90">
+            <div className="carousel w-full h-72 md:h-80 ">
                 <div id="item1" className="carousel-item w-full">
                     <img
                         src={slider1}
@@ -31,10 +31,10 @@ function Carousel_div() {
                 </div>
             </div>
             <div className="flex w-full justify-center gap-4 pb-2">
-                <a href="#item1"  className="btn btn-xs bg-sky-100 shadow-md">.</a>
-                <a href="#item2" className="btn btn-xs bg-sky-100 shadow-md">.</a>
-                <a href="#item3" className="btn btn-xs bg-sky-100 shadow-md">.</a>
-                <a href="#item4" className="btn btn-xs bg-sky-100 shadow-mdanimate-pulse">.</a>
+                <a href="#item1"  className="btn btn-xs bg-sky-100 shadow-md">1</a>
+                <a href="#item2" className="btn btn-xs bg-sky-100 shadow-md">2</a>
+                <a href="#item3" className="btn btn-xs bg-sky-100 shadow-md">3</a>
+                <a href="#item4" className="btn btn-xs bg-sky-100 shadow-mdanimate-pulse">4</a>
             </div>
         </div>
     )

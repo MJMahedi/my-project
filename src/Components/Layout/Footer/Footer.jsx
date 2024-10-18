@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer>
-            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-[#bae9f3] text-md p-10">
+            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg text-md p-10">
 
                 <nav className=''>
                     <h6 className="footer-title text-info text-lg">Services</h6>
@@ -29,7 +29,7 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <div className="sm:hidden footer justify-items-center bg-sky-200 text-md p-10">
+            <div className="sm:hidden footer justify-items-center bg-customBg text-md p-10">
                 <nav className='w-full shadow-sm'>
 
                     <div className="collapse collapse-plus rounded-[3px] bg-sky-50">
@@ -76,7 +76,7 @@ const Footer = () => {
 
             <hr className='border-1 border-sky-900' />
 
-            <div className="footer bg-[#bae9f3] flex items-center justify-around p-4">
+            <div className="footer bg-customBg flex items-center justify-around p-4">
                 <aside className="grid-flow-col items-center">
                     <div className="text-[#12323a]">
                         <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -118,8 +118,6 @@ const Footer = () => {
                             </path>
                         </svg>
                     </a>
-
-
                 </nav>
             </div>
         </footer>
