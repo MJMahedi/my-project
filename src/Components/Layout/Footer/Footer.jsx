@@ -24,8 +24,8 @@ const Footer = () => {
                     <h6 className="footer-title text-info text-lg">Legal</h6>
                     <Link to={"/terms-conditions"} className="link link-hover">Terms & Conditions</Link>
                     <Link to={"/privacy-policy"} className="link link-hover">Privacy Policy</Link>
-                    <Link to={"/terms-conditions"} className="link link-hover">Return & Replacement  policy</Link>
-                    <Link to={"/FAQs"} className="link link-hover">FAQS</Link>
+                    <Link to={"/return-policy"} className="link link-hover">Return & Cancellation Policy</Link>
+                    <Link to={"/FAQs"} className="link link-hover">FAQs</Link>
                 </nav>
             </div>
 
@@ -119,13 +119,15 @@ const Footer = () => {
                         </svg>
                     </a>
                     <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/Tiktok.svg" alt="TikTok" className="h-8 w-8" />
+                        <img src="/Tiktok.svg" alt="TikTok" className="h-6 w-8" />
                     </a>
 
+
+                   
                 </nav>
             </div>
         </footer>
     )
 }
 
-export default Footer
+export default React.memo(Footer);

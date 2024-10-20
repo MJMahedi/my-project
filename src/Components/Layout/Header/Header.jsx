@@ -121,7 +121,6 @@ function Header() {
                             className=" h-10 w-44 lg:h-20 sm:h-14 sm:w-60 lg:w-80 cursor-pointer">
                         </Link>
                     </div>
-                    {/* <Link to={"/"} className="btn btn-ghost text-xl cursor-pointer hover:bg-sky-200">JACKET-POINT</Link> */}
                 </div>
 
 
@@ -136,12 +135,13 @@ function Header() {
                     </button>
 
                     <Link to={"/shoping-cart"} className="flex no-underline hover:text-black" href="#">
-                        <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
-                            <circle cx="10.5" cy="18.5" r="1.5" />
-                            <circle cx="17.5" cy="18.5" r="1.5" />
+                        <svg
+                            className="mr-2 w-6 h-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                        >
+                            {/* SVG path data */}
+                            <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
                         </svg>
                     </Link>
 
@@ -190,40 +190,50 @@ function Header() {
             </div>
 
 
-            <div className="hidden sm:flex items-center justify-end text-xs md:text-sm">
+            <div className="hidden sm:flex items-center justify-end text-xs  lg:pr-20 md:pr-20">
 
-                <a className="flex no-underline hover:text-black" href="#">
-                    <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24">
-                        <path
-                            d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
-                        <circle cx="10.5" cy="18.5" r="1.5" />
-                        <circle cx="17.5" cy="18.5" r="1.5" />
-                    </svg>
-                    <Link to={"/shoping-cart"}>Cart</Link>
-                </a>
 
-                <a className="flex pl-3 no-underline hover:text-black" href="#">
-                    <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24">
-                        <path
-                            d="M21,7H7.462L5.91,3.586C5.748,3.229,5.392,3,5,3H2v2h2.356L9.09,15.414C9.252,15.771,9.608,16,10,16h8 c0.4,0,0.762-0.238,0.919-0.606l3-7c0.133-0.309,0.101-0.663-0.084-0.944C21.649,7.169,21.336,7,21,7z M17.341,14h-6.697L8.371,9 h11.112L17.341,14z" />
-                        <circle cx="10.5" cy="18.5" r="1.5" />
-                        <circle cx="17.5" cy="18.5" r="1.5" />
-                    </svg>
-                    <Link to={"/whish-list"}>WishList</Link>
-                </a>
 
-                <a className="flex pl-3 no-underline hover:text-gray-500 text-black" href="#">
-                    <svg className="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24">
-                        <circle fill="none" cx="12" cy="7" r="3" />
-                        <path
-                            d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
+                <Link className="flex items-center no-underline hover:text-black " to={"/shoping-cart"}> <svg
+                    className="mr-2 w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                >
+                    {/* SVG path data */}
+                    <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
+                </svg>
+                    Cart</Link>
+
+                <Link className="flex items-center pl-3 no-underline hover:text-black" to={"/whish-list"}>
+                    <svg className="mr-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                     </svg>
-                    <Link to={"/login"}>SignIn O</Link>
-                    <Link to={"/register"}>R Register</Link>
-                </a>
+                    WishList</Link>
+                    
+                    <Link className="flex items-center pl-3 no-underline hover:text-black"  to={"/login"}>
+                    <svg className="mr-2 w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve">
+                        <style type="text/css">
+                            {`
+                            .st0 { fill: #1E3050; }
+                            .st1 { fill: #A5ACB9; }
+                        `}
+                        </style>
+                        <g>
+                            <image style={{ overflow: 'visible', opacity: 0.3 }} width="522" height="457" xlinkHref="490B6D0D.png" transform="matrix(1 0 0 1 -3.4016 29.5984)"></image>
+                            <g>
+                                <g>
+                                    <path className="st0" d="M344.4,278L213.2,410.8c-19.7,19.9-53.6,6-53.6-22v-69.2H28c-15.9,0-28.8-12.9-28.8-28.8v-69.6
+                                    c0-15.9,12.9-28.8,28.8-28.8h131.6v-69.2c0-28,33.9-41.9,53.6-22L344.4,234C356.4,246.2,356.4,265.8,344.4,278z"/>
+                                    <path className="st1" d="M512.8,123.5v265c0,50.7-41.1,91.9-91.9,91.9h-71.4c-17.2,0-31.1-13.9-31.1-31.1v0
+                                    c0-17.2,13.9-31.1,31.1-31.1h62.3c21.4,0,38.8-17.4,38.8-38.8V132.6c0-21.4-17.4-38.8-38.8-38.8h-62.3
+                                    c-17.2,0-31.1-13.9-31.1-31.1v0c0-17.2,13.9-31.1,31.1-31.1h71.4C471.7,31.6,512.8,72.8,512.8,123.5z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    Login</Link>
+                
             </div>
 
 
@@ -344,4 +354,4 @@ function Header() {
         </nav>
     )
 }
-export default Header
+export default React.memo(Header);

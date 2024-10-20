@@ -6,9 +6,8 @@ const Layout = ({ children }) => {
     return (
         <div>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
-
             {/* this for scroll to top  */}
             <ScrollRestoration />
         </div>

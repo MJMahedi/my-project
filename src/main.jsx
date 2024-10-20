@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-
 import {
   createBrowserRouter,
   RouterProvider
@@ -33,9 +32,7 @@ import MinazDream from "./Components/pages/MinazDream";
 import Dashboard from "./Components/Dashboard";
 import PrivacyPolicy from "./Components/pages/PrivacyPolicy";
 import FAQs from "./Components/pages/Faqs";
-
-
-
+import ReturnPolicy from "./Components/pages/ReturnPolicy";
 
 const router = createBrowserRouter([
   {
@@ -196,19 +193,33 @@ const router = createBrowserRouter([
   {
     path: "/terms-conditions",
     element: (
-      <Terms_comditions />
+     <Layout>
+       <Terms_comditions />
+     </Layout>
     )
   },
   {
     path: "/privacy-policy",
     element: (
-      <PrivacyPolicy />
+     <Layout>
+       <PrivacyPolicy />
+     </Layout>
+    )
+  },
+  {
+    path: "/return-policy",
+    element: (
+     <Layout>
+       <ReturnPolicy />
+     </Layout>
     )
   },
   {
     path:"/FAQs",
     element: (
-      <FAQs />
+     <Layout>
+       <FAQs />
+     </Layout>
     )
 
   },
