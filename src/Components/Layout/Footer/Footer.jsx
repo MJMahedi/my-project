@@ -4,7 +4,40 @@ import Tiktok from "../../../assets/Tiktok_icon.svg"
 const Footer = () => {
     return (
         <footer>
+
+
             <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg bg-opacity-80 text-md p-10">
+                <div className="bg-customBg py-6 px-4 rounded-md">
+                    <h3 className="flex items-center text-sky-900 text-md font-semibold mb-4 gap-2"> <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
+                            height="20" className="fill-[#e49b0f]">
+                            <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg>
+                    </a>
+                        Get Special Discount In Your Inbox</h3>
+
+                    <form className="flex flex-col sm:flex-row gap-3">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400 w-full  sm:w-2/3"
+                        />
+                        <button
+                            type="submit"
+                            className="bg-[#e49b0f] text-white px-4 py-2 rounded-md hover:bg-sky-700 transition-all w-full   sm:w-1/3"
+                        >
+                            Subscribe
+                        </button>
+                    </form>
+
+                    <h3 className="flex items-center text-sky-900 text-md font-semibold  gap-2"> <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="fill-[#e49b0f]" width="20"
+                            height="20"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" /></svg>
+                    </a>
+                        For Any Help You May Call Us At <br />
+                    </h3>
+                    <h4 className="text-sky-900 text-sm font-semibold px-6">  +8801317201109 <br />Open 24 Hour's a Day, 7 Day's a Week</h4>
+
+                </div>
 
                 <nav className=''>
                     <h6 className="footer-title text-info text-lg">Millennial Clothing</h6>
@@ -40,6 +73,38 @@ const Footer = () => {
             </div>
 
             <div className="sm:hidden footer justify-items-center bg-customBg bg-opacity-80 text-md p-6">
+                <div className="bg-customBg py-4 px-12 rounded-md">
+                    <h3 className="flex items-center text-sky-900  text-sm font-semibold mb-4 gap-2"> <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
+                            height="20" className="fill-[#e49b0f]">
+                            <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" /></svg>
+                    </a>
+                        Get Special Discount In Your Inbox</h3>
+
+                    <form className="flex flex-row sm:flex-row gap-3 ">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400 w-full sm:w-2/3"
+                        />
+                        <button
+                            type="submit"
+                            className="bg-[#e49b0f] text-white text-center px-4 py-2 rounded-md hover:bg-sky-700 transition-all w-full w-1/3"
+                        >Subscribe
+                        </button>
+                    </form>
+
+                    <h3 className="flex  items-center text-sky-900 text-sm font-semibold  gap-2 py-2"> <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="fill-[#e49b0f]" width="20"
+                            height="20"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" /></svg>
+                    </a>
+                        <p >For Any Help You May Call Us At <br />
+                        </p>
+                    </h3>
+                    <p className="align-bottom px-6 text-sky-900">  +8801317201109 <br />Open 24 Hour's a Day, 7 Day's a Week</p>
+
+
+                </div>
                 <nav className='w-full shadow-sm'>
 
                     <div className="collapse collapse-plus rounded-[3px] bg-sky-50">
@@ -117,10 +182,10 @@ const Footer = () => {
                         </a>
                     </div>
                     <div>
-                    
+
                         <p className='tracking-widest text-sky-950'>
-                            
-                        ©  {new Date().getFullYear()} MILLENNIAL | All rights reserved <br />
+
+                            ©  {new Date().getFullYear()} MILLENNIAL | All rights reserved <br />
                             <span className='tracking-wide text-gray-500  text-[13px]'>
                                 Developed by Maruf & Mahedi
                             </span>
