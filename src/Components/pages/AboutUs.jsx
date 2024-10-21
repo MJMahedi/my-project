@@ -20,10 +20,11 @@ const AboutUs = () => {
       <style jsx>{`
                 p {
                     color: #4a4a4a;
+                    margin-bottom: 4px;
                     line-height: 1.6;
                     font-size: 16px;
                     font-weight:normal;
-                }
+                }, 
             `}</style>
       <div className="bg-customBg bg-opacity-80 min-h-screen py-6 px-6 sm:px-12">
         <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">

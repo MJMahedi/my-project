@@ -66,9 +66,14 @@ const Footer = () => {
                         <div className="collapse-content">
                             <hr className="py-1" />
 
-                            <p><Link to={"/terms-conditions"} className="link link-hover">Terms of use</Link></p>
-                            <p><Link to={"/terms-conditions"} className="link link-hover">Privacy policy</Link></p>
-                            <p><Link to={"/terms-conditions"} className="link link-hover">Cookie policy</Link></p>
+                            <p> <Link to={"/terms-conditions"} className="link link-hover">Terms & Conditions</Link></p>
+                            <p><Link to={"/privacy-policy"} className="link link-hover">Privacy Policy</Link></p>
+                            <p> <Link to={"/return-policy"} className="link link-hover">Return & Cancellation Policy</Link></p>
+                            <p> <Link to={"/FAQs"} className="link link-hover">FAQs</Link></p>
+
+
+
+
                         </div>
                     </div>
                 </nav>
@@ -123,7 +128,7 @@ const Footer = () => {
                     </a>
 
 
-                   
+
                 </nav>
             </div>
         </footer>

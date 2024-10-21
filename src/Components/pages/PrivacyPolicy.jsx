@@ -2,9 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import AboutImg from './../../assets/aboutPic.jpg';
 function PrivacyPolicy() {
+
+    const email = "info@millennial-clothing.com"; // Replace with the desired email address
+    const subject = ""; // Optional subject
+    const body = "";
+
     return (
         <>
-        <style jsx>{`
+            <style jsx>{`
                 p {
                     color: #4a4a4a;
                     margin-bottom: 1.5rem;
@@ -12,146 +17,220 @@ function PrivacyPolicy() {
                     font-size: 16px;
                     font-weight:normal;
                 }
+                  li {
+                         color: #4a4a4a; 
+                          margin-bottom: 0.5rem; 
+                          font-weight:normal; 
+                         padding-left: 1.2rem; 
+                     }
             `}</style>
             <div className="bg-customBg bg-opacity-80 min-h-screen py-6 px-6 sm:px-12">
-            <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">
-                <div className="relative">
-                    <img
-                        src={AboutImg}
-                        alt="Our Team PNG"
-                        className="w-full h-64 object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black opacity-30"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <h1 className="text-4xl text-white font-semibold">Privacy Policy</h1>
+                <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    <div className="relative">
+                        <img
+                            src={AboutImg}
+                            alt="Our Team PNG"
+                            className="w-full h-64 object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black opacity-30"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <h1 className="text-4xl text-white font-semibold">Privacy Policy</h1>
+                        </div>
                     </div>
+                    <div className="p-8">
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Privacy Policy – <Link to="/" className="text-orange-500 hover:underline">
+                            Millennial Clothing
+                        </Link></h2>
+
+                        <p className="mb-4">
+                            At <Link to="/" className="text-orange-500 hover:underline">
+                                Millennial Clothing
+                            </Link>, we respect your privacy and are committed to safeguarding your personal information. This Privacy Policy outlines how we collect, use, and protect your data. By using our website, you agree to these terms. For additional legal information, please review our  <Link to="/terms-conditions" className="text-blue-500 hover:underline"> Terms of Service</Link> and <Link to="/return-policy" className="text-blue-500 hover:underline"> Return Policy</Link>
+                        </p>
+
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Information We Collect</h2>
+
+                        <p className="mb-4">
+                            We collect various types of data to enhance your shopping experience on <Link to="/" className="text-orange-500 hover:underline">
+                                Millennial Clothing's
+                            </Link> website.
+                        </p>
+                        <p>Automatically Collected Data:</p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>IP address, browser type, and device information.</li>
+                            <li>Cookies and other technologies to track your website interactions.</li>
+
+                        </ul>
+                        <p>Personal Information (Voluntarily Provided):</p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Name, email address, and phone number.</li>
+                            <li>Postal/ZIP code</li>
+                            <li>Payment information(e.g., credit card details)</li>
+                            <li>Feedback, opinions, and preferences regarding our website and services</li>
+                        </ul>
+                        <p>Behavioral Data:</p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Pages you visit, links you clic, and the frequency of visits.</li>
+                            <li>Purchase history and shopping interactions.</li>
+
+                        </ul>
+                        <p>For further details, please refer to our <Link to="/FAQs" className="text-blue-500 hover:underline">FAQ</Link> or contact us at  <a
+                            href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                            className="text-blue-500 hover:underline ml-1"
+                        >
+                            info@millennial-clothing.com
+                        </a></p>
+
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">How We Use Your Information</h2>
+
+                        <p className="mb-4">
+                            We use your data to:
+                        </p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Personalize your shopping experience.</li>
+                            <li>Provide the products or services you request.</li>
+                            <li>Communicate important updates, promotions, and offers.</li>
+                            <li>Comply with legal requirements.</li>
+                        </ul>
+                        <p className="mb-4">
+                            Additional Uses Include:
+                        </p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Improving our products and services based on your feedback.</li>
+                            <li>Notifying you of contest results or sending promotional offers.</li>
+                            <li>Conducting surveys to better understand your preferences.</li>
+                        </ul>
+                        <p className="mb-4">
+                            Anonymous Data Is Used To:
+                        </p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Provide relevant content and ads.</li>
+                            <li>Track website usage and enhance performance.</li>
+                            <li>Diagnose technical issues and optimize user experience.</li>
+                        </ul>
+
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Sharing Your Information</h2>
+
+                        <p className="mb-4">
+                            <Link to="/" className="text-orange-500 hover:underline">
+                                Millennial Clothing's
+                            </Link> does not sell, rent, or share your personal data without your consent. However, we may share your information in the following cases:
+                        </p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>To fulfill product or service requests.</li>
+                            <li>To comply with legal obligations, such as court orders or law enforcement requests.</li>
+                            <li>To prevent fraud or illegal activities.</li>
+                        </ul>
+                        <p className="mb-4">
+                            We may also share aggregated, non-identifiable data with our advertisers and partners to enhance our services and marketing strategies.
+                        </p>
+
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Your Rights and Choices</h2>
+
+                        <p className="mb-4">
+                            You have control over your personal data. You can:
+                        </p>
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Update your account information anytime.</li>
+                            <li>Opt-in or opt-out of marketing emails.</li>
+                            <li>Request to have your data deleted by contacting <a
+                                href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                                className="text-blue-500 hover:underline ml-1"
+                            >
+                                info@millennial-clothing.com
+                            </a>. We will process your request within one business day.</li>
+                        </ul>
+
+                        <p className="mb-4">
+                            Please note that some service-related communications may still be sent to you for account updates.
+                        </p>
+
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Data Security at <Link to="/" className="text-orange-500 hover:underline">
+                            Millennial Clothing
+                        </Link></h2>
+
+                        <p className="mb-4">
+                            We take every measure to protect your personal data by implementing:
+                        </p>
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Physical, electronic, and managerial safeguards.</li>
+                            <li>Limiting access to sensitive information to authorized personnel only.</li>
+
+                        </ul>
+                        <p className="mb-4">
+                            Although we strive to secure your data, no internet transmission is entirely risk-free. By using our website, you acknowledge that <Link to="/" className="text-orange-500 hover:underline">
+                                Millennial Clothing
+                            </Link> is not liable for unauthorized access due to external factors beyond our control.
+                        </p>
+
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Your Data Rights</h2>
+
+                        <p className="mb-4">
+                            You have the right to:
+                        </p>
+
+                        <ul className="list-disc list-inside mb-4">
+                            <li>Access the personal data we hold about you.</li>
+                            <li>Correct any inaccuracies in your data.</li>
+                            <li>Ask us to stop using your data for direct marketing purposes.</li>
+                        </ul>
+
+                        <p className="mb-4">
+                            For any concerns or to exercise your rights, please contact us at <a
+                                href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                                className="text-blue-500 hover:underline ml-1"
+                            >
+                                info@millennial-clothing.com
+                            </a>.
+                        </p>
+                        <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Policy Updates</h2>
+
+                        <p className="mb-4">
+                            <Link to="/" className="text-orange-500 hover:underline">
+                                Millennial Clothing
+                            </Link> reserves the right to modify this Privacy Policy as necessary. Any changes will be communicated through a prominent notice on our website and will take effect immediately upon posting.
+                        </p>
+                        <div className="mt-8 text-center">
+                            <p>
+                                For any questions or concerns,contact us at:<br />
+
+                                <a
+                                    href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+                                    className="text-blue-500 hover:underline ml-1"
+                                >
+                                    Email: info@millennial-clothing.com
+                                </a>
+                                <br />
+                                Website:<Link to="/" className="text-orange-500 hover:underline">
+                                    www.millennial-clothing.com
+                                </Link>
+                            </p>
+                            <p className="text-gray-700 mb-4">
+                                Thank you for choosing <span>
+                                    <Link to="/" className="text-orange-500 hover:underline">
+                                        Millennial Clothing
+                                    </Link>
+                                </span>. We look forward to serving you and making your shopping experience exceptional.
+                            </p>
+                            <Link
+                                to="/contact-us"
+                                className="animate-bounce  bg-sky-500 text-sky-50 py-2 px-4 rounded hover:bg-sky-600 transition duration-300"
+                            >
+                                Contact Us
+                            </Link>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div className="p-8">
-                    <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
-
-                    <p className="mb-4">
-                        This privacy policy sets out how our website uses and protects any information that you give us when you use
-                        this
-                        website.
-                    </p>
-
-                    <h2 className="text-2xl font-bold mb-2">Information We Collect</h2>
-
-                    <p className="mb-4">
-                        We may collect the following information:
-                    </p>
-
-                    <ul className="list-disc list-inside mb-4">
-                        <li>Your name and contact information</li>
-                        <li>Demographic information</li>
-                        <li>Other information relevant to customer surveys and/or offers</li>
-                    </ul>
-
-                    <h2 className="text-2xl font-bold mb-2">How We Use the Information</h2>
-
-                    <p className="mb-4">
-                        We require this information to understand your needs and provide you with a better service, and in
-                        particular
-                        for
-                        the following reasons:
-                    </p>
-
-                    <ul className="list-disc list-inside mb-4">
-                        <li>Internal record keeping</li>
-                        <li>Improving our products and services</li>
-                        <li>Sending promotional emails about new products, special offers, or other information which we think you
-                            may
-                            find
-                            interesting</li>
-                        <li>From time to time, we may also use your information to contact you for market research purposes. We may
-                            contact
-                            you by email, phone, or mail. We may use the information to customize the website according to your
-                            interests.</li>
-                    </ul>
-
-                    <h2 className="text-2xl font-bold mb-2">Security</h2>
-
-                    <p className="mb-4">
-                        We are committed to ensuring that your information is secure. In order to prevent unauthorized access or
-                        disclosure,
-                        we have put in place suitable physical, electronic, and managerial procedures to safeguard and secure the
-                        information we collect online.
-                    </p>
-
-                    <h2 className="text-2xl font-bold mb-2">Cookies</h2>
-
-                    <p className="mb-4">
-                        A cookie is a small file that asks permission to be placed on your computer's hard drive. Once you agree,
-                        the
-                        file
-                        is added, and the cookie helps analyze web traffic or lets you know when you visit a particular site.
-                        Cookies
-                        allow
-                        web applications to respond to you as an individual. The web application can tailor its operations to your
-                        needs,
-                        likes, and dislikes by gathering and remembering information about your preferences.
-                    </p>
-
-                    <p className="mb-4">
-                        Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find
-                        useful
-                        and which you do not. A cookie in no way gives us access to your computer or any information about you,
-                        other
-                        than
-                        the data you choose to share with us.
-                    </p>
-
-                    <h2 className="text-2xl font-bold mb-2">Links to Other Websites</h2>
-
-                    <p className="mb-4">
-                        Our website may contain links to other websites of interest. However, once you have used these links to
-                        leave
-                        our
-                        site, you should note that we do not have any control over that other website. Therefore, we cannot be
-                        responsible
-                        for the protection and privacy of any information which you provide whilst visiting such sites and such
-                        sites
-                        are
-                        not governed by this privacy statement. You should exercise caution and look at the privacy statement
-                        applicable
-                        to
-                        the website in question.
-                    </p>
-
-                    <h2 className="text-2xl font-bold mb-2">Controlling Your Personal Information</h2>
-
-                    <p className="mb-4">
-                        You may choose to restrict the collection or use of your personal information in the following ways:
-                    </p>
-
-                    <ul className="list-disc list-inside mb-4">
-                        <li>If you have previously agreed to us using your personal information for direct marketing purposes, you
-                            may
-                            change your mind at any time by writing to or emailing us at [email protected]</li>
-                        <li>We will not sell, distribute, or lease your personal information to third parties unless we have your
-                            permission
-                            or are required by law to do so. We may use your personal information to send you promotional
-                            information
-                            about
-                            third parties which we think you may find interesting if you tell us that you wish this to happen.</li>
-                        <li>You may request details of personal information which we hold about you. If you would like a copy of the
-                            information held on you, please write to [Your Company Name, Address, City, State, Zip Code] or email
-                            [email protected]</li>
-                        <li>If you believe that any information we are holding on you is incorrect or incomplete, please write to or
-                            email
-                            us as soon as possible at the above address. We will promptly correct any information found to be
-                            incorrect.
-                        </li>
-                    </ul>
-
-                    <p className="mb-4">
-                        This privacy policy is subject to change without notice.
-                    </p>
-
-                </div>
-
             </div>
-        </div>
         </>
     )
 }

@@ -54,7 +54,7 @@ function Terms_comditions() {
 
                         <p className="mb-4">
                             The domain name <Link to="/" className="text-orange-500 hover:underline">
-                                Millennial Clothing
+                            https://www.millennial-clothing.com
                             </Link> (referred to as "Website") is owned by <Link to="/" className="text-orange-500 hover:underline">
                                 Millennial Clothing
                             </Link>, a company incorporated under the Companies Act, 1994 (Act XVIII of 1994). By accessing this Site, you confirm your understanding of the Terms of Use. If you do not agree to these Terms, you must not use this Website. We reserve the right to change, modify, add, or remove portions of these Terms at any time. Changes will be effective when posted on the Site without additional notice. Please check these Terms of Use regularly for updates. Your continued use of the Site following the posting of changes constitutes your acceptance of those changes.
