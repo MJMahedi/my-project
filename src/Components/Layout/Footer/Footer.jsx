@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Tiktok from "../../../assets/Tiktok_icon.svg"
 const Footer = () => {
     return (
         <footer>
@@ -71,7 +70,7 @@ const Footer = () => {
                     <Link to={"/contact-us"} className="link link-hover">Contact US</Link>
                 </nav>
             </div>
-
+            {/* Small Device  */}
             <div className="sm:hidden footer justify-items-center bg-customBg bg-opacity-80 text-md p-6">
                 <div className="bg-customBg py-4 px-12 rounded-md">
                     <h3 className="flex items-center text-sky-900  text-sm font-semibold mb-4 gap-2"> <a href="">
