@@ -1,5 +1,55 @@
 [
     {
+        "_id": 10,
+        "title": "Bata shocks",
+        "collection": "Dell 2024  New arrival",
+        "category": "Best seller",
+        "subCategory": "shock",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": "/winter_jacket_2.jpg",
+        "discount": 110,
+        "price": 140,
+        "color": [
+            "Neon",
+            "White",
+            "Green"
+        ],
+        "ratings": 4.5,
+        "brand": "minasDream"
+    },
+    {
+        "_id": 11,
+        "title": "Bata shocks",
+        "collection": "Dell 2024  New arrival",
+        "category": "New Arrival",
+        "subCategory": "shock",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image": "/winter_jacket_2.jpg",
+        "discount": 110,
+        "price": 140,
+        "color": [
+            "Neon",
+            "White",
+            "Green"
+        ],
+        "ratings": 4.5,
+        "brand": "minasDream"
+    },
+    {
         "_id": 1,
         "title": "Winter Men Jacket",
         "collection": "winter",
@@ -48,7 +98,7 @@
         "brand": "Millenium"
     },
     {
-        "_id": 12,
+        "_id": 9,
         "title": "Premium Bomber Jacket",
         "collection": "winter",
         "category": "women",
@@ -219,4 +269,5 @@
         "ratings": 4.5,
         "brand": "minasDream"
     }
+   
 ]
