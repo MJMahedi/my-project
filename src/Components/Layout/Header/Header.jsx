@@ -112,7 +112,7 @@ function Header() {
                 {/*Millennial Website Logo  */}
 
                 <div className="navbar-center">
-                    <div className="avatar lg:pl-[100px] lg:mt-2 ">
+                    <div className="avatar lg:mt-2 ">
 
                         <Link to={"/"} style={{
                             backgroundImage: `url(${Logo})`,
@@ -172,12 +172,13 @@ function Header() {
                 </div>
 
                 {/* Imput Area for large device */}
-                <form className="navbar-start hidden md:hidden lg:flex lg:justify-around lg:pr-0 sm:hidden ">
+                <form className=" lg:items-end hidden md:hidden lg:flex lg:justify-around lg:pr-0 sm:hidden gap-2 ">
+                    {/* Search Input */}
                     <div className="relative">
                         <input
                             type="search"
                             id="default-search"
-                            className="w-[200px] h-7 px-3 text-sm text-gray-900 outline-none rounded-md bg-sky-50 ring-1 focus:ring-2 ring-sky-100 ring-offset-2 ring-offset-sky-50 pr-10" // Adjusted width and height
+                            className="w-[140px] h-7 px-3 text-sm text-gray-900 outline-none rounded-md bg-sky-50 ring-1 focus:ring-2 ring-sky-100 ring-offset-2 ring-offset-sky-50 pr-10" // Adjusted width and height
                             placeholder="Searching"
                             required
                         />
@@ -199,10 +200,10 @@ function Header() {
                             </svg>
                         </div>
                     </div>
-
-                    <div className="hidden lg:flex items-center justify-end text-md  lg:pr-20 md:pr-20">
+                    {/* Wishlist Link */}
+                    <div className="hidden lg:flex items-center justify-end text-md">
                         <Link className="flex items-center pl-3 no-underline hover:text-black" to={"/whish-list"}>
-                            <svg className="mr-2 w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <svg className="mr-1 w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                             </svg>
                             WishList</Link>

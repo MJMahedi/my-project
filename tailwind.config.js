@@ -33,7 +33,7 @@ export default {
           "600": '#92dce4',
           "700": '#6acfd4',
           "800": '#43c3c5',
-          "900": '#1ab7b5',   // Darker variant
+          "900": '#12323a',   // Darker variant
         },
       },
       fontFamily: {
