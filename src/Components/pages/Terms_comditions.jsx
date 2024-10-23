@@ -18,6 +18,12 @@ function Terms_comditions() {
                     font-size: 16px;
                     font-weight:normal;
                 }
+                 li {
+                         color: #4a4a4a; 
+                          margin-bottom: 0.5rem; 
+                          font-weight:normal; 
+                         padding-left: 1.2rem; 
+                     }
             `}</style>
             <div className="bg-customBg bg-opacity-80 min-h-screen py-6 px-6 sm:px-12">
                 <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">

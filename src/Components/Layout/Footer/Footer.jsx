@@ -6,7 +6,7 @@ const Footer = () => {
 
 
             <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg bg-opacity-80 text-md p-6">
-                <div className="bg-customBg py-6 px-4 rounded-md">
+                <div className="bg-customBg pt-4 px-4 rounded-md">
                     <h3 className="flex items-center text-sky-900 text-md font-semibold  gap-2"> <a href="">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
                             height="20" className="fill-[#e49b0f]">
@@ -34,7 +34,7 @@ const Footer = () => {
                     </a>
                         For Any Help You May Call Us At <br />
                     </h3>
-                    <p className="text-center text-sky-900 font-medium mt-[-12px] leading-tight">
+                    <p className="text-center text-sky-900 font-medium md:text-sm mt-[-12px] leading-tight">
                         +8801317201109 <br />
                         Open 24 Hours a Day, 7 Days a Week
                     </p>
