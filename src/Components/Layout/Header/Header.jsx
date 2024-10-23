@@ -101,7 +101,7 @@ function Header() {
 
                                 <Link to={"/minaz-dream"}
                                     className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
-                                    <div className="font-semibold" >Minaz-Dream(Brand)</div>
+                                    <div className="font-semibold" >Mina's-Dream</div>
                                 </Link>
                             </li>
 
@@ -112,7 +112,7 @@ function Header() {
                 {/*Millennial Website Logo  */}
 
                 <div className="navbar-center">
-                    <div className="avatar lg:mt-2 ">
+                    <div className="avatar pr-12 pt-1 md:pt-2 lg:mt-0 ">
 
                         <Link to={"/"} style={{
                             backgroundImage: `url(${Logo})`,
@@ -127,17 +127,18 @@ function Header() {
 
 
                 {/* Hidden from Small & Large Device  */}
-                <div className="flex items-center justify-end lg:hidden mr-2">
-                    <button className="btn btn-ghost btn-circle">
+                <div className="flex items-center gap-3 md:gap-8 justify-end lg:hidden mr-2">
+                    <button className="btn w-auto btn-ghost btn-circle">
                         {/* Search Icon SVG */}
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-12 lg:h-12"
+                            className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-7 lg:w-12 lg:h-12"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
                         >
                             <path
+                            
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
@@ -147,26 +148,54 @@ function Header() {
                     </button>
                     {/* Shopping Cart Icon */}
                     <Link to={"/shoping-cart"} className="flex no-underline hover:text-black" href="#">
-                        <svg
-                            className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-12 lg:h-12"
+                    <svg className=" w-4 h-4 md:w-8 md:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="#1E3050" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                            </svg>
+                    </Link>
+                    <Link to={"/shoping-cart"} className="flex no-underline hover:text-black" href="#">
+                    <svg
+                            className="w-6 h-4 md:w-8 md:h-6"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 576 512"
                         >
-                            <path
-                                d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z"
-                            />
+                            {/* SVG path data */}
+                            <path fill="#1E3050" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
                         </svg>
                     </Link>
+
                     {/* Login Icon SVG */}
-                    <Link to={"/login"} className="flex px-2 no-underline hover:text-black" href="#">
-                        <svg
-                            className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-12 lg:h-12"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                        >
-                            <circle fill="none" cx="12" cy="7" r="3" />
-                            <path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z" />
-                        </svg>
+                    <Link to={"/login"} className="flex no-underline hover:text-black" href="#">
+                    <svg
+                                className=" w-6 h-4 md:w-8 md:h-6"
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 512 512"
+                                xmlSpace="preserve"
+                            >
+                                <g>
+                                    <g>
+                                        <g>
+                                            {/* First path with fill #1E3050 */}
+                                            <path
+                                                fill="#1E3050"
+                                                d="M403.4,248.4L272.2,381.2c-19.7,19.9-53.6,6-53.6-22V290H87c-15.9,0-28.8-12.9-28.8-28.8v-69.6
+				c0-15.9,12.9-28.8,28.8-28.8h131.6V93.6c0-28,33.9-41.9,53.6-22l131.2,132.8C415.4,216.6,415.4,236.2,403.4,248.4z"
+                                            />
+                                            {/* Second path with fill #A5ACB9 */}
+                                            <path
+                                                fill="#1E3050"
+                                                d="M571.8,93.9v265c0,50.7-41.1,91.9-91.9,91.9h-71.4c-17.2,0-31.1-13.9-31.1-31.1l0,0
+				c0-17.2,13.9-31.1,31.1-31.1h62.3c21.4,0,38.8-17.4,38.8-38.8V103c0-21.4-17.4-38.8-38.8-38.8h-62.3c-17.2,0-31.1-13.9-31.1-31.1
+				l0,0c0-17.2,13.9-31.1,31.1-31.1h71.4C530.7,2,571.8,43.2,571.8,93.9z"
+                                            />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
                     </Link>
 
                 </div>
@@ -174,11 +203,11 @@ function Header() {
                 {/* Imput Area for large device */}
                 <form className=" lg:items-end hidden md:hidden lg:flex lg:justify-around lg:pr-0 sm:hidden gap-2 ">
                     {/* Search Input */}
-                    <div className="relative">
+                    <div className="relative text-[#12323a]">
                         <input
                             type="search"
                             id="default-search"
-                            className="w-[140px] h-7 px-3 text-sm text-gray-900 outline-none rounded-md bg-sky-50 ring-1 focus:ring-2 ring-sky-100 ring-offset-2 ring-offset-sky-50 pr-10" // Adjusted width and height
+                            className="bg-customBg-100 w-[140px] h-7 px-3 text-sm outline-none rounded-md ring-1 focus:ring-2 ring-sky-100 ring-offset-1  pr-10" // Adjusted width and height
                             placeholder="Searching"
                             required
                         />
@@ -204,21 +233,21 @@ function Header() {
                     <div className="hidden lg:flex items-center justify-end text-md">
                         <Link className="flex items-center pl-3 no-underline hover:text-black" to={"/whish-list"}>
                             <svg className="mr-1 w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                <path  fill="#1E3050" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                             </svg>
-                            WishList</Link>
+                            </Link>
                         <Link className="flex items-center pl-3 no-underline hover:text-black " to={"/shoping-cart"}> <svg
-                            className="mr-2 w-7 h-7"
+                            className="mr-1 w-7 h-7"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 576 512"
                         >
                             {/* SVG path data */}
-                            <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
+                            <path  fill="#1E3050" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
                         </svg>
-                            Cart</Link>
+                           </Link>
                         <Link className="flex items-center pl-3 no-underline hover:text-black" to={"/login"}>
                             <svg
-                                className="mr-2 w-8 h-7"
+                                className="mr-1 w-9 h-7"
                                 version="1.1"
                                 id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +268,7 @@ function Header() {
                                             />
                                             {/* Second path with fill #A5ACB9 */}
                                             <path
-                                                fill="#A5ACB9"
+                                                 fill="#1E3050"
                                                 d="M571.8,93.9v265c0,50.7-41.1,91.9-91.9,91.9h-71.4c-17.2,0-31.1-13.9-31.1-31.1l0,0
 				c0-17.2,13.9-31.1,31.1-31.1h62.3c21.4,0,38.8-17.4,38.8-38.8V103c0-21.4-17.4-38.8-38.8-38.8h-62.3c-17.2,0-31.1-13.9-31.1-31.1
 				l0,0c0-17.2,13.9-31.1,31.1-31.1h71.4C530.7,2,571.8,43.2,571.8,93.9z"
@@ -249,7 +278,7 @@ function Header() {
                                 </g>
                             </svg>
 
-                            Login</Link>
+                           </Link>
 
                     </div>
                 </form>
@@ -321,7 +350,7 @@ function Header() {
                         <span
                             className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                         >
-                            Men
+                            Men's
                         </span>
                     </Link></div>
                 <div className="mr-[2px]">
@@ -336,7 +365,7 @@ function Header() {
                         <span
                             className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                         >
-                            Women
+                            Women's
                         </span>
                     </Link></div>
                 <div className="mr-[2px]">
@@ -366,7 +395,7 @@ function Header() {
                         <span
                             className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
                         >
-                            Minaz-Dream
+                            Mina's Dream
                         </span>
                     </Link></div>
 

@@ -24,7 +24,7 @@ function Catagorys() {
 
             <div className="">
                 <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-                    <legend className="px-6 text-lg font-semibold text-center">TOP CATEGORIES</legend>
+                    <legend className="px-6 text-lg font-semibold text-center">CATEGORIES</legend>
                 </fieldset>
             </div>
 
@@ -44,7 +44,7 @@ function Catagorys() {
                                     backgroundPosition: `center`
                                 }}
                                 className='flex justify-center items-end h-44 md:h-60 w-full object-fit rounded'>
-                                <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest shadow'>
+                                <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest '>
                                     {category}
                                 </h1>
                             </Link>

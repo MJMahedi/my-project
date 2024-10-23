@@ -1,59 +1,10 @@
 [
-    {
-        "_id": 10,
-        "title": "Bata shocks",
-        "collection": "Dell 2024  New arrival",
-        "category": "Best seller",
-        "subCategory": "shock",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-        "image": "/winter_jacket_2.jpg",
-        "discount": 110,
-        "price": 140,
-        "color": [
-            "Neon",
-            "White",
-            "Green"
-        ],
-        "ratings": 4.5,
-        "brand": "minasDream"
-    },
-    {
-        "_id": 11,
-        "title": "Bata shocks",
-        "collection": "Dell 2024  New arrival",
-        "category": "New Arrival",
-        "subCategory": "shock",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-        "image": "/winter_jacket_2.jpg",
-        "discount": 110,
-        "price": 140,
-        "color": [
-            "Neon",
-            "White",
-            "Green"
-        ],
-        "ratings": 4.5,
-        "brand": "minasDream"
-    },
+   
     {
         "_id": 1,
         "title": "Winter Men Jacket",
         "collection": "winter",
-        "category": "men",
+        "category": "Men",
         "subCategory": "Men shirt",
         "size": [
             "XS",
@@ -77,7 +28,7 @@
         "_id": 2,
         "title": "Premium Bomber Jacket",
         "collection": "winter",
-        "category": "women",
+        "category": "Women",
         "subCategory": "pant",
         "size": [
             "XS",
@@ -101,7 +52,7 @@
         "_id": 9,
         "title": "Premium Bomber Jacket",
         "collection": "winter",
-        "category": "women",
+        "category": "Women",
         "subCategory": "pant",
         "size": [
             "XS",
@@ -121,54 +72,7 @@
         "ratings": 4.5,
         "brand": "Millenium"
     },
-    {
-        "_id": 3,
-        "title": "Premium Bag",
-        "collection": "Moder Technology",
-        "category": "accessories",
-        "subCategory": "bag",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-        "image":"/winter_jacket_1.jpg",
-        "discount": 110,
-        "price": 790,
-        "color": [
-            "blue",
-            "Red"
-        ],
-        "ratings": 7.5,
-        "brand": "gucchi"
-    },
-    {
-        "_id": 4,
-        "title": "Mac book Pro",
-        "collection": "Latest 2024",
-        "category": "accessories",
-        "subCategory": "it",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-       "image":"/winter_jacket_1.jpg",
-        "discount": 110,
-        "price": 800,
-        "color": [
-            "Yellow",
-            "Orange"
-        ],
-        "ratings": 4.5,
-        "brand": "Hitachi"
-    },
+   
     {
         "_id": 5,
         "title": "Best Kids Jackets",
@@ -192,13 +96,13 @@
             "Green"
         ],
         "ratings": 4.5,
-        "brand": "minasDream"
+        "brand": "Mina's Dream"
     },
     {
         "_id": 6,
         "title": "Bata shocks",
         "collection": "Dell 2024  New arrival",
-        "category": "minas dream",
+        "category": "Mina's Dream",
         "subCategory": "shock",
         "size": [
             "XS",
@@ -219,36 +123,12 @@
         "ratings": 4.5,
         "brand": "minasDream"
     },
-    {
-        "_id": 7,
-        "title": "Bata shocks",
-        "collection": "Dell 2024  New arrival",
-        "category": "minas shop",
-        "subCategory": "shock",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-       "image":"/winter_jacket_1.jpg",
-        "discount": 110,
-        "price": 220,
-        "color": [
-            "Neon",
-            "White",
-            "Green"
-        ],
-        "ratings": 4.5,
-        "brand": "minasDream"
-    },
+    
     {
         "_id": 8,
         "title": "Bata shocks",
         "collection": "Dell 2024  New arrival",
-        "category": "WINTER",
+        "category": "Winter",
         "subCategory": "shock",
         "size": [
             "XS",
@@ -268,6 +148,56 @@
         ],
         "ratings": 4.5,
         "brand": "minasDream"
+    },
+
+    
+    {
+        "_id": 4,
+        "title": "Mac book Pro",
+        "collection": "Latest 2024",
+        "category": "Accessories",
+        "subCategory": "it",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+       "image":"/winter_jacket_1.jpg",
+        "discount": 110,
+        "price": 800,
+        "color": [
+            "Yellow",
+            "Orange"
+        ],
+        "ratings": 4.5,
+        "brand": "Hitachi"
+    },
+    {
+        "_id": 3,
+        "title": "Premium Bag",
+        "collection": "Moder Technology",
+        "category": "Accessories",
+        "subCategory": "bag",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "image":"/winter_jacket_1.jpg",
+        "discount": 110,
+        "price": 790,
+        "color": [
+            "blue",
+            "Red"
+        ],
+        "ratings": 7.5,
+        "brand": "gucchi"
     }
    
 ]

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/aboutPic.jpg';
+import AboutImg from './../../assets/aboutPic.jpg'
 
 function FAQs() {
   return (
@@ -8,11 +8,14 @@ function FAQs() {
       <style jsx>{`
                 p {
                     color: #4a4a4a;
-                    margin-bottom: 1.5rem;
-                    line-height: 1.6;
-                    font-size: 16px;
                     font-weight:normal;
                 }
+                 li {
+                         color: #4a4a4a; 
+                          margin-bottom: 0.5rem; 
+                          font-weight:normal; 
+                         padding-left: 1.2rem; 
+                     }
             `}</style>
       <div className="bg-customBg bg-opacity-80 min-h-screen py-6 px-6 sm:px-12">
         <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">
@@ -34,8 +37,8 @@ function FAQs() {
 
             <h2 className="text-2xl font-bold mb-4">General Information</h2>
 
-            <div className="mb-4">
-              <h3 className="text-xl font-bold mb-2">1. What is <Link to="/" className="text-orange-500 hover:underline">
+             <div className="mb-4">
+              <h3 className="text-xl font-bold mb-2">sWhat is <Link to="/" className="text-orange-500 hover:underline">
                 Millennial Clothing?
               </Link></h3>
               <p>
@@ -44,7 +47,9 @@ function FAQs() {
                 </Link> is a premium fashion brand specializing in stylish apparel for teenagers, young professionals, and bikers.
                 Our collection includes jackets, sweaters, shirts, pants, blazers, and accessories designed for every occasion.
               </p>
-            </div>
+            </div> 
+            
+
 
             <div className="mb-4">
               <h3 className="text-xl font-bold mb-2">2. What types of products do you offer?</h3>

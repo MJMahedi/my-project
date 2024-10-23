@@ -66,7 +66,7 @@ function Products() {
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
             {products
-              .filter(item => item.category === 'men')
+              .filter(item => item.category === 'Men')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
                 <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
@@ -80,7 +80,7 @@ function Products() {
             className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
             {products
-              .filter(item => item.category === 'women')
+              .filter(item => item.category === 'Women')
               .slice(0, 5) // Get only the first 5 products
               .map(item => (
                 <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
