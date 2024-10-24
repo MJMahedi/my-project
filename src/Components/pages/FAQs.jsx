@@ -37,8 +37,8 @@ function FAQs() {
 
             <h2 className="text-2xl font-bold mb-4">General Information</h2>
 
-             <div className="mb-4">
-              <h3 className="text-xl font-bold mb-2">sWhat is <Link to="/" className="text-orange-500 hover:underline">
+              {/* <div className="mb-4">
+              <h3 className="text-xl font-bold mb-2"> Love What is <Link to="/" className="text-orange-500 hover:underline">
                 Millennial Clothing?
               </Link></h3>
               <p>
@@ -47,9 +47,37 @@ function FAQs() {
                 </Link> is a premium fashion brand specializing in stylish apparel for teenagers, young professionals, and bikers.
                 Our collection includes jackets, sweaters, shirts, pants, blazers, and accessories designed for every occasion.
               </p>
-            </div> 
+            </div>  */}
             
-
+            <div className="w-[100%] space-y-1">
+                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                        <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
+                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
+                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
+                            <hr className="py-1" />
+                            <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
+                                happiness, loyalty, and long-lasting connections  </p>
+                        </div>
+                    </div>
+                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                        <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
+                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
+                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
+                            <hr className="py-1" />
+                            <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
+                                happiness, loyalty, and long-lasting connections  </p>
+                        </div>
+                    </div>
+                    <div className="collapse collapse-plus rounded-[3px] bg-base-200 shadow-md">
+                        <input type="radio" name="my-accordion-3" className='peer' checked="checked" />
+                        <div className="collapse-title text-md font-medium bg-base-200 peer-checked:bg-sky-50">Do you know how JACKET-POINT got its name?</div>
+                        <div className="collapse-content text-sm bg-base-100 peer-checked:bg-base-300">
+                            <hr className="py-1" />
+                            <p>The brand took its name from Van Gogh’s iconic painting, 'Sunflower', symbolizing warmth,
+                                happiness, loyalty, and long-lasting connections  </p>
+                        </div>
+                    </div>
+                </div>
 
             <div className="mb-4">
               <h3 className="text-xl font-bold mb-2">2. What types of products do you offer?</h3>

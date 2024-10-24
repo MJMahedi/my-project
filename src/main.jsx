@@ -31,7 +31,7 @@ import Thankyou from "./Components/pages/Thankyou";
 import MinazDream from "./Components/pages/MinazDream";
 import Dashboard from "./Components/Dashboard";
 import PrivacyPolicy from "./Components/pages/PrivacyPolicy";
-import FAQs from "./Components/pages/Faqs";
+import FAQs from "./Components/pages/FAQs";
 import ReturnPolicy from "./Components/pages/ReturnPolicy";
 
 const router = createBrowserRouter([
