@@ -127,8 +127,13 @@ function Header() {
 
 
                 {/* Hidden from Small & Large Device  */}
+<<<<<<< HEAD
                 <div className="flex items-center gap-3 md:gap-8 justify-end lg:hidden mr-2">
                     <button className="btn w-auto btn-ghost btn-circle">
+=======
+                <div className="flex items-center md:gap-8 justify-end lg:hidden mr-2">
+                    <button className="btn btn-ghost btn-circle">
+>>>>>>> c3b470b74b758f13e6fbcb89de1fa04f140fb967
                         {/* Search Icon SVG */}
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
