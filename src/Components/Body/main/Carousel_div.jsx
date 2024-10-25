@@ -9,6 +9,7 @@ function Carousel_div() {
     return (
         <div className="bg-[#bae9f3] bg-opacity-90">
             <div className="carousel w-full h-72 md:h-[420px] lg:h-[540px]">
+            {/* <div className="carousel w-full h-72 md:h-[420px] lg:h-[820px] lg:w-[1460]"> */}
                 <div id="item1" className="carousel-item w-full">
                     <img
                         src={slider1}

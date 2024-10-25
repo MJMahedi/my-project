@@ -99,7 +99,7 @@ function Header() {
                             <li className=" transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105
                          duration-300">
 
-                                <Link to={"/minaz-dream"}
+                                <Link to={"/minas-dream"}
                                     className="mb-1 bg-gray-50 hover:bg-gray-100 p-6 rounded cursor-pointer shadow-sm hover:shadow-xl">
                                     <div className="font-semibold" >Mina's-Dream</div>
                                 </Link>
@@ -127,13 +127,11 @@ function Header() {
 
 
                 {/* Hidden from Small & Large Device  */}
-<<<<<<< HEAD
-                <div className="flex items-center gap-3 md:gap-8 justify-end lg:hidden mr-2">
-                    <button className="btn w-auto btn-ghost btn-circle">
-=======
+
+
                 <div className="flex items-center md:gap-8 justify-end lg:hidden mr-2">
                     <button className="btn btn-ghost btn-circle">
->>>>>>> c3b470b74b758f13e6fbcb89de1fa04f140fb967
+
                         {/* Search Icon SVG */}
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -391,7 +389,7 @@ function Header() {
                 <div className="mr-[2px]">
                     <Link
                         className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
-                        to={"/minaz-dream"}
+                        to={"/minas-dream"}
                     >
                         <span
                             className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-yellow-600 to-sky-300 transition-all group-hover:h-full group-active:bg-sky-500"

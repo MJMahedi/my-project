@@ -28,11 +28,13 @@ import Terms_comditions from "./Components/pages/Terms_comditions";
 import Category_products from "./Components/products/Category_products";
 import Payment from "./Components/pages/Payment";
 import Thankyou from "./Components/pages/Thankyou";
-import MinazDream from "./Components/pages/MinazDream";
 import Dashboard from "./Components/Dashboard";
 import PrivacyPolicy from "./Components/pages/PrivacyPolicy";
 import FAQs from "./Components/pages/FAQs";
 import ReturnPolicy from "./Components/pages/ReturnPolicy";
+import MinasDream from "./Components/pages/MinasDream";
+import SizeGuide from "./Components/pages/SizeGuide";
+
 
 const router = createBrowserRouter([
   {
@@ -106,10 +108,10 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "/minaz-dream",
+    path: "/minas-dream",
     element: (
       <Layout>
-        <MinazDream />
+        <MinasDream />
       </Layout>
     )
   },
@@ -145,6 +147,16 @@ const router = createBrowserRouter([
     element: (
 
       <Thankyou />
+
+    )
+  },
+  {
+    path: "/size-guide",
+    element: (
+      <Layout>
+        <SizeGuide />
+      </Layout>
+
 
     )
   },
@@ -193,33 +205,33 @@ const router = createBrowserRouter([
   {
     path: "/terms-conditions",
     element: (
-     <Layout>
-       <Terms_comditions />
-     </Layout>
+      <Layout>
+        <Terms_comditions />
+      </Layout>
     )
   },
   {
     path: "/privacy-policy",
     element: (
-     <Layout>
-       <PrivacyPolicy />
-     </Layout>
+      <Layout>
+        <PrivacyPolicy />
+      </Layout>
     )
   },
   {
     path: "/return-policy",
     element: (
-     <Layout>
-       <ReturnPolicy />
-     </Layout>
+      <Layout>
+        <ReturnPolicy />
+      </Layout>
     )
   },
   {
-    path:"/FAQs",
+    path: "/FAQs",
     element: (
-     <Layout>
-       <FAQs />
-     </Layout>
+      <Layout>
+        <FAQs />
+      </Layout>
     )
 
   },
@@ -236,7 +248,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* StateProvider provide busket universally */}
     <StateProvider initialState={initialState} reducer={reducer} >
-      
+
       {/* Provide product univarsally */}
       <ProductProvider>
         <RouterProvider router={router} />
