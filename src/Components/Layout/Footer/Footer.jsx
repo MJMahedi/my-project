@@ -66,8 +66,8 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <h6 className="footer-title text-info text-lg">Customer Service</h6>
-                    <Link to={"/contact-us"} className="link link-hover">How to Order</Link>
-                    <Link to={"/branding"} className="link link-hover">Shipping & Delivery</Link>
+                    <Link to={"/"} className="link link-hover">How to Order</Link>
+                    <Link to={"/"} className="link link-hover">Shipping & Delivery</Link>
                     <Link to={"/size-guide"} className="link link-hover">Size & Care Guide</Link>
                     <Link to={"/FAQs"} className="link link-hover">FAQs</Link>
                     <Link to={"/contact-us"} className="link link-hover">Contact US</Link>
@@ -173,13 +173,13 @@ const Footer = () => {
                             <hr className="py-1" />
 
                             <p>
-                                <Link to={"/contact-us"} className="link link-hover">How to Order</Link>
+                                <Link to={"/"} className="link link-hover">How to Order</Link>
                             </p>
                             <p>
-                                <Link to={"/branding"} className="link link-hover">Shipping & Delivery</Link>
+                                <Link to={"/"} className="link link-hover">Shipping & Delivery</Link>
                             </p>
                             <p>
-                                <Link to={"/branding"} className="link link-hover">Size & Care Guide</Link>
+                                <Link to={"/"} className="link link-hover">Size & Care Guide</Link>
                             </p>
                             <p>
                                 <Link to={"/FAQs"} className="link link-hover">FAQs</Link>

@@ -112,7 +112,7 @@ function Header() {
                 {/*Millennial Website Logo  */}
 
                 <div className="navbar-center">
-                    <div className="avatar pr-12 pt-1 md:pt-2 lg:mt-0 ">
+                    <div className="avatar pr-4 md:pr-8 lg:pr-12 pt-1 md:pt-2 lg:mt-0 ">
 
                         <Link to={"/"} style={{
                             backgroundImage: `url(${Logo})`,

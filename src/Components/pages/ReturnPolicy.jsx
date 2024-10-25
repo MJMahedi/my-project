@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/aboutPic.jpg';
+import AboutImg from './../../assets/banner3.jpg';
 function ReturnPolicy() {
     return (<>
         {/* CSS-in-JS style block */}
@@ -25,8 +25,8 @@ function ReturnPolicy() {
                 <div className="relative">
                     <img
                         src={AboutImg}
-                        alt="Our Team PNG"
-                        className="w-full h-64 object-cover"
+                        alt="Return & Replacement Policy"
+                        className="w-full h-64 md:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute inset-0 bg-black opacity-30"></div>
                     <div className="absolute inset-0 flex items-center justify-center">

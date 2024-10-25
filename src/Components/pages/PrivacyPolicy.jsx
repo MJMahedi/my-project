@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/aboutPic.jpg';
+import AboutImg from './../../assets/banner2.jpg';
 function PrivacyPolicy() {
 
     const email = "info@millennial-clothing.com"; // Replace with the desired email address
@@ -29,8 +29,8 @@ function PrivacyPolicy() {
                     <div className="relative">
                         <img
                             src={AboutImg}
-                            alt="Our Team PNG"
-                            className="w-full h-64 object-cover"
+                            alt="Privacy Policy"
+                            className="w-full h-64 md:h-80 lg:h-96 object-cover"
                         />
                         <div className="absolute inset-0 bg-black opacity-30"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -200,12 +200,12 @@ function PrivacyPolicy() {
                         <div className="mt-8 text-center">
                             <p>
                                 For any questions or concerns,contact us at:<br />
-
+                                Email:
                                 <a
                                     href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
                                     className="text-blue-500 hover:underline ml-1"
                                 >
-                                    Email: info@millennial-clothing.com
+                                    info@millennial-clothing.com
                                 </a>
                                 <br />
                                 Website:<Link to="/" className="text-orange-500 hover:underline">

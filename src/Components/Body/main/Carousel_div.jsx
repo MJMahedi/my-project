@@ -1,44 +1,52 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import slider1 from './../../../assets/banner1.jpg';
+import slider2 from './../../../assets/banner2.jpg';
+import slider3 from './../../../assets/banner3.jpg';
+import slider4 from './../../../assets/banner4.jpg';
 
-import slider1 from './../../../assets/banner1.jpg'
-import slider2 from './../../../assets/banner2.jpg'
-import slider3 from './../../../assets/banner3.jpg'
-import slider4 from './../../../assets/banner4.jpg'
+const Carousel_div = () => {
+    const images = [slider1, slider2, slider3, slider4];
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-function Carousel_div() {
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <div className="bg-[#bae9f3] bg-opacity-90">
-            <div className="carousel w-full h-72 md:h-[420px] lg:h-[540px]">
-            {/* <div className="carousel w-full h-72 md:h-[420px] lg:h-[820px] lg:w-[1460]"> */}
-                <div id="item1" className="carousel-item w-full">
-                    <img
-                        src={slider1}
-                        className="w-full" />
+        <div className="bg-[#bae9f3] bg-opacity-90 ">
+            <div className="w-[90%] mx-auto relative overflow-hidden rounded-md">
+                <div className="w-full pt-[56.25%] relative md:h-[420px] lg:h-[600px]">
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                        >
+                            <img
+                                src={image}
+                                className="w-full h-full object-cover mx-auto"
+                                alt={`Slide ${index + 1}`}
+                            />
+                        </div>
+                    ))}
+                    
+                    {/* Navigation Indicators */}
+                    <div className="absolute bottom-10 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {images.map((_, index) => (
+                            <div
+                                key={index}
+                                onClick={() => setCurrentIndex(index)}
+                                className={`w-5 md:w-7 lg:w-10 h-2 md:h-4 lg:h-6 border-solid border-2 border-customBg-800 rounded-full cursor-pointer transition duration-300 ${index === currentIndex ? 'bg-customBg-500 scale-125' : 'bg-transparen'}`}
+                            ></div>
+                        ))}
+                    </div>
                 </div>
-                <div id="item2" className="carousel-item w-full">
-                    <img
-                        src={slider2}
-                        className="w-full" />
-                </div>
-                <div id="item3" className="carousel-item w-full">
-                    <img
-                        src={slider3}
-                        className="w-full" />
-                </div>
-                <div id="item4" className="carousel-item w-full">
-                    <img
-                        src={slider4}
-                        className="w-full" />
-                </div>
-            </div>
-            <div className="flex w-full justify-center gap-4 pb-2">
-                <a href="#item1" className="btn btn-xs bg-sky-100 shadow-md">1</a>
-                <a href="#item2" className="btn btn-xs bg-sky-100 shadow-md">2</a>
-                <a href="#item3" className="btn btn-xs bg-sky-100 shadow-md">3</a>
-                <a href="#item4" className="btn btn-xs bg-sky-100 shadow-mdanimate-pulse">4</a>
             </div>
         </div>
-    )
+    );
 }
 
-export default Carousel_div
+export default Carousel_div;

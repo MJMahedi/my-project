@@ -5,7 +5,8 @@ import FounderImg from './../../assets/Founder_CEO.jpg';
 import FounderMinazDImg from './../../assets/Founder_minaz_dream.jpg';
 import CoFounder from './../../assets/Co-Founder.jpeg';
 import CoFounder2 from './../../assets/Co-Founder_2.jpeg';
-import AboutImg from './../../assets/aboutPic.jpg';
+import AboutImg from './../../assets/banner1.jpg';
+// import AboutImg from './../../assets/aboutPic.jpg';
 
 const AboutUs = () => {
 
@@ -29,19 +30,16 @@ const AboutUs = () => {
       <div className="bg-customBg bg-opacity-80 min-h-screen py-6 px-6 sm:px-12">
         <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">
           <div className="relative">
-            <img
-              src={AboutImg}
-              alt="Our Team PNG"
-              className="w-full  h-64 object-cover"
-            />
+            <img src={AboutImg} alt="Our Team PNG" className="w-full h-64 md:h-80 lg:h-96 object-cover"  />
+            {/* <img src={AboutImg} alt="About Us Cover Image" className="w-full max-w-lg mx-4 h-64 md:h-80 lg:h-auto "  /> */}
             <div className="absolute inset-0 bg-black opacity-30"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <h1 className="text-4xl text-white font-semibold">About Us</h1>
             </div>
           </div>
 
-          <div className="p-8">
-            <h2 className="text-3xl font-bold text-center my-6 animate-pulse">Welcome to <Link to="/" className="text-orange-500 hover:underline">
+          <div className="p-4">
+            <h2 className=" text-xl md:text-2xl lg:text-3xl font-bold text-center my-4 animate-pulse">Welcome to <Link to="/" className="text-orange-500 hover:underline">
               Millennial Clothing
             </Link> – Where Trend Meets Timeless!</h2>
             <p>
@@ -190,11 +188,11 @@ const AboutUs = () => {
               <p>
                 For any questions or concerns,contact us at:<br />
 
-                <a
+                Email: <a
                   href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
                   className="text-blue-500 hover:underline ml-1"
                 >
-                  Email: info@millennial-clothing.com
+                  info@millennial-clothing.com
                 </a>
                 <br />
                 Website:<Link to="/" className="text-orange-500 hover:underline">
