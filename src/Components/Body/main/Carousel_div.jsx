@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import slider1 from './../../../assets/banner1.jpg';
 import slider2 from './../../../assets/banner2.jpg';
-import slider3 from './../../../assets/banner3.jpg';
-import slider4 from './../../../assets/banner4.jpg';
+import slider3 from './../../../assets/banner3.webp';
+import slider4 from './../../../assets/banner4.webp';
 
 const Carousel_div = () => {
     const images = [slider1, slider2, slider3, slider4];

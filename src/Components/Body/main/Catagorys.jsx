@@ -17,8 +17,6 @@ function Catagorys() {
     // console.log(uniqueCategories.map(category =>
     //     products.find(item => item.category === category)))
 
-
-
     return (
         <div className="bg-customBg bg-opacity-70">
 
@@ -61,11 +59,7 @@ function Catagorys() {
                         loyalty, and long-lasting connections 🌻</p>
                 </div>
             </div>
-
-
-
         </div>
-
     )
 }
 

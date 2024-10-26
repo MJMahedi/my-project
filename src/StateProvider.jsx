@@ -15,8 +15,6 @@ export const StateProvider = ({ reducer, initialState, children}) => (
 );
 
 
-
-
 // Pull informaton from the DataLayer
 export const useStateValue = () => useContext(StateContext);
 
@@ -34,7 +32,7 @@ export const ProductProvider = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('demodata.json'); // replace with your JSON URL
+                const response = await fetch('/demodata.json'); // replace with your JSON URL
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -52,7 +50,7 @@ export const ProductProvider = ({ children }) => {
     }, []);
 
     // by mj
-     // Memoize context value to prevent unnecessary re-renders
+     // Memrize context value to prevent unnecessary re-renders
      const value = useMemo(() => ({ products, loading, error }), [products, loading, error]);
 
 
