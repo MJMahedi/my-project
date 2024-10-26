@@ -37,17 +37,21 @@ function Category_products() {
   // };
 
   // Filter products based on the selected category
-  // const filteredProducts = products.filter(item => item.categorytoLowerCase() === category.toLowerCase());
+  const filteredProducts = products.filter(item => item.category.toLowerCase() === category.toLowerCase());
 
   // Filter the products based on the category from URL
-  const filteredProducts = products.filter((item) => {
-    // Ensure item.category exists and is a string before using toLowerCase
-    return item.category && typeof item.category === 'string' &&
-      item.category.toLowerCase() === category.toLowerCase();
-  });
+  // const filteredProducts = products.filter((item) => {
+  //   // Ensure item.category exists and is a string before using toLowerCase
+  //   return item.category && typeof item.category === 'string' &&
+  //     item.category === category;
+  // });
   if (filteredProducts.length === 0) {
     return <p>No products found for {category}</p>;
   }
+  // const filteredProducts = products.filter(product => 
+  //   product.category && product.category.toLowerCase() === category.toLowerCase()
+  // );
+  
 
   const addToBasket = () => {
     // Push the item into the data Layer
