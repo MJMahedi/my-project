@@ -20,31 +20,35 @@ function Catagorys() {
     return (
         <div className="bg-customBg bg-opacity-70">
 
-            <div className="">
+            <div className=" py-6">
                 <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-                    <legend className="px-6 text-lg font-semibold text-center">CATEGORIES</legend>
+                    <legend className="px-6 text-3xl md:text-2xl lg:text-3xl font-semibold text-center">Categories</legend>
                 </fieldset>
             </div>
 
-            <div className=" w-[auto] h-auto grid grid-cols-3 md:grid-cols-4 gap-1 mx-8 sm:mx-4 relative">
+            <div className=" w-[auto] h-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-2 lg:gap-5 mx-4 md:mx-8 lg:mx-16 relative ">
 
                 {uniqueCategories.map((category, index) => {
                     // Find the first product for each category to get the image
                     const item = products.find(item => item.category === category);
                     return item ? (
-                        <div key={index} className=" overflow-hidden">
+                        <div key={index} className=" relative w-full overflow-hidden border-2 border-customBg-800 rounded-md">
                             <Link
                                 to={`/category-products/${category}`} // Dynamic URL
+                                className="block relative w-full "
                                 style={{
+                                    paddingBottom: '133.33%', // 3:4 aspect ratio (100% * 4/3)
                                     backgroundImage: `url(${item.image})`, // Use item.image directly
                                     backgroundSize: `cover`,
                                     backgroundRepeat: `no-repeat`,
                                     backgroundPosition: `center`
                                 }}
-                                className='flex justify-center items-end h-44 md:h-60 w-full object-fit rounded'>
-                                <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest '>
-                                    {category}
-                                </h1>
+                            >
+                                <div className="absolute bottom-0 w-full bg-opacity-50 flex justify-center items-center">
+                                    <h1 className='btn btn-ghost md:text-lg tracking-wide md:tracking-widest text-sky-50 font-semibold p-2 animate-bounce tracking-widest '>
+                                        {category}
+                                    </h1>
+                                </div>
                             </Link>
                         </div>
                     ) : null; // Return null if no item is found for the category

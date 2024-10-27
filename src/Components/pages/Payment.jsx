@@ -31,7 +31,7 @@ function Payment() {
   };
 
    // WhatsApp URL
-   const whatsappURL = `https://wa.me/8801847552985?text=${prepareWhatsAppMessage()}`;
+   const whatsappURL = `https://wa.me/8801317201109?text=${prepareWhatsAppMessage()}`;
 
   // Handle order confirmation and WhatsApp redirect
   const handleOrderConfirmation = () => {

@@ -91,7 +91,7 @@ function Header() {
                                     </summary>
                                     <ul className="">
                                         <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm">
-                                            <Link to={"/category-products/winter"} className="font-semibold" > Winter Collections</Link>
+                                            <Link to={"/category-products/winter"} className="font-semibold" >Winter Collections</Link>
                                         </li>
                                     </ul>
                                 </details>

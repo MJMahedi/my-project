@@ -30,86 +30,131 @@ import FAQs from "./Components/pages/FAQs";
 import ReturnPolicy from "./Components/pages/ReturnPolicy";
 import MinasDream from "./Components/pages/MinasDream";
 import SizeGuide from "./Components/pages/SizeGuide";
+import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
+// import AuthHandler from "./AuthHandler";
 
 
 const router = createBrowserRouter([
   {
-    path: "/", element: (<Layout> <Body /> </Layout>)
-  },
-  {
-    path: "/products", element: (<Layout> <Products />  </Layout>)
-  },
-  {
-    path: "/category-products/:category", element: (<Layout>  <Category_products />  </Layout>)
-  },
-  {
-    path: "/product/:id", element: (<Layout> <Product /> </Layout>)
+    path: "/",
+    element: <Layout />, // Apply Layout globally
+    children: [
+      { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
+      { path: "/products", element: <Products /> }, // Route "/products"
+      { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
+      { path: "/product/:id", element: <Product /> }, // Route "/product"
+      { path: "/men", element: <Men /> }, // Route "/men"
+      { path: "/women", element: <Women /> }, // Route "/women"
+      { path: "/kids", element: <Kids /> }, // Route "/kids"
+      { path: "/winter", element: <Winter /> }, // Route "/winter"
+      { path: "/minas-dream", element: <MinasDream /> }, // Route "/mina's-dream"
+      { path: "/shoping-cart", element: <Shoping_cart /> }, // Route "/shoping-cart"
+      { path: "/whish-list", element: <Whish_list /> }, // Route "/Whish List"
+      { path: "/payment", element: <Payment /> }, // Route "/payment"
+      { path: "/thank-you", element: <Thankyou /> }, // Route "/thank-you"
+      { path: "/size-guide", element: <SizeGuide /> }, // Route "/Size Guide"
+      { path: "/login", element: <Login /> }, // Route "/login"
+      { path: "/register", element: <Register /> }, // Route "/register"
+      { path: "/about-us", element: <AboutUs /> }, // Route "/about-us"
+      { path: "/contact-us", element: <ContactUs /> }, // Route "/contact-us"
+      { path: "/branding", element: <Branding_company /> }, // Route "/branding"
+      { path: "/terms-conditions", element: <Terms_comditions /> }, // Route "/Terms & Conditions"
+      { path: "/privacy-policy", element: <PrivacyPolicy /> }, // Route "/Privacy Policy"
+      { path: "/return-policy", element: <ReturnPolicy /> }, // Route "/Return Policy"
+      {  path: "/Shipping_and_Delivery", element:  <Shipping_and_Delivery /> }, // Route "/Shipping & Delivery"
+      {   path: "/FAQs", element:  <FAQs />  }, // Route "/FAQs"
+
+
+    ]
   },
 
-  {
-    path: "/men", element: (<Layout>   <Men />  </Layout>)
-  },
-  {
-    path: "/women", element: (<Layout>   <Women />  </Layout>)
-  },
-  {
-    path: "*", element: <h1>404 Not Found</h1> // Catch-all for unmatched routes
-  },
-  {
-    path: "/kids", element: (<Layout> <Kids /> </Layout>)
-  },
-  {
-    path: "/winter", element: (<Layout>   <Winter /> </Layout>)
-  },
-  {
-    path: "/minas-dream", element: (<Layout> <MinasDream />   </Layout>)
-  },
-  {
-    path: "/shoping-cart", element: (<Layout> <Shoping_cart />  </Layout>)
-  },
-  {
-    path: "/whish-list", element: (<Layout>  <Whish_list /> </Layout>)
-  },
-  {
-    path: "/payment", element: (<Layout>  <Payment /> </Layout>)
-  },
-  {
-    path: "/thank-you", element: (<Thankyou />)
-  },
-  {
-    path: "/size-guide", element: (<Layout> <SizeGuide />  </Layout>)
-  },
-  {
-    path: "/login", element: (<Layout>   <Login />  </Layout>)
-  },
-  {
-    path: "/register", element: (<Layout> <Register /> </Layout>)
-  },
-  {
-    path: "/about-us", element: (<Layout>  <AboutUs />  </Layout>)
-  },
-  {
-    path: "/contact-us", element: (<Layout> <ContactUs />  </Layout>)
-  },
-  {
-    path: "/branding", element: (<Layout> <Branding_company /> </Layout>)
-  },
-  {
-    path: "/terms-conditions", element: (<Layout>  <Terms_comditions />  </Layout>)
-  },
-  {
-    path: "/privacy-policy", element: (<Layout> <PrivacyPolicy />  </Layout>)
-  },
-  {
-    path: "/return-policy", element: (<Layout>  <ReturnPolicy />  </Layout>)
-  },
-  {
-    path: "/FAQs", element: (<Layout>  <FAQs />  </Layout>)
-  },
-  {
-    path: "/dashboard", element: (<Dashboard />)
-  },
+  { path: "/terms-conditions", element: <Terms_comditions /> },
+  { path: "/dashboard", element: <Dashboard /> }, // Route "/dashboard"
+  { path: "*", element: <h1>404 Not Found</h1> }, // Catch-all route for 404
 ]);
+
+
+
+//   {
+//     path: "/", element: (<Layout> <Body /> </Layout>)
+//   },
+//   {
+//     path: "/products", element: (<Layout> <Products />  </Layout>)
+//   },
+//   {
+//     path: "/category-products/:category", element: (<Layout>  <Category_products />  </Layout>)
+//   },
+//   {
+//     path: "/product/:id", element: (<Layout> <Product /> </Layout>)
+//   },
+
+//   {
+//     path: "/men", element: (<Layout>   <Men />  </Layout>)
+//   },
+//   {
+//     path: "/women", element: (<Layout>   <Women />  </Layout>)
+//   },
+//   {
+//     path: "*", element: <h1>404 Not Found</h1> // Catch-all for unmatched routes
+//   },
+//   {
+//     path: "/kids", element: (<Layout> <Kids /> </Layout>)
+//   },
+//   {
+//     path: "/winter", element: (<Layout>   <Winter /> </Layout>)
+//   },
+//   {
+//     path: "/minas-dream", element: (<Layout> <MinasDream />   </Layout>)
+//   },
+//   {
+//     path: "/shoping-cart", element: (<Layout> <Shoping_cart />  </Layout>)
+//   },
+//   {
+//     path: "/whish-list", element: (<Layout>  <Whish_list /> </Layout>)
+//   },
+//   {
+//     path: "/payment", element: (<Layout>  <Payment /> </Layout>)
+//   },
+//   {
+//     path: "/thank-you", element: (<Thankyou />)
+//   },
+//   {
+//     path: "/size-guide", element: (<Layout> <SizeGuide />  </Layout>)
+//   },
+//   {
+//     path: "/login", element: (<Layout>   <Login />  </Layout>)
+//   },
+//   {
+//     path: "/register", element: (<Layout> <Register /> </Layout>)
+//   },
+//   {
+//     path: "/about-us", element: (<Layout>  <AboutUs />  </Layout>)
+//   },
+//   {
+//     path: "/contact-us", element: (<Layout> <ContactUs />  </Layout>)
+//   },
+//   {
+//     path: "/branding", element: (<Layout> <Branding_company /> </Layout>)
+//   },
+//   {
+//     path: "/terms-conditions", element: (<Layout>  <Terms_comditions />  </Layout>)
+//   },
+//   {
+//     path: "/privacy-policy", element: (<Layout> <PrivacyPolicy />  </Layout>)
+//   },
+//   {
+//     path: "/return-policy", element: (<Layout>  <ReturnPolicy />  </Layout>)
+//   },
+//   {
+//     path: "/Shipping_and_Delivery", element: (<Layout>  <Shipping_and_Delivery />  </Layout>)
+//   },
+//   {
+//     path: "/FAQs", element: (<Layout>  <FAQs />  </Layout>)
+//   },
+//   {
+//     path: "/dashboard", element: (<Dashboard />)
+//   },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -117,6 +162,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <StateProvider initialState={initialState} reducer={reducer} >
       {/* Provide product univarsally */}
       <ProductProvider>
+        {/* <AuthHandler /> AuthHandler to track login state */}
         <RouterProvider router={router} />
       </ProductProvider>
     </StateProvider>

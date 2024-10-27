@@ -60,10 +60,10 @@ function Products() {
 
       <div>
 
-        <h1 className=' mx-4 text-md text-sky-600 font-semibold'>Men</h1>
-        <article id="container" className="w-full py-6 px-2 md:px-4 flex justify-center">
+        <h1 className='mx-4 text-md text-sky-600 font-semibold'>Men</h1>
+        <article id="container" className="w-full py-6 px-6 md:px-4 flex justify-center">
           <section id="Projects"
-            className="w-full  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+            className="w-[]  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
             {products
               .filter(item => item.category === 'Men')
@@ -74,6 +74,15 @@ function Products() {
 
           </section>
         </article>
+       
+
+
+
+
+
+
+
+
         <h1 className='mx-2 text-md text-sky-600 font-semibold'>Women</h1>
         <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
           <section id="Projects"
@@ -103,8 +112,6 @@ function Products() {
 
           </section>
         </article>
-
-
 
         <div className='mx-2 text-md text-sky-600 font-semibold'>Mina's Dream</div>
         <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">

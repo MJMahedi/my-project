@@ -56,10 +56,10 @@ const Footer = () => {
                     <h6 className="footer-title text-info text-lg">Top Categories</h6>
 
 
-                    <Link to={"/"} className="link link-hover">Men's Fashion</Link>
-                    <Link to={"/"} className="link link-hover">Women's Fashion</Link>
-                    <Link to={"/"} className="link link-hover">Kid's Fashion</Link>
-                    <Link to={"/"} className="link link-hover">Mina's Dream Collections</Link>
+                    <Link to={"/category-products/men"} className="link link-hover">Men's Fashion</Link>
+                    <Link to={"/category-products/women"} className="link link-hover">Women's Fashion</Link>
+                    <Link to={"/category-products/kids"} className="link link-hover">Kid's Fashion</Link>
+                    <Link to={"/minas-dream"} className="link link-hover">Mina's Dream Collections</Link>
                     <Link to={"/"} className="link link-hover">Season's Pick</Link>
 
 
@@ -67,7 +67,7 @@ const Footer = () => {
                 <nav>
                     <h6 className="footer-title text-info text-lg">Customer Service</h6>
                     <Link to={"/"} className="link link-hover">How to Order</Link>
-                    <Link to={"/"} className="link link-hover">Shipping & Delivery</Link>
+                    <Link to={"/Shipping_and_Delivery"} className="link link-hover">Shipping & Delivery</Link>
                     <Link to={"/size-guide"} className="link link-hover">Size & Care Guide</Link>
                     <Link to={"/FAQs"} className="link link-hover">FAQs</Link>
                     <Link to={"/contact-us"} className="link link-hover">Contact US</Link>
@@ -157,10 +157,10 @@ const Footer = () => {
                         <div className="collapse-title font-medium footer-title text-sky-900">Top Categories</div>
                         <div className="collapse-content">
                             <hr className="py-1" />
-                            <p><Link to={"/"} className="link link-hover">Men's Fashion</Link></p>
-                            <p><Link to={"/"} className="link link-hover">Women's Fashion</Link></p>
-                            <p> <Link to={"/"} className="link link-hover">Kid's Fashion</Link></p>
-                            <p><Link to={"/"} className="link link-hover">Mina's Dream Collections</Link></p>
+                            <p><Link to={"/category-products/men"} className="link link-hover">Men's Fashion</Link></p>
+                            <p><Link to={"/category-products/women"} className="link link-hover">Women's Fashion</Link></p>
+                            <p> <Link to={"/category-products/kids"} className="link link-hover">Kid's Fashion</Link></p>
+                            <p><Link to={"/minas-dream"} className="link link-hover">Mina's Dream Collections</Link></p>
                             <p> <Link to={"/"} className="link link-hover">Season's Pick</Link></p>
                         </div>
                     </div>
@@ -176,7 +176,7 @@ const Footer = () => {
                                 <Link to={"/"} className="link link-hover">How to Order</Link>
                             </p>
                             <p>
-                                <Link to={"/"} className="link link-hover">Shipping & Delivery</Link>
+                                <Link to={"/Shipping_and_Delivery"} className="link link-hover">Shipping & Delivery</Link>
                             </p>
                             <p>
                                 <Link to={"/"} className="link link-hover">Size & Care Guide</Link>
