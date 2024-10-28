@@ -32,7 +32,7 @@ const Best_Selling = () => {
                                 className="block relative w-full border-2 border-customBg-800 rounded-md"
                                 style={{
                                     paddingBottom: '133.33%', // 3:4 aspect ratio (100% * 4/3)
-                                    backgroundImage: `url(${item.image})`, // Use item.image directly
+                                    backgroundImage: `url(${item.image[0]})`, // Use item.image directly
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat',

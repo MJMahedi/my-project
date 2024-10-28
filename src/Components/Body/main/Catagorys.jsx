@@ -38,7 +38,7 @@ function Catagorys() {
                                 className="block relative w-full "
                                 style={{
                                     paddingBottom: '133.33%', // 3:4 aspect ratio (100% * 4/3)
-                                    backgroundImage: `url(${item.image})`, // Use item.image directly
+                                    backgroundImage: `url(${item.image[0]})`, // Use item.image directly
                                     backgroundSize: `cover`,
                                     backgroundRepeat: `no-repeat`,
                                     backgroundPosition: `center`

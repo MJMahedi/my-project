@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useProductValue } from '../../StateProvider'; // For fetching products
 import { useStateValue } from '../../StateProvider'; // For managing basket
@@ -6,15 +6,16 @@ import { useStateValue } from '../../StateProvider'; // For managing basket
 function Product() {
   const { id } = useParams(); // Get the product ID from the URL
   const { products, loading, error } = useProductValue(); // Get products from the context
-  const [, dispatch] = useStateValue(); // Get dispatch from global state
+  const [dispatch] = useStateValue(); // Get dispatch from global state
 
   // Handle loading or error state
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   // Find the product by ID (parse ID to number if necessary)
-  const product = products.find(item => item._id === parseInt(id)); 
-
+  const product = products.find(item => item._id === parseInt(id));
+  // State to store the selected image
+  const [selectedImage, setSelectedImage] = useState(product.image[0]);
   if (!product) {
     return <div>Product not found</div>; // Handle the case where the product is not found
   }
@@ -24,32 +25,38 @@ function Product() {
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
-      _id: product._id,
-      title: product.title,
-      image: product.image,
-      price: product.price,  // Make sure price is included here
-      discount: product.discount,  // If relevant
-      quantity: 1 // Or whatever logic you need for quantity
-    }
+        _id: product._id,
+        title: product.title,
+        image: product.image[0],
+        price: product.price,  // Make sure price is included here
+        discount: product.discount,  // If relevant
+        quantity: 1 // Or whatever logic you need for quantity
+      }
     });
   };
 
   return (
     <div>
       <main className="py-10 bg-sky-50">
-        <div className="container space-x-4 mx-auto px-4 flex flex-col md:flex-row">
+        <div className="container space-x-4 mx-auto px-4 flex flex-col md:flex-row ">
 
-          <div className="md:w-1/2">
-            <div className="relative">
-              <div style={{
-                backgroundImage: `url(${product.image})`,
-                backgroundSize: `cover`,
-                backgroundRepeat: `no-repeat`,
-                backgroundPosition: `center`
-              }} className='w-full h-72 object-cover rounded-lg shadow-lg'>
+          <div className="w-3/4">
+            <div className="grid grid-cols-2 gap-8">
+
+
+              <div className='grid grid-cols-3 gap-6'>
+                {product.image.map((image, index) => (
+                  <div key={index} onClick={() => setSelectedImage(image)} // Update selected image on click
+                    style={{
+                      backgroundImage: `url(${image})`,
+                      backgroundSize: `cover`,
+                      // backgroundRepeat: `no-repeat`,
+                      backgroundPosition: `center`
+                    }} className=' aspect-[3/4] rounded-md shadow-md cursor-pointer'>
+                  </div>
+                ))}
               </div>
-
-              <div className='flex justify-center space-x-5 mt-4'>
+              {/* <div className='flex justify-center space-x-5 mt-4'>
                 {product.size.map((size, index) => (
                   <div key={index} style={{
                     backgroundImage: `url(${product.image})`,
@@ -59,12 +66,21 @@ function Product() {
                   }} className='w-28 h-20 object-cover rounded-md shadow-md'>
                   </div>
                 ))}
+              </div> */}
+               {/* Right Side - Main Image Preview */}
+              <div style={{
+                backgroundImage: `url(${selectedImage})`,
+                backgroundSize: `cover`,
+                backgroundRepeat: `no-repeat`,
+                backgroundPosition: `center`,
+                width: '300px',  // ichcha moto width
+                height: '400px'   // ichcha moto height
+              }} className="flex justify-center items-center w-full max-w-sm aspect-[3/4] rounded-lg shadow-lg">
               </div>
-
             </div>
           </div>
 
-          <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
+          <div className="w-1/4 md:pl-0 mt-0">
             <h1 className="text-xl font-bold text-gray-900">{product.title}</h1>
 
             <div className='p-2 bg-yellow-200 rounded-2xl'>
