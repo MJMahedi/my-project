@@ -153,7 +153,7 @@
         "title": "Premium Women Jacket",
         "collection": "winter",
         "category": "Women",
-        "subCategory": "pant",
+        "subCategory": "NewArrival",
         "size": [
             "XS",
             "S",
@@ -161,14 +161,13 @@
             "XL",
             "XXL"
         ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
+        "description": "Women Best Jacket",
         "image": [
             "/assets/Women/womenjacket1.jpg",
-            "/assets/Women/womenjacket1.jpg",
-            "/assets/Women/womenjacket1.jpg",
-            "/assets/Women/womenjacket1.jpg",
-            "/assets/Women/womenjacket1.jpg",
-            "/assets/Women/womenjacket1.jpg"
+            "/assets/Women/womenjacket2.jpg",
+            "/assets/Women/womenjacket3.jpg",
+            "/assets/Women/womenjacket4.jpg",
+            "/assets/Women/womenjacket4.jpg"
         ],
         "discount": 110,
         "price": 420,
@@ -194,11 +193,11 @@
         ],
         "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
         "image": [
+            "/assets/Women/womenjacket4.jpg",
+            "/assets/Women/womenjacket3.jpg",
+            "/assets/Women/womenjacket1.jpg",
             "/assets/Women/womenjacket2.jpg",
-            "/assets/Women/womenjacket2.jpg",
-            "/assets/Women/womenjacket2.jpg",
-            "/assets/Women/womenjacket2.jpg",
-            "/assets/Women/womenjacket2.jpg"
+            "/assets/Women/womenjacket4.jpg"
         ],
         "discount": 110,
         "price": 590,
