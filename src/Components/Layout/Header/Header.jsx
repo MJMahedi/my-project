@@ -1,10 +1,72 @@
-import React from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 import Logo from "./../../../assets/Website_Logo.svg"
+import { useNavigate } from 'react-router-dom'
+
+import { useProductValue } from "../../../StateProvider"; // Adjust the import path as needed
 
 
 function Header() {
+    // Inside your Header component:
+    const navigate = useNavigate();
 
+    // Step 1: Get products from ProductContext
+    const { products } = useProductValue();
+    // console.log("Products in Header:", products);
+    // Step 2: State for search input and results
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredResults, setFilteredResults] = useState([]);
+
+    const resultsRef = useRef(null); // Ref for results dropdown
+    const inputRef = useRef(null); // Ref for search input
+
+
+    // Step 3: Handle search input and update filtered results
+    const handleSearch = (e) => {
+        const query = e.target.value;
+        setSearchQuery(query);
+
+        if (query) {
+            const results = products.filter((product) =>
+                product.title && product.title.toLowerCase().includes(query.toLowerCase())
+            );
+            setFilteredResults(results);
+        } else {
+            setFilteredResults([]); // Clear results if query is empty
+        }
+    };
+    // Function to handle navigation
+    const navigateToResults = () => {
+        setFilteredResults([]); // Clear filtered results
+        navigate(`/results?query=${searchQuery}`);
+        setSearchQuery(''); // Clear search query
+    };
+    // Handle Enter key press to navigate
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            setSearchQuery(''); // Clear search query
+            setFilteredResults([]); // Clear filtered results
+            navigate(`/results?query=${searchQuery}`);
+        }
+    };
+
+    // Clear search when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (resultsRef.current && !resultsRef.current.contains(event.target) &&
+                inputRef.current && !inputRef.current.contains(event.target)) {
+                setSearchQuery('');
+                setFilteredResults([]);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [resultsRef, inputRef]);
+    console.log("Filtered Results:", filteredResults);
     return (
         <nav className="bg-customBg">
 
@@ -76,7 +138,7 @@ function Header() {
                                     </summary>
                                     <ul className="">
                                         <li className="bg-sky-50 hover:bg-sky-100 p-2 my-2 rounded cursor-pointer shadow-sm">
-                                        <Link to={"/category-products/winter"} className="font-semibold" >Winter Collections</Link>
+                                            <Link to={"/category-products/winter"} className="font-semibold" >Winter Collections</Link>
                                         </li>
                                     </ul>
                                 </details>
@@ -127,10 +189,10 @@ function Header() {
                 </div>
 
 
-                {/* Hidden from Small & Large Device  */}
+                {/* Hidden from Large Device  */}
 
 
-                <div className="flex items-center md:gap-8 justify-end lg:hidden mr-2">
+                <div className="flex items-center md:gap-8 justify-end lg:hidden mr-5 gap-3">
                     <button className="btn btn-ghost btn-circle">
 
                         {/* Search Icon SVG */}
@@ -207,15 +269,21 @@ function Header() {
                 {/* Imput Area for large device */}
                 <form className=" lg:items-end hidden md:hidden lg:flex lg:justify-around lg:pr-0 sm:hidden gap-2 ">
                     {/* Search Input */}
-                    <div className="relative text-[#12323a]">
+                    <div className="relative text-[#12323a]" ref={inputRef}>
                         <input
                             type="search"
                             id="default-search"
-                            className="bg-customBg-100 w-[140px] h-7 px-3 text-sm outline-none rounded-md ring-1 focus:ring-2 ring-sky-100 ring-offset-1  pr-10" // Adjusted width and height
+                            value={searchQuery}
+                            onChange={handleSearch} // This will handle input changes
+                            onKeyPress={handleKeyPress} // Add the Enter key detection
+                            className="bg-customBg-100 w-[140px] h-7 px-3 text-sm outline-none rounded-md ring-1 focus:ring-2 ring-sky-100 ring-offset-1 pr-10"
                             placeholder="Searching"
                             required
                         />
-                        <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <div
+                            className="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer" // Add cursor-pointer
+                            onClick={navigateToResults} // Add onClick handler
+                        >
                             <svg
                                 className="w-4 h-4 text-gray-500 dark:text-gray-400"
                                 aria-hidden="true"
@@ -232,7 +300,35 @@ function Header() {
                                 />
                             </svg>
                         </div>
+
+
+                        {/* Step 4: Display filtered search results */}
+                        {searchQuery && (
+
+
+                            <div className="absolute z-10 border rounded-md w-full mt-1" ref={resultsRef}>
+                                {filteredResults.length > 0 ? (
+                                    filteredResults.map((product) => (
+                                        <Link
+                                            key={product._id}
+                                            to={`/product/${product._id}`} // Change this to your product detail route
+                                            className="block p-2 bg-customBg-100 text-sm border-b hover:bg-gray-100" // Styling for each item
+                                            onClick={() => setSearchQuery('')} // Clear the search query on click
+                                        >
+                                            {product.title} {/* Use the correct property name */}
+                                        </Link>
+                                    ))
+                                ) : (
+                                    <div className="p-2 text-sm text-gray-500">No results found</div>
+                                )}
+                            </div>
+
+                        )}
+
+
+
                     </div>
+
                     {/* Wishlist Link */}
                     <div className="hidden lg:flex items-center justify-end text-md">
                         <Link className="flex items-center pl-3 no-underline hover:text-black" to={"/whish-list"}>
@@ -240,14 +336,15 @@ function Header() {
                                 <path fill="#1E3050" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
                             </svg>
                         </Link>
-                        <Link className="flex items-center pl-3 no-underline hover:text-black " to={"/shoping-cart"}> <svg
-                            className="mr-1 w-7 h-7"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                        >
-                            {/* SVG path data */}
-                            <path fill="#1E3050" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
-                        </svg>
+                        <Link className="flex items-center pl-3 no-underline hover:text-black " to={"/shoping-cart"}>
+                            <svg
+                                className="mr-1 w-7 h-7"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"
+                            >
+                                {/* SVG path data */}
+                                <path fill="#1E3050" d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20l44 0 0 44c0 11 9 20 20 20s20-9 20-20l0-44 44 0c11 0 20-9 20-20s-9-20-20-20l-44 0 0-44c0-11-9-20-20-20s-20 9-20 20l0 44-44 0c-11 0-20 9-20 20z" />
+                            </svg>
                         </Link>
                         <Link className="flex items-center pl-3 no-underline hover:text-black" to={"/login"}>
                             <svg

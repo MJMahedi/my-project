@@ -32,6 +32,7 @@ import MinasDream from "./Components/pages/MinasDream";
 import SizeGuide from "./Components/pages/SizeGuide";
 import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
 import Collections from "./Components/products/Collections";
+import Results from "./Components/pages/Results";
 // import AuthHandler from "./AuthHandler";
 
 
@@ -42,6 +43,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
       { path: "/products", element: <Products /> }, // Route "/products"
+      { path: "/results", element: <Results /> }, // Route "/results Show results"
       { path: "/collections", element: <Collections /> }, // Route "/products"
       { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
       { path: "/product/:id", element: <Product /> }, // Route "/product"

@@ -40,7 +40,7 @@ function Products() {
 
 
   const uniqueCategories = [...new Set(products.map(item => item.category))];
-  console.log(uniqueCategories);
+  // console.log(uniqueCategories);
 
   // // const [uniqueProducts, setUniqueProducts] = useState(['']);
   // console.log(uniqueCategories.map(category =>

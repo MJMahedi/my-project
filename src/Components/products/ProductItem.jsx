@@ -3,10 +3,10 @@ import { Link, useParams } from 'react-router-dom'
 import { useStateValue, useProductValue } from '../../StateProvider'
 
 
-const ProductItem = ({ item, addToBasket }) => {
+const ProductItem = ({ item, addToBasket,product }) => {
 
   const { category } = useParams(); // Get category from URL
-  console.log(category)
+  // console.log(category)
 
   
 

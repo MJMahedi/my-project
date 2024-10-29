@@ -12,7 +12,7 @@
             "XL",
             "XXL"
         ],
-        "description": "Premium Bomber Jacket",
+        "description": "Mens Bomber Jacket",
         "image": [
             "/assets/Men/menjacket1.jpg",
             "/assets/Men/menjacket2.jpg",
@@ -44,10 +44,11 @@
         ],
         "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
         "image": [
-            "/assets/Men/menjacket1.jpg",
-            "/assets/Men/menjacket1.jpg",
-            "/assets/Men/menjacket1.jpg",
-            "/assets/Men/menjacket1.jpg"
+            "/assets/Men/menjacket6.jpg",
+            "/assets/Men/menjacket7.jpg",
+            "/assets/Men/menjacket8.jpg",
+            "/assets/Men/menjacket9.jpg",
+            "/assets/Men/menjacket10.jpg"
         ],
         "discount": 110,
         "price": 990,

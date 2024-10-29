@@ -14,6 +14,8 @@ function Product() {
 
   // Find the product by ID (parse ID to number if necessary)
   const product = products.find(item => item._id === parseInt(id));
+
+  
   // State to store the selected image
   const [selectedImage, setSelectedImage] = useState(product.image[0]);
   if (!product) {
@@ -138,7 +140,7 @@ function Product() {
               </div>
             </div>
 
-            <Link to={"/shoping-cart"} onClick={addToBasket}>
+            <Link to={`/shoping-cart`} onClick={addToBasket}>
               <button className="w-[100%] mt-4 animate-bounce bg-gradient-to-tr from-sky-900 to-blue-500 text-white py-[10px] font-bold px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 ">
                 <p className='animate-pulse tracking-widest'>Buy Now</p>
               </button>
