@@ -24,7 +24,7 @@ const Results = () => {
             <h2 className="text-lg font-bold mb-4">Search Results for: "{query}"</h2>
             {filteredResults.length > 0 ? (
 
-                < div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                < div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                     {filteredResults.map(item => (
                         <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
 

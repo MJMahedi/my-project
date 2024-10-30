@@ -7,21 +7,26 @@ import { useProductValue } from "../../../StateProvider"; // Adjust the import p
 
 
 function Header() {
-    // Inside your Header component:
     const navigate = useNavigate();
 
-    // Step 1: Get products from ProductContext
+    // Get products from ProductContext
     const { products } = useProductValue();
-    // console.log("Products in Header:", products);
-    // Step 2: State for search input and results
+    const [searchOpen, setSearchOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredResults, setFilteredResults] = useState([]);
 
-    const resultsRef = useRef(null); // Ref for results dropdown
-    const inputRef = useRef(null); // Ref for search input
+    // Refs for detecting clicks outside
+    const resultsRef = useRef(null); // For results dropdown
+    const inputRef = useRef(null);   // For search input
 
+    // Toggle Search Bar visibility
+    const toggleSearchBar = () => {
+        setSearchOpen((prev) => !prev);
+        setSearchQuery(''); // Clear query when search opens/closes
+        setFilteredResults([]);
+    };
 
-    // Step 3: Handle search input and update filtered results
+    // Handle search input and update filtered results
     const handleSearch = (e) => {
         const query = e.target.value;
         setSearchQuery(query);
@@ -35,29 +40,35 @@ function Header() {
             setFilteredResults([]); // Clear results if query is empty
         }
     };
+
     // Function to handle navigation
     const navigateToResults = () => {
-        setFilteredResults([]); // Clear filtered results
-        navigate(`/results?query=${searchQuery}`);
-        setSearchQuery(''); // Clear search query
+        if (searchQuery) {
+            navigate(`/results?query=${searchQuery}`);
+            setSearchQuery(''); // Clear search query
+            setFilteredResults([]); // Clear filtered results
+            setSearchOpen(false); // Close search dropdown
+        }
     };
+
     // Handle Enter key press to navigate
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
-            setSearchQuery(''); // Clear search query
-            setFilteredResults([]); // Clear filtered results
-            navigate(`/results?query=${searchQuery}`);
+            navigateToResults();
         }
     };
 
     // Clear search when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (resultsRef.current && !resultsRef.current.contains(event.target) &&
-                inputRef.current && !inputRef.current.contains(event.target)) {
-                setSearchQuery('');
-                setFilteredResults([]);
+            if (
+                resultsRef.current && !resultsRef.current.contains(event.target) &&
+                inputRef.current && !inputRef.current.contains(event.target)
+            ) {
+                setSearchOpen(false);
+                setSearchQuery(''); // Clear search query
+                setFilteredResults([]); // Clear filtered results
             }
         };
 
@@ -66,14 +77,13 @@ function Header() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [resultsRef, inputRef]);
-    console.log("Filtered Results:", filteredResults);
     return (
         <nav className="bg-customBg">
 
             <div className="flex lg:flex md:flex md:justify-around sm:justify-around 
  justify-between items-center	 ">
-
-                <div className="navbar w-1/4 sm:hidden">
+                {/* Dropdown menu  */}
+                <div className="navbar w-1/6 md:hidden">
                     <div className="dropdown dropdown-start">
                         <div tabindex="0" className="">
                             <label className="btn btn-ghost hover:bg-gray-100 hover:shadow-md swap swap-rotate">
@@ -190,12 +200,12 @@ function Header() {
 
 
                 {/* Hidden from Large Device  */}
+                {/* Visible for Small & Medium Device  */}
 
+                <div className="flex items-center md:gap-8 justify-end lg:hidden mr-4 gap-2 pr-3">
 
-                <div className="flex items-center md:gap-8 justify-end lg:hidden mr-5 gap-3">
-                    <button className="btn btn-ghost btn-circle">
-
-                        {/* Search Icon SVG */}
+                    {/* Search Button Icon for Small & Medium Devices */}
+                    <button onClick={toggleSearchBar} className="btn btn-ghost btn-circle">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-7 lg:w-12 lg:h-12"
@@ -204,7 +214,6 @@ function Header() {
                             stroke="currentColor"
                         >
                             <path
-
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth="2"
@@ -212,6 +221,45 @@ function Header() {
                             />
                         </svg>
                     </button>
+
+                    {/* Search Bar - Only Visible when searchOpen is true */}
+                    {searchOpen && (
+                        <div
+                            ref={resultsRef}
+                            className="z-10 absolute top-14 md:top-4 right-2 md:right-60 w-2/5 sm:w-1/5 md:w-1/5 lg:w-1/4">
+                            <div ref={inputRef} className="relative flex justify-end items-center pr-10">
+                                {/* Search Input */}
+                                <input
+                                    type="search"
+                                    id="default-search"
+                                    value={searchQuery}
+                                    onChange={handleSearch} // Update search query
+                                    onKeyPress={handleKeyPress} // Detect Enter key
+                                    className="bg-customBg-100 w-[140px] h-7 px-10 text-sm outline-none rounded-md ring-1 focus:ring-2 ring-sky-100 ring-offset-1"
+                                    placeholder="Searching"
+                                    required
+                                />
+
+                                {/* Search Icon SVG inside input */}
+                                <svg
+                                    className="absolute right-3 w-4 h-4 text-gray-500 dark:text-gray-400 cursor-pointer mr-10"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 20 20"
+                                    onClick={navigateToResults} // Navigate on click
+                                >
+                                    <path
+                                        stroke="currentColor"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    )}
                     {/* Shopping Cart Icon */}
                     <Link to={"/"} className="flex no-underline hover:text-black" href="#">
                         <svg className=" w-4 h-4 md:w-8 md:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -266,8 +314,8 @@ function Header() {
 
                 </div>
 
-                {/* Imput Area for large device */}
-                <form className=" lg:items-end hidden md:hidden lg:flex lg:justify-around lg:pr-0 sm:hidden gap-2 ">
+                {/* Imput Area for large device Only */}
+                <form className=" lg:items-end hidden lg:flex lg:justify-around lg:pr-0 md:hidden gap-2 ">
                     {/* Search Input */}
                     <div className="relative text-[#12323a]" ref={inputRef}>
                         <input
@@ -385,10 +433,10 @@ function Header() {
                 </form>
             </div>
 
-            {/* for small device three dot  */}
+            {/* Medium & Large device nav bar   */}
 
 
-            <div className="hidden sm:flex justify-center items-center cursor-pointer bg-sky-50">
+            <div className="hidden md:flex justify-center items-center cursor-pointer bg-sky-50">
 
                 {/* <Link to={"/winter"} className="btn bg-sky-50 hover:bg-sky-200 border-0 rounded-sm py-4 mx-[1px] min-w-28">
                     Winter</Link> */}
