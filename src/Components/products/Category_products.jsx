@@ -9,7 +9,7 @@ import { useEffect } from "react";
 function Category_products() {
 
   const { category } = useParams(); // Get category from URL
-  console.log(category)
+  // console.log(category)
 
 
   const { products, loading, error } = useProductValue();
