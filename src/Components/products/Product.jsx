@@ -6,7 +6,7 @@ import { useStateValue } from '../../StateProvider'; // For managing basket
 function Product() {
   const { id } = useParams(); // Get the product ID from the URL
   const { products, loading, error } = useProductValue(); // Get products from the context
-  const [dispatch] = useStateValue(); // Get dispatch from global state
+  const {dispatch} = useStateValue(); // Get dispatch from global state
 
   // Handle loading or error state
   if (loading) return <div>Loading...</div>;

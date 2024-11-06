@@ -8,7 +8,8 @@ import { getTotal, getItemPriceTotal, getItemDiscountTotal, getBasketDiscountTot
 
 function Payment() {
 
-  const [{ basket }, dispatch] = useStateValue();
+  const {user, createUser, state, dispatch} = useStateValue();  // Destructuring `basket` and `user` directly
+  const { basket } = state;
 
   const shipingCost = 60;
   const navigate = useNavigate();

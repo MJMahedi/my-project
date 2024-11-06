@@ -7,7 +7,7 @@ import ProductItem from './ProductItem';
 
 const Collections = () => {
 
-    const [{ basket }, dispatch] = useStateValue();
+    const { user, createUser, state, dispatch } = useStateValue();
 
     const { products, loading, error } = useProductValue();
 
@@ -49,7 +49,6 @@ const Collections = () => {
     return (
 
         <div className='bg-customBg bg-opacity-50'>
-
             <div className="py-2 ">
                 <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
                     <legend className="px-6 text-2xl text-center">Our Collections</legend>

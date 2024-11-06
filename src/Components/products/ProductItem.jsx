@@ -4,8 +4,8 @@ import { useStateValue } from '../../StateProvider';
 
 const ProductItem = ({ item }) => {
   const { category } = useParams();
-  const [{ basket }, dispatch] = useStateValue();
-
+  const { user, createUser, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
+  const { basket } = state;  // Access `basket` from `state`
   const {
     _id = '',
     title = 'No title available',
@@ -18,7 +18,7 @@ const ProductItem = ({ item }) => {
   // Load basket from local storage on initial mount
   useEffect(() => {
     const savedBasket = JSON.parse(localStorage.getItem('basket')) || [];
-    if ( savedBasket.length > 0) {
+    if (savedBasket.length > 0) {
       dispatch({
         type: 'SET_BASKET',
         basket: savedBasket,
@@ -44,24 +44,26 @@ const ProductItem = ({ item }) => {
   // Sync local storage whenever the basket state changes
   const addToBasket = () => {
     const newItem = { ...item, quantity: 1 };
+
+    // Save updated basket to local storage
+    const updatedBasket = [...basket, newItem];
     dispatch({
       type: "ADD_TO_BASKET",
       item: newItem,
     });
-   // Save updated basket to local storage
-   const updatedBasket = [...basket, newItem];
-   localStorage.setItem('basket', JSON.stringify(updatedBasket));
- };
+    localStorage.setItem('basket', JSON.stringify(updatedBasket));
+  };
+  // Sync local storage whenever the basket state changes
   useEffect(() => {
-    if (basket.length > 0) {
-      localStorage.setItem('basket', JSON.stringify(basket));
-    }
+    localStorage.setItem('basket', JSON.stringify(basket));
   }, [basket]);
 
   return (
     <div className="product-item border-2 border-customBg-800 rounded-md text-center">
+      {/* <p>User Email: {user ? user.email : "No user logged in"}</p> */}
+
       <Link to={`/product/${item._id}`}>
-        <img src={item.image[2]} alt={item.title} className="product-image" />
+        <img src={item.image[1]} alt={item.title} className="product-image" />
         <h2>{item.title}</h2>
         <p>{item.price} Tk</p>
       </Link>

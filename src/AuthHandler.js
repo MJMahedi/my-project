@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 // import { auth, db } from "./_firebase"; // Make sure your Firebase is configured
-import { auth, db } from "./firebase.config"; // Make sure your Firebase is configured
+// import { auth, db } from "./firebase.config"; // Make sure your Firebase is configured
 
 import { doc, getDoc } from 'firebase/firestore'
 
 const AuthHandler = () => {
-    const [, dispatch] = useStateValue(); // Get dispatch function from StateProvider
+    const [user, createUser, state, dispatch] = useStateValue(); // Get dispatch function from StateProvider
 
 
     useEffect(() => {

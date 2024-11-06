@@ -9,7 +9,8 @@ import ProductItem from './ProductItem';
 
 function Products() {
 
-  const [{ basket }, dispatch] = useStateValue();
+  const {user, createUser, state, dispatch} = useStateValue();  // Destructuring `basket` and `user` directly
+  const { basket } = state;
 
   const { products, loading, error } = useProductValue();
 

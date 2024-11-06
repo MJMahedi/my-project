@@ -24,7 +24,8 @@ function Category_products() {
     return <div>Error: {error}</div>; // Handle any potential errors
   }
 
-  const [{ basket }, dispatch] = useStateValue();
+  // const [{ basket }, dispatch] = useStateValue();
+  const { user, state, dispatch } = useStateValue();
 
   // const product = {
   //   id: 1,

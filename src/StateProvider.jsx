@@ -1,20 +1,74 @@
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import React, { createContext, useReducer, useContext, useState, useEffect, useMemo } from 'react';
+import app from './firebase.config';
+import PropTypes from 'prop-types'; // ES6
 
 
 // Prepare or Bring the DataLayer 
 export const StateContext = createContext();
 
-
+const auth = getAuth(app);
 // Warp & Provide the DataLayer
-export const StateProvider = ({ reducer, initialState, children}) => (
-    <StateContext.Provider 
-    value={useReducer(reducer, initialState)} 
-    >
-        {children}
-    </StateContext.Provider>
-);
+export const StateProvider = ({ reducer, initialState, children }) => {
+    const [user, setUser] = useState(null);
+    const createUser = async (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password);
+        // try {
+        //     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        //     setUser(userCredential.user); // Set the user state after creation
+        // } catch (error) {
+        //     console.error('Error creating user:', error);
+        //     // Handle error (e.g., set an error state)
+        // }
+    };
+    const signInUser = async (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+        // try {
+        //     const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        //     setUser(userCredential.user); // Set the user state after creation
+        // } catch (error) {
+        //     console.error('Error sign In user:', error);
+        //     // Handle error (e.g., set an error state)
+        // }
+    };
 
+        const logOut = () =>{
 
+          return signOut(auth);
+        }
+
+    useEffect(() =>{
+      const unSubscribe =  onAuthStateChanged(auth, currentUser =>{
+           
+            console.log('Observing Current user inside useEffect of StateProvider', currentUser);
+            setUser(currentUser);
+        });
+        return () =>{
+            unSubscribe();
+        }
+    } , []);
+    const authInfo = {
+        user,
+        
+        createUser,
+        signInUser,
+        logOut,
+        dispatch: null, // Placeholder to be replaced later
+    };
+
+    // Use the reducer for state management
+    const [state, dispatch] = useReducer(reducer, initialState);
+    authInfo.dispatch = dispatch; // Assign dispatch to authInfo
+
+    return (
+        <StateContext.Provider value={{ ...authInfo, state }}>
+            {children}
+        </StateContext.Provider>
+    );
+};
+StateProvider.PropTypes = {
+    children: PropTypes.node.isRequired,
+};
 // Pull informaton from the DataLayer
 export const useStateValue = () => useContext(StateContext);
 
@@ -49,9 +103,10 @@ export const ProductProvider = ({ children }) => {
         fetchData();
     }, []);
 
-    // by mj
-     // Memrize context value to prevent unnecessary re-renders
-     const value = useMemo(() => ({ products, loading, error }), [products, loading, error]);
+
+    // By mj
+    // Memrize context value to prevent unnecessary re-renders
+    const value = useMemo(() => ({ products, loading, error }), [products, loading, error]);
 
 
     return (
