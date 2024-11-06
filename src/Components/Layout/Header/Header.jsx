@@ -32,7 +32,15 @@ function Header() {
     // Handle Logout 
     const handleLogOut = () => {
         logOut()
-            .then(() => console.log('User LogOut Done'))
+            .then(() => {
+                console.log('User LogOut Done')
+                toast.success("You have been Logged out", {
+                    style: {
+                        backgroundColor: "#bae9f3", // Use your custom color
+                        color: "#12323a" // Text color
+                    },
+                });
+            })
             .catch(error => {
                 console.error(error)
             })
