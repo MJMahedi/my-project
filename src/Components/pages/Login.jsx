@@ -124,23 +124,23 @@ function Login() {
                                         name="email"
                                         placeholder="Enter your Email"
                                         ref={emailRef}
-                                        className="focus:outline-none focus:ring-2 focus:ring-sky-400
+                                        className="w-[80%] lg:w-full focus:outline-none focus:ring-2 focus:ring-sky-400
                                              border border-[#e49b0f] text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-customBg-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                                 </div>
                                 <div className="relative">
                                     <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                    <div className="flex items-center bg-customBg-200 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus-within:ring-blue-500 dark:focus-within:border-blue-500">
+                                    <div className="w-[80%] lg:w-full flex items-center bg-customBg-200 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus-within:ring-blue-500 dark:focus-within:border-blue-500">
                                         <input
                                             type={showPassword ? "text" : "password"}
                                             name="password"
                                             // id="password"
                                             placeholder="••••••••"
-                                            className="  focus:outline-none focus:ring-2 focus:ring-sky-400
+                                            className="   focus:outline-none focus:ring-2 focus:ring-sky-400
                                              border border-[#e49b0f] text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-customBg-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                             required
                                         />
                                         <span
-                                            className="absolute right-3 cursor-pointer text-gray-500 dark:text-gray-400"
+                                            className="absolute right-24 lg:right-4 cursor-pointer text-gray-500 dark:text-gray-400"
                                             onClick={() => setShowPassword(!showPassword)}
                                         >
                                             {showPassword ? <FaRegEyeSlash /> : <FaEye />}

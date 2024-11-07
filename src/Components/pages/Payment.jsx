@@ -8,7 +8,7 @@ import { getTotal, getItemPriceTotal, getItemDiscountTotal, getBasketDiscountTot
 
 function Payment() {
 
-  const {user, createUser, state, dispatch} = useStateValue();  // Destructuring `basket` and `user` directly
+  const { user, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
   const { basket } = state;
 
   const shipingCost = 60;
@@ -31,8 +31,8 @@ function Payment() {
     return encodeURIComponent(message.trim());
   };
 
-   // WhatsApp URL
-   const whatsappURL = `https://wa.me/8801317201109?text=${prepareWhatsAppMessage()}`;
+  // WhatsApp URL
+  const whatsappURL = `https://wa.me/8801317201109?text=${prepareWhatsAppMessage()}`;
 
   // Handle order confirmation and WhatsApp redirect
   const handleOrderConfirmation = () => {
@@ -51,36 +51,37 @@ function Payment() {
             <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
               <div className="space-y-6">
                 {basket.map(item =>
-                  <div key={item.id} className="rounded-lg border border-gray-200 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-4">
+                  <div key={item._id} className="rounded-lg border border-gray-200 bg-white p-2 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-4">
                     <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                       <a href="#" className="shrink-0 md:order-1">
-                        <img className="h-20 w-20 dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/imac-front.svg" alt={item.title} />
+                        <img className="h-20 w-20 dark:hidden" src={item.image[0]} alt={item.title} />
                       </a>
                       <div className="flex items-center justify-between md:order-3 md:justify-end overflow-hidden">
                         <div className="flex items-center">
-                          <button onClick={() => dispatch({ type: 'decrement', id: item.id })} type="button" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none">
-                            <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 2">
+                          <button onClick={() => dispatch({ type: 'decrement', id: item._id })} type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
+                            {/* Decrement SVG */}
+                            <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
                               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16" />
                             </svg>
                           </button>
                           <input type="text" className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 dark:text-white" value={item.quantity} readOnly />
-                          <button onClick={() => dispatch({ type: 'increment', id: item.id })} type="button" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none">
+                          <button onClick={() => dispatch({ type: 'increment', id: item._id })} type="button" id="increment-button" data-input-counter-increment="counter-input"  className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none">
                             <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
                               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16" />
                             </svg>
                           </button>
                         </div>
                         <div className="text-end md:order-4 md:w-32">
-                          <p className="text-sm text-gray-600 dark:text-white">Price:  {getItemPriceTotal(basket, item.id)} Tk</p>
-                          <p className="text-sm text-orange-500">Discount: {getItemDiscountTotal(basket, item.id)} Tk</p>
-                          <p className="text-sm font-bold text-gray-900">SubTotal: {getItemTotal(basket, item.id)} Tk</p>
+                          <p className="text-sm text-gray-600 dark:text-white">Price:  {getItemPriceTotal(basket, item._id)} Tk</p>
+                          <p className="text-sm text-orange-500">Discount: {getItemDiscountTotal(basket, item._id)} Tk</p>
+                          <p className="text-sm font-bold text-gray-900">SubTotal: {getItemTotal(basket, item._id)} Tk</p>
                         </div>
                       </div>
                     </div>
 
                     <div className='text-center border-t-[1px] pt-1'>
                       <h1 className='text-sm font-semibold'>{item.title}</h1>
-                      <h1 className='text-[12px]'>Description: Lorem ipsum dolor sit amet...</h1>
+                      {/* <h1 className='text-[12px]'>Description: Lorem ipsum dolor sit amet...</h1> */}
                     </div>
                   </div>
                 )}
