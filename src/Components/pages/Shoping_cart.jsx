@@ -11,7 +11,7 @@ function Shopping_cart() {
 
   return (
     <div>
-      <section className="bg-sky-50 py-8 antialiased dark:bg-gray-900 md:py-16">
+      <section className="bg-customBg-500 py-8 antialiased dark:bg-gray-900 md:py-16">
         <p className="text-center ">You are Sign In From : {user ? user.email : "No user logged in"}</p>
         <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">Shopping Cart</h2>
@@ -19,7 +19,7 @@ function Shopping_cart() {
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
               <div className="space-y-6">
                 {basket.map(item => (
-                  <div key={item._id} className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
+                  <div key={item._id} className="rounded-lg border border-gray-200 bg-customBg-600 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-6">
                     <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
                       <a href="#" className="shrink-0 md:order-1">
                         <img className="h-20 w-20 dark:block" src={item.image[0]} alt={item.title} />
@@ -69,21 +69,21 @@ function Shopping_cart() {
             </div>
 
             <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
-              <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
+              <div className="space-y-4 rounded-lg border border-gray-200 bg-customBg-600 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
                 <p className="text-xl font-semibold text-gray-900 dark:text-white">Order summary <span className='text-red-600'>{basket.length}</span> items</p>
                 <div className="space-y-4">
                   <div className="space-y-2">
                     <dl className="flex items-center justify-between gap-4">
-                      <dt className="text-sm font-normal text-gray-500 dark:text-gray-400">Original price : </dt>
+                      <dt className="text-sm font-normal dark:text-gray-400">Original price : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{getBasketPriceTotal(basket)} Tk</dd>
                     </dl>
 
                     <dl className="flex items-center justify-between gap-4">
-                      <dt className="text-sm font-normal text-gray-500 dark:text-gray-400">Total discount : </dt>
+                      <dt className="text-sm font-normal  dark:text-gray-400">Total discount : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{getBasketDiscountTotal(basket)} Tk</dd>
                     </dl>
                     <dl className="flex items-center justify-between gap-4">
-                      <dt className="text-sm font-normal text-gray-500 dark:text-gray-400">Shipping fee : </dt>
+                      <dt className="text-sm font-normal  dark:text-gray-400">Shipping fee : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{shippingCost} Tk</dd>
                     </dl>
 
