@@ -30,6 +30,36 @@
         "brand": "Millennial"
     },
     {
+        "_id": 2,
+        "title": "Premium Women Jacket",
+        "collection": "winter",
+        "category": "Women",
+        "subCategory": "NewArrival",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Women Best Jacket",
+        "image": [
+            "/assets/Women/womenjacket1.jpg",
+            "/assets/Women/womenjacket2.jpg",
+            "/assets/Women/womenjacket3.jpg",
+            "/assets/Women/womenjacket4.jpg",
+            "/assets/Women/womenjacket4.jpg"
+        ],
+        "discount": 110,
+        "price": 420,
+        "color": [
+            "Olive",
+            "Poweder Blue"
+        ],
+        "ratings": 4.5,
+        "brand": "Millenium"
+    },
+    {
         "_id": 10,
         "title": "Winter Men Jacket",
         "collection": "winter",
@@ -148,36 +178,6 @@
         ],
         "ratings": 4.5,
         "brand": "Millennial"
-    },
-    {
-        "_id": 2,
-        "title": "Premium Women Jacket",
-        "collection": "winter",
-        "category": "Women",
-        "subCategory": "NewArrival",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Women Best Jacket",
-        "image": [
-            "/assets/Women/womenjacket1.jpg",
-            "/assets/Women/womenjacket2.jpg",
-            "/assets/Women/womenjacket3.jpg",
-            "/assets/Women/womenjacket4.jpg",
-            "/assets/Women/womenjacket4.jpg"
-        ],
-        "discount": 110,
-        "price": 420,
-        "color": [
-            "Olive",
-            "Poweder Blue"
-        ],
-        "ratings": 4.5,
-        "brand": "Millenium"
     },
     {
         "_id": 9,
@@ -361,5 +361,34 @@
         ],
         "ratings": 7.5,
         "brand": "gucchi"
+    },
+    {
+        "_id": 14,
+        "title": "Mens Bomber Jacket",
+        "collection": "winter",
+        "category": "Men",
+        "subCategory": "NewArrival",
+        "size": [
+            "XS",
+            "S",
+            "L",
+            "XL",
+            "XXL"
+        ],
+        "description": "Mens Bomber Jacket",
+        "image": [
+            "/assets/Men/menjacket11.jpg",
+            "/assets/Men/menjacket12.jpg",
+            "/assets/Men/menjacket13.jpg"
+           
+        ],
+        "discount": 110,
+        "price": 2850,
+        "color": [
+            "Olive",
+            "Poweder Blue"
+        ],
+        "ratings": 4.5,
+        "brand": "Millennial"
     }
 ]
