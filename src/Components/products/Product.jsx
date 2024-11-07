@@ -6,7 +6,7 @@ import { useStateValue } from '../../StateProvider'; // For managing basket
 function Product() {
   const { id } = useParams(); // Get the product ID from the URL
   const { products, loading, error } = useProductValue(); // Get products from the context
-  const {dispatch} = useStateValue(); // Get dispatch from global state
+  const { dispatch } = useStateValue(); // Get dispatch from global state
 
   // Handle loading or error state
   if (loading) return <div>Loading...</div>;
@@ -15,7 +15,7 @@ function Product() {
   // Find the product by ID (parse ID to number if necessary)
   const product = products.find(item => item._id === parseInt(id));
 
-  
+
   // State to store the selected image
   const [selectedImage, setSelectedImage] = useState(product.image[0]);
   if (!product) {
@@ -29,7 +29,7 @@ function Product() {
       item: {
         _id: product._id,
         title: product.title,
-        image: product.image[0],
+        image: product.image,
         price: product.price,  // Make sure price is included here
         discount: product.discount,  // If relevant
         quantity: 1 // Or whatever logic you need for quantity
