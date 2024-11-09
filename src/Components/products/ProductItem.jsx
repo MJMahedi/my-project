@@ -57,7 +57,7 @@ const ProductItem = ({ item }) => {
     });
   };
   // Sync local storage whenever the basket state changes
-  // const addToBasket = () => {
+  // const addToUpdateBasket = () => {
   //   const newItem = { ...item, quantity: 1 };
 
   //   // Save updated basket to local storage
@@ -68,23 +68,26 @@ const ProductItem = ({ item }) => {
   //   });
   //   localStorage.setItem('basket', JSON.stringify(updatedBasket));
   // };
-  // Sync local storage whenever the basket state changes
+  // // Sync local storage whenever the basket state changes
   // useEffect(() => {
   //   localStorage.setItem('basket', JSON.stringify(basket));
   // }, [basket]);
 
   return (
     <div className="product-item border-2 border-customBg-800 rounded-md text-center">
-
-     
-
       <Link to={`/product/${item._id}`}>
-        <img src={item.image[1]} alt={item.title} className="product-image" />
+        <img src={item.image[0]} alt={item.title} className="product-image" />
         <h2>{item.title}</h2>
         <p>{item.price} Tk</p>
       </Link>
-      
-      <button onClick={addToBasket}>Add to Basket !!</button>
+
+      {/* <button onClick={addToBasket}>Add to Basket !!</button> */}
+      <button
+        onClick={addToBasket}
+        className="mt-4 w-full px-4 py-2 rounded-md bg-customBg-800 text-white font-semibold transition-transform duration-300 hover:bg-customBg-900 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-customBg-600 dark:bg-customBg-700 dark:hover:bg-customBg-600 dark:focus:ring-offset-gray-800"
+      >
+        Add to Basket !!
+      </button>
     </div>
   );
 };

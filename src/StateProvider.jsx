@@ -49,6 +49,7 @@ export const StateProvider = ({ reducer, initialState, children }) => {
     } , []);
     const authInfo = {
         user,
+        setUser,
         createUser,
         signInUser,
         logOut,
