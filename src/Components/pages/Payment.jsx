@@ -11,7 +11,7 @@ function Payment() {
   const { user, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
   const { basket } = state;
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const shipingCost = 60;
+  const shipingCost = 0;
   const navigate = useNavigate();
 
   // Prepare WhatsApp Message with Basket Details
@@ -58,9 +58,9 @@ function Payment() {
                     <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6">
                       <img className="h-20 w-20" src={item.image[0]} alt={item.title} />
                       <div className="text-end md:w-32">
-                        <p className="text-sm">Price: {getItemPriceTotal(basket, item._id)} Tk</p>
-                        <p className="text-sm text-orange-500">Discount: {getItemDiscountTotal(basket, item._id)} Tk</p>
-                        <p className="text-sm font-bold">SubTotal: {getItemTotal(basket, item._id)} Tk</p>
+                        <p className="text-sm">New Price: {getItemPriceTotal(basket, item._id)} Tk</p>
+                        <p className="text-sm text-orange-500">You Got Discount: {getItemDiscountTotal(basket, item._id)} %</p>
+                        {/* <p className="text-sm font-bold">SubTotal: {getItemTotal(basket, item._id)} Tk</p> */}
                       </div>
                     </div>
                     <h1 className="text-center text-sm font-semibold">{item.title}</h1>
@@ -73,7 +73,7 @@ function Payment() {
               <div className="space-y-4 rounded-lg border bg-customBg-200 p-4 shadow-sm">
                 <p className="text-xl font-semibold">Order Summary ({basket?.length} items)</p>
                 <dl className="flex items-center justify-between gap-4">
-                  <dt>Original price:</dt>
+                  <dt>Original price was</dt>
                   <dd>{getBasketPriceTotal(basket)} Tk</dd>
                 </dl>
                 <dl className="flex items-center justify-between gap-4">

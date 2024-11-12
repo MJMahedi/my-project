@@ -32,6 +32,7 @@ function Product() {
         title: product.title,
         image: product.image,
         price: product.price,  // Make sure price is included here
+        SKU: product.SKU,  // Make sure price is included here
         discount: product.discount,  // If relevant
         quantity: 1 // Or whatever logic you need for quantity
       }
@@ -133,7 +134,7 @@ function Product() {
                 <span className="ml-2 text-lg font-semibold text-red-600">{(product.price - finalPrice)} Tk</span>
               </div>
             </div>
-
+            <h3 className="text-md">Product Code : {product.SKU}</h3>
             {/* Description */}
             {/* <p className=" text-sm text-gray-600 mt-2">{product.description}</p> */}
             {/* Dynamic Description Section */}

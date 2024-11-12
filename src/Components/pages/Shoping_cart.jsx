@@ -4,7 +4,7 @@ import { useStateValue } from '../../StateProvider'
 import { getTotal, getBasketDiscountTotal, getBasketPriceTotal, getItemTotal, getItemPriceTotal, getItemDiscountTotal } from '../../reducer';
 
 function Shopping_cart() {
-  const shippingCost = 60;
+  const shippingCost = 0;
   const { user, state, dispatch } = useStateValue();
   const { basket } = state;
   console.log('this is current busket', basket)
