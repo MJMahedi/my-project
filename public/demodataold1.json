@@ -1,50 +1,40 @@
 [
     {
         "_id": 1,
-        "title": "Premium Men Jacket",
+        "title": "Mens Premium Two-Tone High Neck Jacker",
         "collection": "winter",
-        "category": "men",
-        "subCategory": "Men shirt",
+        "category": "Men",
+        "subCategory": "NewArrival",
+        "productType": "Jacket",
         "size": [
-            "XS",
-            "S",
+            "M",
             "L",
             "XL",
             "XXL"
         ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-        "image": "/men_jacket_2.jpg",
-        "discount": 110,
-        "price": 739.99,
-        "color": [
-            "Olive",
-            "Poweder Blue"
+        "description": [
+            "Fabrics: Microfiber Premium Bonded Fabrics",
+            "Inner Fabrics: Micorfiber Soft 6 Ounce Padding",
+            "Zipper: YKK Metal Zipper",
+            "Rib: 3/3 Solid Rib"
         ],
+        "image": [
+            "/assets/Men/menjacket1.jpg",
+            "/assets/Men/menjacket2.jpg",
+            "/assets/Men/menjacket3.jpg",
+            "/assets/Men/menjacket4.jpg",
+            "/assets/Men/menjacket5.jpg"
+        ],
+        "features": [
+            "Fog, Water, Wind, Dust Proof",
+            "Stylish Design",
+            "Made with Care",
+            "Long Durability"
+        ],
+        "discount": 5,
+        "price": 2990,
+        "color": "Almond & Obsidian Black",
         "ratings": 4.5,
-        "brand": "Millennial"
-    },
-    {
-        "_id": 2,
-        "title": "Premium Bomber Jacket",
-        "collection": "winter",
-        "category": "women",
-        "subCategory": "pant",
-        "size": [
-            "XS",
-            "S",
-            "L",
-            "XL",
-            "XXL"
-        ],
-        "description": "Acer Nitro 5 AN515-57-79TD Gaming Laptop | Intel Core i7-11800H | NVIDIA GeForce RTX 3050 Ti Laptop GPU 8GB DDR4 | 512GB NVMe SSD | Killer Wi-Fi 6 | Backlit Keyboard",
-        "image": "/women_jacket_1.jpg",
-        "discount": 110,
-        "price": 739.99,
-        "color": [
-            "Olive",
-            "Poweder Blue"
-        ],
-        "ratings": 4.5,
-        "brand": "Millenium"
+        "brand": "Millennial Clothing"
     }
 ]

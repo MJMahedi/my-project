@@ -24,12 +24,13 @@ function Shopping_cart() {
                       <a href="#" className="shrink-0 md:order-1">
                         <img className="h-20 w-20 dark:block" src={item.image[0]} alt={item.title} />
                       </a>
-                      <div className="flex items-center justify-around md:order-3 md:justify-end">
-                        <div className="text-end md:order-4 md:w-32">
-                          <p className="text-base font-bold text-gray-900 dark:text-white">Price : {getItemPriceTotal(basket, item._id)}Tk</p>
-                          <p className="text-sm font-semibold text-orange-500 dark:text-white">Discount : {getItemDiscountTotal(basket, item._id)}Tk</p>
+                      <div className="flex items-center justify-around md:order-3 ">
+                        <div className="text-end md:order-4 md:w-48">
+                          <p className="text-base font-bold text-gray-900 dark:text-white mb-1">New Price : {getItemPriceTotal(basket, item._id)} Tk</p>
+                          <p className="text-sm font-semibold text-orange-500 dark:text-white">Discount : {getItemDiscountTotal(basket, item._id)} %</p>
                         </div>
                       </div>
+
 
                       <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
                         <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">{item.title}</a>

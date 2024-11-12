@@ -8,19 +8,36 @@ export const initialState = {
 // export const getTotal = (basket) => (basket?.reduce((amount, item) => (item.price + amount) - item.discount, 0));
 export const getTotal = (basket) => {
     return basket?.reduce((amount, item) => {
-        const updatedPrice = (item.price * item.quantity) - (item.discount * item.quantity);
+        // Apply discount directly here
+        const discountAmount = Math.round((item.price * item.discount) / 100);
+        // const updatedPrice = (item.price * item.quantity) - (item.discount * item.quantity);
+        const updatedPrice = Math.round((item.price - discountAmount) * item.quantity);
         return amount + updatedPrice;
     }, 0) || 0;
 };
-export const getBasketDiscountTotal = (basket) => (basket?.reduce((amount, item) => (item.discount * item.quantity) + amount, 0));
-export const getBasketPriceTotal = (basket) => (basket?.reduce((amount, item) => (item.price * item.quantity) + amount, 0));
 
+// Calculate the total discount for the basket
+export const getBasketDiscountTotal = (basket) => {
+    return basket?.reduce((amount, item) => {
+        const discountAmount = Math.round((item.price * item.discount) / 100);
+        return amount + discountAmount * item.quantity;
+    }, 0);
+};
+// Calculate the total price without discount for the basket
+export const getBasketPriceTotal = (basket) => {
+    return basket?.reduce((amount, item) => {
+        return amount + item.price * item.quantity;
+    }, 0);
+};
 
+// Calculate item total including discount for the basket
 
 export const getItemPriceTotal = (basket, itemId) => {
     const item = basket.find((item) => item._id === itemId);
     if (item) {
-        return (item.price * item.quantity) || 0; // Return total price for the item, or 0 if not found
+        const discountAmount = Math.round((item.price * item.discount) / 100);
+        const totalPrice = Math.round((item.price - discountAmount) * item.quantity);
+        return totalPrice; // Return the total price for the item after discount
     }
     return 0; // Return 0 if the item is not found in the basket
 };
@@ -34,7 +51,7 @@ export const getItemDiscountTotal = (basket, itemId) => {
 export const getItemTotal = (basket, itemId) => {
     const item = basket.find((item) => item._id === itemId);
     if (item) {
-        const totalPrice = (item.price * item.quantity) - (item.discount * item.quantity);
+        const totalPrice = Math.round((item.price * item.quantity) - (item.discount * item.quantity));
         return totalPrice; // Return the total price for the item
     }
     return 0; // Return 0 if the item is not found in the basket

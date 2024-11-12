@@ -13,7 +13,7 @@ function Product() {
   if (error) return <div>Error: {error}</div>;
 
   // Find the product by ID (parse ID to number if necessary)
-  const product = products.find(item => item._id === parseInt(id));
+  const product = products && products.find(item => item._id === parseInt(id));
 
 
   // State to store the selected image
@@ -21,7 +21,8 @@ function Product() {
   if (!product) {
     return <div>Product not found</div>; // Handle the case where the product is not found
   }
-
+  const discountAmount = Math.round((product.price * product.discount) / 100);
+  const finalPrice = product.price - discountAmount;
   const addToBasket = () => {
     // Push the item into the data layer
     dispatch({
@@ -112,32 +113,77 @@ function Product() {
           </div>
 
           {/* Right Section - Product Details */}
-          <div className="w-full md:w-1/2  mt-0">
+          <div className="p-4 rounded-2xl shadow-lg bg-customBg-300 w-full md:w-1/2  mt-0">
             <h1 className="text-xl font-bold text-gray-900">{product.title}</h1>
+            {/* Price section  */}
 
-            <div className='p-2 bg-yellow-200 rounded-2xl'>
+            {/* <div className='p-2 bg-yellow-200 rounded-2xl'>
               <p className="text-md text-gray-700 font-semibold">Original Price: {product.price} Tk</p>
-              <p className="text-sm text-gray-600 cursor-auto font-semibold">Discount: {product.discount} Tk</p>
+              <p className="text-sm text-gray-600 cursor-auto font-semibold">Discount: {product.discount}% finalPrice :{finalPrice} </p>
+            </div> */}
+
+            <div className="p-2 bg-customBg-100 rounded-2xl border shadow-lg">
+              <p className="text-lg text-gray-800 font-semibold mb-2">Original Price: <span className="line-through text-red-500">{product.price} Tk</span></p>
+              <p className="text-sm text-gray-700 font-medium mb-2">
+                <span className="text-green-600">Discount: {product.discount}%</span>
+                <span className="text-xl font-bold text-gray-800">Final Price: {finalPrice} Tk</span>
+              </p>
+              <div className="flex items-center">
+                <span className="text-sm text-gray-500">You Save: </span>
+                <span className="ml-2 text-lg font-semibold text-red-600">{(product.price - finalPrice)} Tk</span>
+              </div>
             </div>
 
-            <p className=" text-sm text-gray-600 mt-2">{product.description}</p>
+            {/* Description */}
+            {/* <p className=" text-sm text-gray-600 mt-2">{product.description}</p> */}
+            {/* Dynamic Description Section */}
+            <div className="mb-4">
+              <h3 className="font-bold text-xl">Description:</h3>
+              <ul className="list-disc ml-5">
+                {product.description?.map((desc, index) => (
+                  <li className="text-sm" key={index}>{desc}</li>
+                ))}
+              </ul>
+            </div>
 
-            <div className="mt-2 text-sm">
-              <label htmlFor="size" className="block text-gray-700 font-semibold">Size</label>
-              <select id="size" className="block w-full mt-2 p-2 border border-gray-300 rounded-lg">
+            {/* Features */}
+            <div>
+              <h3 className="font-bold text-xl">Features:</h3>
+              <ul className="list-disc ml-5">
+                {product.features && product.features.map((feature, index) => (
+                  <li className="text-sm" key={index}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+
+
+            {/* Sizes */}
+            {/* <div className="mb-4">
+              <h3 className="font-bold text-xl">Available Sizes:</h3>
+              <div className="flex space-x-2">
+                {product.sizes.map((size, index) => (
+                  <span
+                    key={index}
+                    className="border rounded-md px-3 py-1 bg-gray-200"
+                  >
+                    {size}
+                  </span>
+                ))}
+              </div>
+            </div> */}
+
+            <div className="mt-2 ">
+              <label htmlFor="size" className="block text-xl  font-bold">Size</label>
+              <select id="size" className="block w-full mt-2 p-2 border border-gray-300 text-sm rounded-lg">
                 {product.size.map((size, index) => (
                   <option key={index}>{size}</option>
                 ))}
               </select>
             </div>
 
-            <div className="mt-2 text-sm">
-              <label htmlFor="color" className="block text-gray-700 font-semibold">Color</label>
-              <div className="flex space-x-4 mt-2">
-                {product.color.map((color, index) => (
-                  <button key={index} className="w-8 h-8 rounded-full border border-gray-300" style={{ backgroundColor: color }}></button>
-                ))}
-              </div>
+            <div className="mt-2 ">
+            <h3 className="text-md">Color : {product.color}</h3>
+
             </div>
 
             <Link to={`/shoping-cart`} onClick={addToBasket}>

@@ -86,7 +86,7 @@ export const ProductProvider = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/demodata.json'); // replace with your JSON URL
+                const response = await fetch('/demodataold1.json'); // replace with your JSON URL
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
