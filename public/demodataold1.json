@@ -156,9 +156,7 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "L"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -192,11 +190,9 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -232,12 +228,10 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL",
             "XXL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -251,7 +245,6 @@
             "/assets/Men/menjacket25.jpg",
             "/assets/Men/menjacket26.jpg",
             "/assets/Men/menjacket27.jpg"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -273,11 +266,9 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -292,7 +283,6 @@
             "/assets/Men/menjacket30.webp",
             "/assets/Men/menjacket31.webp",
             "/assets/Men/menjacket32.webp"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -314,11 +304,9 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -331,7 +319,6 @@
             "/assets/Men/menjacket33.webp",
             "/assets/Men/menjacket34.webp",
             "/assets/Men/menjacket35.webp"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -353,12 +340,10 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL",
             "XXL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Premium Bonded Fabrics",
@@ -371,7 +356,6 @@
             "/assets/Men/menjacket36.jpg",
             "/assets/Men/menjacket37.jpg",
             "/assets/Men/menjacket38.jpg"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -393,11 +377,9 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -412,7 +394,6 @@
             "/assets/Men/menjacket41.webp",
             "/assets/Men/menjacket42.webp",
             "/assets/Men/menjacket43.webp"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -434,12 +415,10 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL",
             "XXL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -453,7 +432,6 @@
             "/assets/Men/menjacket45.jpg",
             "/assets/Men/menjacket46.jpg",
             "/assets/Men/menjacket47.jpg"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -475,12 +453,10 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL",
             "XXL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -493,7 +469,6 @@
             "/assets/Men/menjacket48.jpg",
             "/assets/Men/menjacket49.jpg",
             "/assets/Men/menjacket50.jpg"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -515,11 +490,9 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -533,7 +506,6 @@
             "/assets/Men/menjacket52.webp",
             "/assets/Men/menjacket53.webp",
             "/assets/Men/menjacket54.webp"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -555,12 +527,10 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            
             "M",
             "L",
             "XL",
             "XXL"
-            
         ],
         "description": [
             "Fabrics: Microfiber Premium Jacquard Fabrics",
@@ -573,7 +543,6 @@
             "/assets/Women/womenjacket2.jpg",
             "/assets/Women/womenjacket3.jpg",
             "/assets/Women/womenjacket4.jpg"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -595,7 +564,7 @@
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            "L"   
+            "L"
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coated",
@@ -605,9 +574,8 @@
         ],
         "sku": "J1016",
         "image": [
-            "/assets/Men/menjacket55.webp",
+            "/assets/Men/menjacket55.jpg",
             "/assets/Men/menjacket56.png"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -619,6 +587,58 @@
         "price": 1890,
         "color": "Obsidian Black & White",
         "ratings": 5.0,
+        "brand": "Millennial Clothing"
+    },
+    {
+        "_id": 160,
+        "title": "Accessories Coming Soon !!",
+        "collection": "winter",
+        "category": "Accessories",
+        "subCategory": "",
+        "productType": "Accessories",
+        "size": [
+            "L"
+        ],
+        "description": [
+            "Accessories Coming Soon"
+        ],
+        "sku": "J10160",
+        "image": [
+            "/assets/Accessories/comingsoon.jpg"
+        ],
+        "features": [
+            "Coming Soon"
+        ],
+        "discount": 0,
+        "price": 0,
+        "color": " ",
+        "ratings": 0.0,
+        "brand": "Millennial Clothing"
+    },
+    {
+        "_id": 170,
+        "title": "Kid's Coming Soon !!",
+        "collection": "winter",
+        "category": "kids",
+        "subCategory": "kids",
+        "productType": "kids",
+        "size": [
+            "L"
+        ],
+        "description": [
+            "Accessories Coming Soon"
+        ],
+        "sku": "J10170",
+        "image": [
+            "/assets/Accessories/comingsoon.jpg"
+        ],
+        "features": [
+            "Coming Soon"
+        ],
+        "discount": 0,
+        "price": 0,
+        "color": " ",
+        "ratings": 0.0,
         "brand": "Millennial Clothing"
     }
 ]
