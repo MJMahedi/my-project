@@ -18,7 +18,7 @@
             "Zipper: YKK Metal Zipper",
             "Rib: 3/3 Solid Rib"
         ],
-        "sku": "J1001",
+        "sku": "1001",
         "image": [
             "/assets/Men/menjacket1.jpg",
             "/assets/Men/menjacket2.jpg",
@@ -56,7 +56,7 @@
             "Zipper: YKK Metal Zipper",
             "Rib: 3/3 Solid Rib"
         ],
-        "sku": "J1002",
+        "sku": "1002",
         "image": [
             "/assets/Men/menjacket5.jpg",
             "/assets/Men/menjacket6.jpg",
@@ -93,7 +93,7 @@
             "Inner Fabrics: Micorfiber Soft Sherpa Fleece",
             "Zipper: YKK Metal Zipper"
         ],
-        "sku": "J1003",
+        "sku": "1003",
         "image": [
             "/assets/Men/menjacket9.jpg",
             "/assets/Men/menjacket10.jpg",
@@ -130,7 +130,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1004",
+        "sku": "1004",
         "image": [
             "/assets/Men/menjacket13.webp",
             "/assets/Men/menjacket14.webp",
@@ -164,7 +164,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1005",
+        "sku": "1005",
         "image": [
             "/assets/Men/menjacket16.jpg",
             "/assets/Men/menjacket17.webp",
@@ -200,7 +200,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1006",
+        "sku": "1006",
         "image": [
             "/assets/Men/menjacket19.webp",
             "/assets/Men/menjacket20.webp",
@@ -239,7 +239,7 @@
             "Zipper: YKK Metal Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1007",
+        "sku": "1007",
         "image": [
             "/assets/Men/menjacket24.jpg",
             "/assets/Men/menjacket25.jpg",
@@ -276,7 +276,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1008",
+        "sku": "1008",
         "image": [
             "/assets/Men/menjacket28.webp",
             "/assets/Men/menjacket29.webp",
@@ -314,7 +314,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1009",
+        "sku": "1009",
         "image": [
             "/assets/Men/menjacket33.webp",
             "/assets/Men/menjacket34.webp",
@@ -334,7 +334,7 @@
     },
     {
         "_id": 10,
-        "title": "Mens Premium Two-Tone High Neck Jacker",
+        "title": "Mens Premium Two-Tone High Neck Jacket",
         "collection": "winter",
         "category": "Men",
         "subCategory": "NewArrival",
@@ -351,7 +351,7 @@
             "Zipper: YKK Metal Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1010",
+        "sku": "1010",
         "image": [
             "/assets/Men/menjacket36.jpg",
             "/assets/Men/menjacket37.jpg",
@@ -387,7 +387,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1011",
+        "sku": "1011",
         "image": [
             "/assets/Men/menjacket39.webp",
             "/assets/Men/menjacket40.webp",
@@ -426,7 +426,7 @@
             "Zipper: YKK Metal Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1012",
+        "sku": "1012",
         "image": [
             "/assets/Men/menjacket44.jpg",
             "/assets/Men/menjacket45.jpg",
@@ -464,7 +464,7 @@
             "Zipper: YKK Metal Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1013",
+        "sku": "1013",
         "image": [
             "/assets/Men/menjacket48.jpg",
             "/assets/Men/menjacket49.jpg",
@@ -500,7 +500,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1014",
+        "sku": "1014",
         "image": [
             "/assets/Men/menjacket51.webp",
             "/assets/Men/menjacket52.webp",
@@ -537,7 +537,7 @@
             "Inner Fabrics: Micorfiber Soft Sherpa Fleece",
             "Zipper: Vislon Premium Zipper"
         ],
-        "sku": "J1015",
+        "sku": "1015",
         "image": [
             "/assets/Women/womenjacket1.jpg",
             "/assets/Women/womenjacket2.jpg",
@@ -572,7 +572,7 @@
             "Zipper: Vislon Premium Zipper",
             "Rib : 3/3 Solid Rib"
         ],
-        "sku": "J1016",
+        "sku": "1016",
         "image": [
             "/assets/Men/menjacket55.jpg",
             "/assets/Men/menjacket56.png"
@@ -602,7 +602,7 @@
         "description": [
             "Accessories Coming Soon"
         ],
-        "sku": "J10160",
+        "sku": "10160",
         "image": [
             "/assets/Accessories/comingsoon.jpg"
         ],
@@ -628,7 +628,7 @@
         "description": [
             "Accessories Coming Soon"
         ],
-        "sku": "J10170",
+        "sku": "10170",
         "image": [
             "/assets/Accessories/comingsoon.jpg"
         ],

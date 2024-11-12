@@ -33,14 +33,14 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
         `;
 
         emailjs.send(
-            'service_l6ipoyj',
-            'template_eguf9ag',
+            'service_7pzzg5i',
+            'template_g7y0gwl',
             {
                 customerEmail,
                 customerPhone,
                 message,
             },
-            'uLOxL824mfnyoy1od'
+            'uNVDwlTKVdUoxUjaQ'
         ).then((response) => {
             console.log('Order confirmation sent', response);
             setConfirmationMessage('Order confirmed! We will contact you soon.');

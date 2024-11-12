@@ -40,11 +40,6 @@ const Collections = () => {
     const uniqueCategories = [...new Set(products.map(item => item.category))];
     console.log(uniqueCategories);
 
-    // // const [uniqueProducts, setUniqueProducts] = useState(['']);
-    // console.log(uniqueCategories.map(category =>
-    //   products.find(item => item.category === category)))
-
-
 
     return (
 
@@ -71,13 +66,6 @@ const Collections = () => {
 
                     </section>
                 </article>
-
-
-
-
-
-
-
 
 
                 <h1 className='mx-2 text-md text-sky-600 font-semibold'>Women</h1>
