@@ -11,7 +11,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
     const [customerFirstName, setCustomerFirstName] = useState('');
     const [customerLastName, setCustomerLastName] = useState('');
     const [customerEmail, setCustomerEmail] = useState(user?.email || 'Unregistered User');
-    
+
     const [customerPhone, setCustomerPhone] = useState('');
     const [customerAddress, setCustomerAddress] = useState('');
     const [confirmationMessage, setConfirmationMessage] = useState('');
@@ -27,7 +27,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
                 Price: ${item.price} Taka\n
                 Discount: ${item.discount}%\n
                 Size: ${item.size}\n
-                Total: ${(item.quantity * item.price) - (item.discount * item.quantity)} Taka\n
+                Total: ${((item.price * item.quantity) * (1 - item.discount / 100)).toFixed(2)} Taka\n
             `;
         }).join('\n');
 
@@ -47,7 +47,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
             'service_7pzzg5i',
             'template_g7y0gwl',
             {
-               
+
                 customerFirstName,
                 customerLastName,
                 customerEmail,
