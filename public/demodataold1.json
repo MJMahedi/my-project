@@ -592,7 +592,7 @@
     {
         "_id": 160,
         "title": "Accessories Coming Soon !!",
-        "collection": "winter",
+        "collection": "accessories",
         "category": "Accessories",
         "subCategory": "",
         "productType": "Accessories",
@@ -618,7 +618,7 @@
     {
         "_id": 170,
         "title": "Kid's Coming Soon !!",
-        "collection": "winter",
+        "collection": "regular",
         "category": "kids",
         "subCategory": "kids",
         "productType": "kids",

@@ -178,7 +178,7 @@ function Header() {
                                     <Link to="/products" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Collections</Link>
                                 </li>
                                 <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
-                                    <Link to="/category-products/winter" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Winter</Link>
+                                    <Link to="/winter" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Winter</Link>
                                 </li>
                                 <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
                                     <details className="mb-1">
@@ -580,7 +580,7 @@ function Header() {
                         </Link></div>
 
                     <div className="mr-[2px]">
-                        <Link to={"/category-products/winter"}
+                        <Link to={"/winter"}
                             className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                             href="#"
                         >
