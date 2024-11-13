@@ -64,7 +64,7 @@ function Products() {
         <h1 className='mx-4 text-md text-sky-600 font-semibold'>Men</h1>
         <article id="container" className="w-full py-6 px-6 md:px-4 flex justify-center">
           <section id="Projects"
-            className="w-[]  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+            className="w-[full]  grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
             {products
               .filter(item => item.category === 'Men')

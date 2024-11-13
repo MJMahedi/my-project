@@ -8,13 +8,14 @@ function Product() {
   const { products, loading, error } = useProductValue(); // Get products from the context
   const { dispatch } = useStateValue(); // Get dispatch from global state
 
+
   // Handle loading or error state
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   // Find the product by ID (parse ID to number if necessary)
   const product = products && products.find(item => item._id === parseInt(id));
-
+  const [selectedSize, setSelectedSize] = useState(product.size[0]); // Default to the first size
 
   // State to store the selected image
   const [selectedImage, setSelectedImage] = useState(product.image[0]);
@@ -32,9 +33,10 @@ function Product() {
         title: product.title,
         image: product.image,
         price: product.price,  // Make sure price is included here
-        SKU: product.SKU,  // Make sure price is included here
+        sku: product.sku,  // Make sure price is included here
         discount: product.discount,  // If relevant
-        quantity: 1 // Or whatever logic you need for quantity
+        quantity: 1, // Or whatever logic you need for quantity
+        size: selectedSize, // Pass the selected size
       }
     });
   };
@@ -115,7 +117,7 @@ function Product() {
 
           {/* Right Section - Product Details */}
           <div className="p-4 rounded-2xl shadow-lg bg-customBg-300 w-full md:w-1/2  mt-0">
-            <h1 className="text-xl font-bold text-gray-900">{product.title}</h1>
+            <h1 className="">{product.title}</h1>
             {/* Price section  */}
 
             {/* <div className='p-2 bg-yellow-200 rounded-2xl'>
@@ -124,22 +126,25 @@ function Product() {
             </div> */}
 
             <div className="p-2 bg-customBg-100 rounded-2xl border shadow-lg">
-              <p className="text-lg text-gray-800 font-semibold mb-2">Original Price: <span className="line-through text-red-500">{product.price} Tk</span></p>
-              <p className="text-sm text-gray-700 font-medium mb-2">
-                <span className="text-green-600">Discount: {product.discount}%</span>
-                <span className="text-xl font-bold text-gray-800">Final Price: {finalPrice} Tk</span>
+              <p className="">Original Price : <span className="line-through text-red-500">{product.price} Tk</span></p>
+              <p className="">
+                <span className="text-green-600">Discount : {product.discount}%</span>
+
+              </p>
+              <p>
+                <span className="">Final Price : {finalPrice} Tk</span>
               </p>
               <div className="flex items-center">
-                <span className="text-sm text-gray-500">You Save: </span>
-                <span className="ml-2 text-lg font-semibold text-red-600">{(product.price - finalPrice)} Tk</span>
+                <span className="">You Save: </span>
+                <span className="ml-2 font-semibold text-red-600">{(product.price - finalPrice)} Tk</span>
               </div>
             </div>
-            <h3 className="text-md">Product Code : {product.SKU}</h3>
+            <h3 className="">Product Code : {product.sku}</h3>
             {/* Description */}
             {/* <p className=" text-sm text-gray-600 mt-2">{product.description}</p> */}
             {/* Dynamic Description Section */}
-            <div className="mb-4">
-              <h3 className="font-bold text-xl">Description:</h3>
+            <div className="mb-1">
+              <h3 className="text-lg">Description:</h3>
               <ul className="list-disc ml-5">
                 {product.description?.map((desc, index) => (
                   <li className="text-sm" key={index}>{desc}</li>
@@ -149,7 +154,7 @@ function Product() {
 
             {/* Features */}
             <div>
-              <h3 className="font-bold text-xl">Features:</h3>
+              <h3 className="text-lg">Features:</h3>
               <ul className="list-disc ml-5">
                 {product.features && product.features.map((feature, index) => (
                   <li className="text-sm" key={index}>{feature}</li>
@@ -173,25 +178,41 @@ function Product() {
               </div>
             </div> */}
 
-            <div className="mt-2 ">
+            {/* <div className="mt-2 ">
               <label htmlFor="size" className="block text-xl  font-bold">Size</label>
               <select id="size" className="block w-full mt-2 p-2 border border-gray-300 text-sm rounded-lg">
                 {product.size.map((size, index) => (
                   <option key={index}>{size}</option>
                 ))}
               </select>
+            </div> */}
+            <div className="">
+              <label htmlFor="size" className="block text-lg">Size</label>
+              <select
+                id="size"
+                value={selectedSize}
+                onChange={(e) => setSelectedSize(e.target.value)}
+                className="block w-[25%] p-1 border border-[#e49b0f] text-sm rounded-lg text-center"
+              >
+                {product.size.map((size, index) => (
+                  <option key={index} value={size}>{size}</option>
+                ))}
+              </select>
             </div>
+
 
             <div className="mt-2 ">
-            <h3 className="text-md">Color : {product.color}</h3>
+              <h3 className="text-md">Color : {product.color}</h3>
 
             </div>
 
-            <Link to={`/shoping-cart`} onClick={addToBasket}>
-              <button className="w-[100%] mt-4 animate-bounce bg-gradient-to-tr from-sky-900 to-blue-500 text-white py-[10px] font-bold px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 ">
-                <p className='animate-pulse tracking-widest'>Buy Now</p>
-              </button>
-            </Link>
+            <div className="flex justify-center items-center mt-4">
+              <Link to={`/shoping-cart`} onClick={addToBasket}>
+                <button className="w-[230px] animate-bounce bg-[#e49b0f] text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                  <p className='animate-pulse tracking-widest'>Buy Now</p>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -210,7 +231,7 @@ function Product() {
                 </div>
                 <div className="flex items-center space-x-2 mt-4">
                   <span className="text-yellow-500">★★★☆☆</span>
-                  <p className="text-gray-700">"Good quality but a bit expensive."</p>
+                  <p className="text-gray-700">"Good quality & i'm satisfy."</p>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ function Shopping_cart() {
   const shippingCost = 0;
   const { user, state, dispatch } = useStateValue();
   const { basket } = state;
-  console.log('this is current busket', basket)
+  // console.log('this is current busket', basket)
 
   return (
     <div>
@@ -34,8 +34,12 @@ function Shopping_cart() {
 
                       <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
                         <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">{item.title}</a>
+
                         <br />
                         {/* <p>Product id {item._id}</p> */}
+                        <a href="#" className="text-base font-medium text-gray-900 hover:underline dark:text-white font-semibold">
+                          Size: {item.size ? item.size : "N/A"}
+                        </a>
 
                         <div className="flex items-center justify-around font-semibold">
                           <label className="font-semibold">Quantity add :</label>
@@ -97,7 +101,13 @@ function Shopping_cart() {
                   </div>
                 </div>
 
-                <Link to="/payment" className="block w-full rounded-md bg-blue-600 px-3 py-3 text-center text-sm font-semibold text-white hover:bg-blue-500">Checkout</Link>
+                <div className="flex justify-center items-center mt-4">
+              <Link to="/payment" >
+                <button className="w-[100%] animate-bounce bg-[#e49b0f] text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                  <p className='animate-pulse tracking-widest'>Checkout</p>
+                </button>
+              </Link>
+            </div>
               </div>
             </div>
           </div>

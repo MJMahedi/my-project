@@ -6,7 +6,8 @@ const ProductItem = ({ item }) => {
   const { category } = useParams();
   const { user, state, dispatch } = useStateValue();
   const { basket } = state;
-  
+  const [selectedSize, setSelectedSize] = useState(item.size[0]); // Default to the first size
+
   const [isAdded, setIsAdded] = useState(false);
 
   // Check if the item is already in the basket
@@ -27,7 +28,7 @@ const ProductItem = ({ item }) => {
         price: item.price,
         discount: item.discount,
         quantity: 1,
-        size: item.size[0],
+        size: selectedSize,
         color: item.color[0],
       },
     });
