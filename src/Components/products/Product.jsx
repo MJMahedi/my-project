@@ -51,7 +51,7 @@ function Product() {
             <div className="grid lg:grid-cols-2 gap-8 relative">
 
               {/* All Image Preview Section */}
-              <div className='grid gap-3 lg:grid-cols-3'>
+              <div className='grid gap-2 grid-cols-2'>
                 {product.image.map((image, index) => (
                   <div
                     key={index}
@@ -61,7 +61,10 @@ function Product() {
                       backgroundSize: `cover`,
                       backgroundPosition: `center`
                     }}
-                    className='aspect-[3/4] w-28 h-40 rounded-md shadow-md cursor-pointer z-20'
+                    className={`my-5 aspect-[3/4] w-15 h-20 md:w-27 md:h-36 rounded-md shadow-md cursor-pointer 
+        transition-transform duration-200 ease-in-out 
+        hover:scale-105 ${selectedImage === image ? 'border-2 border-blue-500 shadow-lg' : 'border border-transparent'}
+      `}
                   >
                   </div>
                 ))}
@@ -73,8 +76,8 @@ function Product() {
                   backgroundImage: `url(${selectedImage})`,
                   backgroundSize: `cover`,
                   backgroundPosition: `center`,
-                  width: '300px',  // Custom width
-                  height: '400px'   // Custom height
+                  width: '340px',  // Custom width
+                  height: '452px'   // Custom height
                 }}
                 className="flex justify-center items-center w-full max-w-sm aspect-[3/4] rounded-lg shadow-lg z-10"
               >
@@ -97,21 +100,26 @@ function Product() {
               >
               </div>
               {/* All Image Preview Section */}
-              <div className='flex flex-row gap-2 md:gap-4 items-center ml-0 z-10'>
+
+              <div className='flex flex-row gap-2 md:grid md:grid-cols-3 md:gap-4 items-center ml-0 z-10'>
                 {product.image.map((image, index) => (
                   <div
                     key={index}
                     onClick={() => setSelectedImage(image)} // Update selected image on click
                     style={{
                       backgroundImage: `url(${image})`,
-                      backgroundSize: `cover`,
-                      backgroundPosition: `center`
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
                     }}
-                    className='my-5 aspect-[3/4] w-15 h-20 md:w-27 md:h-36 rounded-md shadow-md cursor-pointer'
+                    className={`my-5 aspect-[3/4] w-15 h-20 md:w-27 md:h-36 rounded-md shadow-md cursor-pointer 
+        transition-transform duration-200 ease-in-out 
+        hover:scale-105 ${selectedImage === image ? 'border-2 border-blue-500 shadow-lg' : 'border border-transparent'}
+      `}
                   >
                   </div>
                 ))}
               </div>
+
             </div>
           </div>
 
