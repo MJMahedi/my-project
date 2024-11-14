@@ -32,6 +32,16 @@ const ProductItem = ({ item }) => {
         color: item.color[0],
       },
     });
+     // Facebook Pixel "Add to Cart" Event Tracking
+  if (window.fbq) {
+    window.fbq('track', 'AddToCart', {
+      content_name: item.title,
+      content_ids: [item._id],
+      content_type: 'product',
+      value: item.price,
+      currency: 'BDT', // Change the currency if needed (e.g., 'USD')
+    });
+  }
     setIsAdded(true); // Update button state to indicate it's added
   };
 
