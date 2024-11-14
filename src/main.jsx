@@ -163,16 +163,18 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ProductProvider>
-      {/* StateProvider provide busket universally */}
-      <StateProvider initialState={initialState} reducer={reducer} >
+
+    {/* StateProvider provide busket universally */}
+    <StateProvider initialState={initialState} reducer={reducer} >
+      <ProductProvider>
         {/* <AuthHandler /> AuthHandler to track login state */}
         {/* Provide product univarsally */}
 
 
         <RouterProvider router={router} />
 
-      </StateProvider>
-    </ProductProvider>
+
+      </ProductProvider>
+    </StateProvider>
   </React.StrictMode>
 );
