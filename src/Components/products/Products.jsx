@@ -4,12 +4,9 @@ import { Link } from 'react-router-dom'
 import { useStateValue, useProductValue } from '../../StateProvider'
 import ProductItem from './ProductItem';
 
-
-
-
 function Products() {
 
-  const {user, createUser, state, dispatch} = useStateValue();  // Destructuring `basket` and `user` directly
+  const { user, createUser, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
   const { basket } = state;
 
   const { products, loading, error } = useProductValue();
@@ -50,82 +47,85 @@ function Products() {
 
 
   return (
+    <>
+      <h1>Products Components No need. We use Collections.jsx </h1>
+    </>
 
-    <div className='bg-customBg bg-opacity-50'>
+    // <div className='bg-customBg bg-opacity-50'>
 
-      <div className="py-2">
-        <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-          <legend className="px-6 text-2xl text-center">Collections</legend>
-        </fieldset>
-      </div>
+    //   <div className="py-2">
+    //     <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
+    //       <legend className="px-6 text-2xl text-center">Collections</legend>
+    //     </fieldset>
+    //   </div>
 
-      <div>
+    //   <div>
 
-        <h1 className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Men</h1>
-        <article id="container" className="w-full py-6 px-6 md:px-4 flex justify-center">
-          <section id="Projects"
-            className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+    //     <h1 className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Men</h1>
+    //     <article id="container" className="w-full py-6 px-6 md:px-4 flex justify-center">
+    //       <section id="Projects"
+    //         className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
-            {products
-              .filter(item => item.category === 'Men')
-              .slice(0, 5) // Get only the first 5 products
-              .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
-              ))}
+    //         {products
+    //           .filter(item => item.category === 'Men')
+    //           .slice(0, 5) // Get only the first 5 products
+    //           .map(item => (
+    //             <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+    //           ))}
 
-          </section>
-        </article> 
+    //       </section>
+    //     </article> 
 
-        <h1 className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Women</h1>
-        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
-          <section id="Projects"
-            className=" grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+    //     <h1 className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Women</h1>
+    //     <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+    //       <section id="Projects"
+    //         className=" grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
-            {products
-              .filter(item => item.category === 'Women')
-              .slice(0, 5) // Get only the first 5 products
-              .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
-              ))}
+    //         {products
+    //           .filter(item => item.category === 'Women')
+    //           .slice(0, 5) // Get only the first 5 products
+    //           .map(item => (
+    //             <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+    //           ))}
 
-          </section>
-        </article>
+    //       </section>
+    //     </article>
 
-        <h1 className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Kids</h1>
-        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
-          <section id="Projects"
-            className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+    //     <h1 className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Kids</h1>
+    //     <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+    //       <section id="Projects"
+    //         className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
-            {products
-              .filter(item => item.category === 'kids')
-              .slice(0, 5) // Get only the first 5 products
-              .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
-              ))}
+    //         {products
+    //           .filter(item => item.category === 'kids')
+    //           .slice(0, 5) // Get only the first 5 products
+    //           .map(item => (
+    //             <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+    //           ))}
 
-          </section>
-        </article>
+    //       </section>
+    //     </article>
 
-        <div className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Mina's Dream</div>
-        <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
-          <section id="Projects"
-            className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
+    //     <div className='text-center text-xl text-sky-600 font-semibold underline underline-offset-8'>Mina's Dream</div>
+    //     <article id="container" className="w-full py-2 md:py-4 lg:py-6 px-2 md:px-4 flex justify-center">
+    //       <section id="Projects"
+    //         className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 justify-items-center justify-center gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 place-content-center">
 
-            {products
-              .filter(item => item.brand === "Mina's Dream")
-              .slice(0, 5) // Get only the first 5 products
-              .map(item => (
-                <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
-              ))}
-
-
-          </section>
-        </article>
-
-      </div>
+    //         {products
+    //           .filter(item => item.brand === "Mina's Dream")
+    //           .slice(0, 5) // Get only the first 5 products
+    //           .map(item => (
+    //             <ProductItem key={item._id} item={item} addToBasket={addToBasket} />
+    //           ))}
 
 
-    </div>
+    //       </section>
+    //     </article>
+
+    //   </div>
+
+
+    // </div>
   )
 }
 

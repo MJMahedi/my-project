@@ -43,7 +43,8 @@ const router = createBrowserRouter([
     element: <Layout />, // Apply Layout globally
     children: [
       { path: "/", element: <Body /> },  // Main route ("/") uses <Body />
-      { path: "/products", element: <Products /> }, // Route "/products"
+      // { path: "/products", element: <Products /> }, // Route "/products"
+      // { path: "/products", element: <Collections /> }, // Route "/products"
       { path: "/results", element: <Results /> }, // Route "/results Show results"
       { path: "/collections", element: <Collections /> }, // Route "/products"
       { path: "/category-products/:category", element: <Category_products /> }, // Route "/category-products"
