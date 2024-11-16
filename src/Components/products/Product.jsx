@@ -33,7 +33,8 @@ function Product() {
         title: product.title,
         image: product.image,
         price: product.price,  // Make sure price is included here
-        sku: product.sku,  // Make sure price is included here
+        color: product.color,  // Make sure Color is included here
+        sku: product.sku,  // Make sure sku is included here
         discount: product.discount,  // If relevant
         quantity: 1, // Or whatever logic you need for quantity
         size: selectedSize, // Pass the selected size
@@ -211,6 +212,7 @@ function Product() {
 
             <div className="mt-2 ">
               <h3 className="text-md">Color : {product.color}</h3>
+              <h3 className="text-md">Product Code : {product.sku}</h3>
 
             </div>
 

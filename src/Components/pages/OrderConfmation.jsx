@@ -10,8 +10,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
     const { user } = useStateValue();
     const [customerFirstName, setCustomerFirstName] = useState('');
     const [customerLastName, setCustomerLastName] = useState('');
-    const [customerEmail, setCustomerEmail] = useState(user?.email || 'Unregistered User');
-
+    const [customerEmail, setCustomerEmail] = useState(user?.email || '');
     const [customerPhone, setCustomerPhone] = useState('');
     const [customerAddress, setCustomerAddress] = useState('');
     const [confirmationMessage, setConfirmationMessage] = useState('');
@@ -20,11 +19,20 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
     // const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
     const handleOrderConfirmation = () => {
+
+        // Calculate the total basket price
+    const totalBasketPrice = basket.reduce((acc, item) => {
+        const itemTotalPrice = (item.price * item.quantity) * (1 - item.discount / 100);
+        return acc + itemTotalPrice;
+    }, 0).toFixed(2);
+
         const orderDetails = basket.map(item => {
             return `
                 Product: ${item.title}\n
                 Quantity: ${item.quantity}\n
                 Price: ${item.price} Taka\n
+                Color: ${item.color} \n
+                SKU: ${item.sku} \n
                 Discount: ${item.discount}%\n
                 Size: ${item.size}\n
                 Total: ${((item.price * item.quantity) * (1 - item.discount / 100)).toFixed(2)} Taka\n
@@ -40,6 +48,8 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
             Customer Address: ${customerAddress}
             Order Details:
             ${orderDetails}
+
+             Total Basket Price: ${totalBasketPrice} Taka
         `;
         let toastSent = false;
 
@@ -64,10 +74,10 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
 
                 // Remove basket from localStorage and reset state
 
-                navigate("/"); // Redirect to homepage or the desired route
-                localStorage.removeItem('basket'); // Clear the basket in localStorage
+                navigate("/"); // Redirect to homepage
+              
                 dispatch({ type: 'EMPTY_BASKET' }); // Clear the basket in state
-
+                localStorage.removeItem('basket'); // Clear the basket in localStorage
 
             };
         }).catch((error) => {
@@ -105,7 +115,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
                     type="email"
                     value={customerEmail}
                     onChange={(e) => setCustomerEmail(e.target.value)}
-                    placeholder="Enter your email"
+                    placeholder="name@example.com"
                     required
                     className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-customBg"
                 />

@@ -7,7 +7,7 @@ import reducer, { initialState } from "./reducer";
 import "./App.css"
 import Layout from "./Components/Layout/Layout";
 import Body from "./Components/Body/Body";
-import Products from "./Components/products/Products";
+// import Products from "./Components/products/Products";
 import Product from "./Components/products/Product"
 import Shoping_cart from "./Components/pages/Shoping_cart";
 import Whish_list from "./Components/pages/Whish_list";

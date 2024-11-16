@@ -26,10 +26,11 @@ const ProductItem = ({ item }) => {
         description: item.description,
         image: item.image,
         price: item.price,
+        sku: item.sku,
         discount: item.discount,
         quantity: 1,
         size: selectedSize,
-        color: item.color[0],
+        color: item.color,
       },
     });
      // Facebook Pixel "Add to Cart" Event Tracking
