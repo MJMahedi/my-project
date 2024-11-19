@@ -151,13 +151,24 @@ function Shopping_cart() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center mt-4">
+                {/* <div className="flex justify-center items-center mt-4">
                   <Link to="/payment" >
                     <button className="w-[100%] animate-bounce bg-[#e49b0f] text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600">
                       <p className='animate-pulse tracking-widest'>Checkout</p>
                     </button>
                   </Link>
+                </div> */}
+                <div className="flex justify-center items-center mt-4">
+                  <Link to="/payment">
+                    <button
+                      className={`w-[100%] ${basket.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e49b0f]'} text-white py-[10px] font-bold px-4 rounded-lg hover:bg-customBg-900 focus:outline-none focus:ring-2 focus:ring-blue-600`}
+                      disabled={basket.length === 0}
+                    >
+                      <p className='animate-pulse tracking-widest'>{basket.length === 0 ? 'No items in cart' : 'Checkout'}</p>
+                    </button>
+                  </Link>
                 </div>
+
               </div>
             </div>
           </div>
