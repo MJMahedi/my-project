@@ -25,7 +25,7 @@ function MinasDream() {
 
   return (
     <div className="bg-customBg bg-opacity-50">
-      <h2 className="text-center py-4">Mina's Dream Products</h2>
+      <h2 className="text-center py-4">Mina's Dream Collections</h2>
       
       <div className="product-list">
         {minaProducts.length > 0 ? (

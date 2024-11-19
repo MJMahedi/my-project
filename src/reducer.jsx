@@ -99,7 +99,7 @@ const reducer = (state, action) => {
             return { ...state, user: action.user };
 
         case 'EMPTY_BASKET': {
-            updateLocalStorage.removeItem('basket'); // Clear localStorage
+            localStorage.removeItem('basket'); // Clear localStorage
             return { ...state, basket: [] };
         }
 
