@@ -7,7 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const OrderConfirmation = ({ basket, setShowModal }) => {
     // const [{ user }, dispatch] = useStateValue();
-    const { user,  dispatch } = useStateValue(); 
+    const { user, dispatch, state } = useStateValue();
+    const { shippingCost } = state;
     const [customerFirstName, setCustomerFirstName] = useState('');
     const [customerLastName, setCustomerLastName] = useState('');
     const [customerEmail, setCustomerEmail] = useState(user?.email || '');
@@ -35,6 +36,10 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
             return acc + itemTotalPrice;
         }, 0).toFixed(2);
 
+        // Add shipping cost to total price
+        const totalPriceWithShipping = (parseFloat(totalBasketPrice) + parseFloat(shippingCost)).toFixed(2);
+
+
         // Create order details
         const orderDetails = basket
             .map(item => `
@@ -60,6 +65,8 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
             Order Details:
             ${orderDetails}
             Total Basket Price: ${totalBasketPrice} Taka
+            Shipping Cost: ${shippingCost} Taka
+        Total Price (Including Shipping): ${totalPriceWithShipping} Taka
         `;
 
         // EmailJS Logic
@@ -141,9 +148,8 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
                     <button
                         onClick={handleOrderConfirmation}
                         disabled={isButtonDisabled}
-                        className={`px-4 py-2 rounded-md text-white transition-all ${
-                            isButtonDisabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e49b0f] hover:bg-customBg-900'
-                        }`}
+                        className={`px-4 py-2 rounded-md text-white transition-all ${isButtonDisabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e49b0f] hover:bg-customBg-900'
+                            }`}
                     >
                         Confirm
                     </button>

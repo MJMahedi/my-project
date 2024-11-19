@@ -137,10 +137,12 @@ function Shopping_cart() {
                       <dt className="text-sm font-normal  dark:text-gray-400">Total discount : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{getBasketDiscountTotal(basket)} Tk</dd>
                     </dl>
-                    <dl className="flex items-center justify-between gap-4">
+
+
+                    {/* <dl className="flex items-center justify-between gap-4">
                       <dt className="text-sm font-normal  dark:text-gray-400">Shipping fee : </dt>
                       <dd className="text-sm font-medium text-gray-900 dark:text-white">{shippingCost} Tk</dd>
-                    </dl>
+                    </dl> */}
 
                     <hr className="border-gray-300 dark:border-gray-600" />
 

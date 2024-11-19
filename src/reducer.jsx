@@ -118,6 +118,12 @@ const reducer = (state, action) => {
             updateLocalStorage(updatedBasket); // Save to localStorage
             return { ...state, basket: updatedBasket };
         }
+        case "SET_SHIPPING_COST":
+            return {
+                ...state,
+                shippingCost: action.shippingCost,
+            };
+
 
         default:
             return state;

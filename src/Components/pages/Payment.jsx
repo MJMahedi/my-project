@@ -9,30 +9,32 @@ import OrderConfirmation from './OrderConfmation';
 function Payment() {
   const [showModal, setShowModal] = useState(false);
   const { user, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
-  const { basket } = state;
+  const { basket, shippingCost } = state;
   const [showConfirmation, setShowConfirmation] = useState(false);
-  const shipingCost = 0;
+  // const [deliveryArea, setDeliveryArea] = useState('Inside Dhaka');
+  // const [shippingCost, setShippingCost] = useState(60);
   const navigate = useNavigate();
 
-  // Prepare WhatsApp Message with Basket Details
-  const prepareWhatsAppMessage = () => {
-    const orderItems = basket.map(item => (
-      `${item.title} (x${item.quantity}) - ${getItemPriceTotal(basket, item.id)} Tk\n`
-    )).join("");
+  // const handleAreaChange = (e) => {
+  //   const selectedArea = e.target.value;
+  //   setDeliveryArea(selectedArea);
 
-    const totalPrice = getTotal(basket);
-    const message = `
-      Order Confirmation:\n
-      Items:\n${orderItems}\n
-      SubTotal: ${totalPrice} Tk\n
-      Shipping Cost: ${shipingCost} Tk\n
-      Total: ${totalPrice + shipingCost} Tk
-    `;
-    return encodeURIComponent(message.trim());
+  //   if (selectedArea === 'Inside Dhaka') {
+  //     setShippingCost(60);
+  //   } else if (selectedArea === 'Outside Dhaka') {
+  //     setShippingCost(120);
+  //   }
+
+  // };
+
+  const updateShippingCost = (area) => {
+    const newShippingCost = area === "outsideDhaka" ? 120 : 60;
+    dispatch({
+      type: "SET_SHIPPING_COST",
+      shippingCost: newShippingCost,
+    });
   };
 
-  // WhatsApp URL
-  const whatsappURL = `https://wa.me/8801317201109?text=${prepareWhatsAppMessage()}`;
 
   // Show order confirmation modal
   const handleShowOrderConfirmation = () => {
@@ -42,7 +44,7 @@ function Payment() {
   // Handle order confirmation and WhatsApp redirect
   const handleOrderConfirmation = () => {
     dispatch({ type: "EMPTY_BASKET" });  // Clear the basket
-    window.location.href = whatsappURL;  // Redirect to WhatsApp
+    // window.location.href = whatsappURL;  // Redirect to WhatsApp
   };
   return (
     <div>
@@ -84,14 +86,29 @@ function Payment() {
                   <dt>SubTotal:</dt>
                   <dd>{getTotal(basket)} Tk</dd>
                 </dl>
+                {/* Area Selection */}
+                <div className="mt-2 gap-2 flex items-center">
+                  <label htmlFor="area" className="flex text-sm font-medium text-gray-700">Select Delivery Area</label>
+                  <select
+                    className="border rounded-md px-4 py-2"
+                    onChange={(e) => updateShippingCost(e.target.value)}
+                    defaultValue="insideDhaka"
+                  >
+                    <option value="insideDhaka">Inside Dhaka</option>
+                    <option value="outsideDhaka">Outside Dhaka</option>
+                  </select>
+
+                </div>
                 <dl className="flex items-center justify-between gap-4">
                   <dt>Shipping Cost:</dt>
-                  <dd>{shipingCost} Tk</dd>
+                  <dd>{shippingCost} Tk</dd>
                 </dl>
                 <dl className="flex items-center justify-between gap-4 border-t pt-2">
                   <dt>Total:</dt>
-                  <dd>{getTotal(basket) + shipingCost} Tk</dd>
+                  <dd>{getTotal(basket) + shippingCost} Tk</dd>
                 </dl>
+
+
 
                 {/* Button to open Order Confirmation */}
                 <div className="flex justify-center">
@@ -112,6 +129,7 @@ function Payment() {
       {showModal && (
         <OrderConfirmation
           basket={basket}
+          shippingCost={shippingCost} // Pass global shipping cost
           setShowModal={setShowModal} // Pass the function to close modal
         />
       )}
