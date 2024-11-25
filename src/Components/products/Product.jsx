@@ -214,10 +214,11 @@ function Product() {
 
               <button
                 onClick={toggleSizeGuide}
-                className="text-blue-500 hover:underline"
+                className="px-2 py-1 border border-[#e49b0f] text-sm rounded-lg text-center  font-semibold rounded-full hover:bg-customBg-900 hover:text-white transition-all duration-300 ease-in-out"
               >
                 Size Guide
               </button>
+
             </div>
 
             {/* Full-Screen Overlay for Size Guide Image */}

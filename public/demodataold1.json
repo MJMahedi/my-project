@@ -607,8 +607,8 @@
         "sku": "10160",
         "image": [
             "/assets/Men/cap1.jpg",
-            "/assets/Men/cap2.jpg",
-            "/assets/Men/cap3.jpg"
+            "/assets/Men/cap2.jpg"
+           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -618,7 +618,38 @@
         ],
         "discount": 40,
         "price": 750,
-        "color": "Antique, Gray ",
+        "color": "Antique",
+        "ratings": 5.0,
+        "brand": "Millennial Clothing"
+    },
+    {
+        "_id": 161,
+        "title": "Millennial Signature Cap",
+        "collection": "accessories",
+        "category": "Accessories",
+        "subCategory": "",
+        "productType": "Accessories",
+        "size": [
+            "One Size"
+        ],
+        "description": [
+            "Fabrics: Microfiber Velvet PU Coated",
+            "Strap: Metal"
+        ],
+        "sku": "10161",
+        "image": [
+            "/assets/Men/cap3.jpg",
+            "/assets/Men/cap1.jpg"
+        ],
+        "features": [
+            "Fog, Water, Wind, Dust Proof",
+            "Stylish Design",
+            "Made with Care",
+            "Long Durability"
+        ],
+        "discount": 40,
+        "price": 750,
+        "color": "Gray ",
         "ratings": 5.0,
         "brand": "Millennial Clothing"
     },
@@ -763,13 +794,19 @@
         "_id": 20,
         "title": "Couples Signature Combo Jacket",
         "collection": "winter",
-        "category": "Combo",
+        "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            "M",
-            "L",
-            "XL"
+            "M*M (Men*Women)",
+            "M*L",
+            "M*XL",
+            "L*M",
+            "L*L",
+            "L*XL",
+            "Xl*M",
+            "Xl*L",
+            "Xl*XL"
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coatedd",
@@ -789,7 +826,7 @@
             "Made with Care",
             "Long Durability"
         ],
-        "discount": 5,
+        "discount": 15,
         "price": 4380,
         "color": "Olive Stripe & Frost Jacquard",
         "ratings": 5.0,
@@ -799,13 +836,19 @@
         "_id": 21,
         "title": "Couples Signature Combo Jacket",
         "collection": "winter",
-        "category": "Combo",
+        "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            "M",
-            "L",
-            "XL"
+            "M*M (Men*Women)",
+            "M*L",
+            "M*XL",
+            "L*M",
+            "L*L",
+            "L*XL",
+            "Xl*M",
+            "Xl*L",
+            "Xl*XL"
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coatedd",
@@ -825,7 +868,7 @@
             "Made with Care",
             "Long Durability"
         ],
-        "discount": 6,
+        "discount": 15,
         "price": 5480,
         "color": "Frost Jacquard & Almond",
         "ratings": 5.0,
@@ -835,13 +878,19 @@
         "_id": 22,
         "title": "Couples Signature Combo Jacket",
         "collection": "winter",
-        "category": "Combo",
+        "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            "M",
-            "L",
-            "XL"
+            "M*M (Men*Women)",
+            "M*L",
+            "M*XL",
+            "L*M",
+            "L*L",
+            "L*XL",
+            "Xl*M",
+            "Xl*L",
+            "Xl*XL"
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coatedd",
@@ -861,7 +910,7 @@
             "Made with Care",
             "Long Durability"
         ],
-        "discount": 5,
+        "discount": 15,
         "price": 4380,
         "color": "Black Stripe & Frost Jacquard",
         "ratings": 5.0,
@@ -871,13 +920,19 @@
         "_id": 23,
         "title": "Couples Signature Combo Jacket",
         "collection": "winter",
-        "category": "Combo",
+        "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
         "size": [
-            "M",
-            "L",
-            "XL"
+            "M*M (Men*Women)",
+            "M*L",
+            "M*XL",
+            "L*M",
+            "L*L",
+            "L*XL",
+            "Xl*M",
+            "Xl*L",
+            "Xl*XL"
         ],
         "description": [
             "Fabrics: Microfiber Suskin PU Coatedd",
@@ -897,7 +952,7 @@
             "Made with Care",
             "Long Durability"
         ],
-        "discount": 5,
+        "discount": 15,
         "price": 4980,
         "color": "Frost Jacquard",
         "ratings": 5.0,
