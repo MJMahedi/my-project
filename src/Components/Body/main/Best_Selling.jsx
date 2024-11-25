@@ -8,7 +8,7 @@ const Best_Selling = () => {
 
     const { products, loading, error } = useProductValue();
     // Filter products to get those where subcategory is 'Best Selling'
-    const bestSellingProducts = products.filter(item => item.subCategory === 'BestSelling');
+    const bestSellingProducts = products.filter(item => item.subCategory === 'BestSelling' || item.subCategory === 'NewArrival' );
     // Get unique categories from products
 
     const uniqueCategories = [...new Set(products.map(item => item.category))];

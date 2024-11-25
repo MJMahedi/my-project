@@ -23,7 +23,15 @@ function Winter() {
     return <p>Error: {error}</p>;
   }
   return (
-    <div className="bg-customBg bg-opacity-50">
+   
+  <div className='bg-customBg bg-opacity-50'>
+            <div className="py-2">
+                <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
+                    <legend className="px-6 text-2xl text-center">Our Collections</legend>
+                </fieldset>
+            </div>
+
+
     <h2 className="text-center py-4">All Winter Collection Here</h2>
     
     <div className="product-list">

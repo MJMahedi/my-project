@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AboutImg from './../../assets/banner3.jpg';
+import AboutImg from './../../assets/banner5.jpg';
 function ReturnPolicy() {
     return (<>
         {/* CSS-in-JS style block */}
@@ -30,7 +30,7 @@ function ReturnPolicy() {
                     />
                     <div className="absolute inset-0 bg-black opacity-30"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <h1 className="text-4xl text-white font-semibold">Return & Replacement Policy</h1>
+                        <h1 className="text-4xl text-center text-white font-semibold">Return & Replacement Policy</h1>
                     </div>
                 </div>
                 <div className="p-8">

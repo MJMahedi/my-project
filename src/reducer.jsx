@@ -1,6 +1,7 @@
 // Initial State
 export const initialState = {
     basket: JSON.parse(localStorage.getItem('basket')) || [], // Load basket from localStorage
+    shippingCost: 60, // Default value
     user: null,
 };
 

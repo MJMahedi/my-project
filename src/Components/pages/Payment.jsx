@@ -11,21 +11,9 @@ function Payment() {
   const { user, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
   const { basket, shippingCost } = state;
   const [showConfirmation, setShowConfirmation] = useState(false);
-  // const [deliveryArea, setDeliveryArea] = useState('Inside Dhaka');
-  // const [shippingCost, setShippingCost] = useState(60);
   const navigate = useNavigate();
 
-  // const handleAreaChange = (e) => {
-  //   const selectedArea = e.target.value;
-  //   setDeliveryArea(selectedArea);
 
-  //   if (selectedArea === 'Inside Dhaka') {
-  //     setShippingCost(60);
-  //   } else if (selectedArea === 'Outside Dhaka') {
-  //     setShippingCost(120);
-  //   }
-
-  // };
 
   const updateShippingCost = (area) => {
     const newShippingCost = area === "outsideDhaka" ? 120 : 60;
@@ -53,23 +41,7 @@ function Payment() {
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl text-center">Complete Order</h2>
 
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
-            <div className="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
-              <div className="space-y-6">
-                {basket.map(item => (
-                  <div key={item._id} className="rounded-lg border border-gray-200 bg-customBg-200 p-2 shadow-sm">
-                    <div className="space-y-4 md:flex md:items-center md:justify-between md:gap-6">
-                      <img className="h-20 w-20" src={item.image[0]} alt={item.title} />
-                      <div className="text-end md:w-32">
-                        <p className="text-sm">New Price: {getItemPriceTotal(basket, item._id)} Tk</p>
-                        <p className="text-sm text-orange-500">You Got Discount: {getItemDiscountTotal(basket, item._id)} %</p>
-                        {/* <p className="text-sm font-bold">SubTotal: {getItemTotal(basket, item._id)} Tk</p> */}
-                      </div>
-                    </div>
-                    <h1 className="text-center text-sm font-semibold">{item.title}</h1>
-                  </div>
-                ))}
-              </div>
-            </div>
+
 
             <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
               <div className="space-y-4 rounded-lg border bg-customBg-200 p-4 shadow-sm">
@@ -88,7 +60,7 @@ function Payment() {
                 </dl>
                 {/* Area Selection */}
                 <div className="mt-2 gap-2 flex items-center">
-                  <label htmlFor="area" className="flex text-sm font-medium text-gray-700">Select Delivery Area</label>
+                  <label htmlFor="area" className="flex font-bold">Select Delivery Area</label>
                   <select
                     className="border rounded-md px-4 py-2"
                     onChange={(e) => updateShippingCost(e.target.value)}
@@ -99,6 +71,7 @@ function Payment() {
                   </select>
 
                 </div>
+
                 <dl className="flex items-center justify-between gap-4">
                   <dt>Shipping Cost:</dt>
                   <dd>{shippingCost} Tk</dd>
@@ -107,8 +80,19 @@ function Payment() {
                   <dt>Total:</dt>
                   <dd>{getTotal(basket) + shippingCost} Tk</dd>
                 </dl>
+                {/* Payment Method */}
+                <div className="mt-2 gap-2 flex items-center">
+                  <label htmlFor="area" className="flex font-bold">Payment Method</label>
+                  <select
+                    className="border rounded-md px-4 py-2"
+                    // onChange={(e) => updateShippingCost(e.target.value)}
+                    defaultValue="cashondelivery"
+                  >
+                    <option value="insideDhaka">Cash On Delivery Only</option>
+                    {/* <option value="outsideDhaka">Outside Dhaka</option> */}
+                  </select>
 
-
+                </div>
 
                 {/* Button to open Order Confirmation */}
                 <div className="flex justify-center">
@@ -119,7 +103,9 @@ function Payment() {
                     Confirm Order
                   </button>
                 </div>
+
               </div>
+
             </div>
           </div>
         </div>

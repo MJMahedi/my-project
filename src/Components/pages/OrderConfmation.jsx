@@ -23,7 +23,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
         setIsButtonDisabled(
             !customerFirstName.trim() ||
             !customerLastName.trim() ||
-            !customerEmail.trim() ||
+            
             !customerPhone.trim() ||
             !customerAddress.trim()
         );
@@ -59,7 +59,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
             New Order Confirmation:
             Customer First Name: ${customerFirstName}
             Customer Last Name: ${customerLastName}
-            Customer Email: ${customerEmail}
+            Customer Email: ${customerEmail || 'Not Provided'}
             Customer Phone: ${customerPhone || 'Not Provided'}
             Customer Address: ${customerAddress}
             Order Details:
@@ -99,8 +99,9 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
-                <h2 className="text-2xl font-semibold mb-4 text-center">Confirm Your Order</h2>
+            <div className="bg-white rounded-lg shadow-lg p-4 w-full max-w-md">
+            
+                <h2 className="text-2xl font-semibold mb-2 text-center mt-4">Confirm Your Order</h2>
 
                 <input
                     type="text"
@@ -154,6 +155,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
                         Confirm
                     </button>
                 </div>
+              
             </div>
         </div>
     );

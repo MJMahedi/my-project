@@ -34,6 +34,8 @@ import Shipping_and_Delivery from "./Components/pages/Shipping_and_Delivery";
 import Collections from "./Components/products/Collections";
 import Results from "./Components/pages/Results";
 import AuthHandler from "./AuthHandler";
+import Career from "./Components/pages/Career";
+import HowToOrder from "./Components/pages/HowToOrder";
 // import AuthHandler from "./AuthHandler";
 
 
@@ -67,6 +69,8 @@ const router = createBrowserRouter([
       { path: "/terms-conditions", element: <Terms_comditions /> }, // Route "/Terms & Conditions"
       { path: "/privacy-policy", element: <PrivacyPolicy /> }, // Route "/Privacy Policy"
       { path: "/return-policy", element: <ReturnPolicy /> }, // Route "/Return Policy"
+      { path: "/career", element: <Career /> }, // Route "/Return Policy"
+      { path: "/howtoorder", element: <HowToOrder /> }, // Route "/Return Policy"
       { path: "/Shipping_and_Delivery", element: <Shipping_and_Delivery /> }, // Route "/Shipping & Delivery"
       { path: "/FAQs", element: <FAQs /> }, // Route "/FAQs"
 

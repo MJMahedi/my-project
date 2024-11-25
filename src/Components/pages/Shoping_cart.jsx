@@ -4,7 +4,7 @@ import { useStateValue } from '../../StateProvider'
 import { getTotal, getBasketDiscountTotal, getBasketPriceTotal, getItemTotal, getItemPriceTotal, getItemDiscountTotal } from '../../reducer';
 
 function Shopping_cart() {
-  const shippingCost = 0;
+  // const shippingCost = 60;
   const { user, state, dispatch } = useStateValue();
   const { basket } = state;
   // console.log('this is current busket', basket)
@@ -69,8 +69,8 @@ function Shopping_cart() {
                           </div>
                           {/* Quantity Details  */}
                           <div>
-                            <div className="flex items-center justify-around font-semibold">
-                              <label className="font-semibold">Quantity add :</label>
+                            <div className="flex items-center justify-around">
+                              <label className="">Quantity:</label>
                               <div className="flex items-center">
                                 <button onClick={() => dispatch({ type: 'decrement', id: item._id })} type="button" id="decrement-button" data-input-counter-decrement="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                   {/* Decrement SVG */}
@@ -79,7 +79,7 @@ function Shopping_cart() {
                                   </svg>
                                 </button>
 
-                                <input type="text" id="counter-input" data-input-counter className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0 dark:text-white" value={item.quantity} required />
+                                <input type="text" id="counter-input" data-input-counter className="w-5 shrink-0 border-0 bg-transparent text-center text-sm font-bold text-gray-900 focus:outline-none focus:ring-0 dark:text-white" value={item.quantity} required />
                                 <button onClick={() => dispatch({ type: 'increment', id: item._id })} type="button" id="increment-button" data-input-counter-increment="counter-input" className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
                                   {/* Increment SVG */}
                                   <svg className="h-2.5 w-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -148,7 +148,7 @@ function Shopping_cart() {
 
                     <dl className="flex items-center justify-between gap-4">
                       <dt className="text-base font-semibold text-gray-900 dark:text-white">Total amount : </dt>
-                      <dd className="text-base font-semibold text-gray-900 dark:text-white">{getBasketPriceTotal(basket) - getBasketDiscountTotal(basket) + shippingCost} Tk</dd>
+                      <dd className="text-base font-semibold text-gray-900 dark:text-white">{getBasketPriceTotal(basket) - getBasketDiscountTotal(basket) } Tk</dd>
                     </dl>
                   </div>
                 </div>

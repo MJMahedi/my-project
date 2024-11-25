@@ -136,15 +136,15 @@ function Header() {
                 <div className="flex lg:flex md:flex md:justify-around sm:justify-around 
  justify-between items-center">
                     {/* Left-Side Dropdown Menu */}
-                    <div className="navbar w-1/6 p-0 md:hidden">
+                    <div className="navbar w-1/6 p-0 md:hidden z-20">
                         <div className="dropdown dropdown-start">
                             <div tabIndex="0" className="relative">
-                                <label className="btn btn-ghost hover:bg-gray-100 hover:shadow-md swap swap-rotate">
+                                <label className="btn-sm btn-ghost hover:shadow-md swap swap-rotate">
                                     <input type="checkbox" />
-                                    <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                                    <svg className="swap-off fill-customBg-900" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
                                         <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
                                     </svg>
-                                    <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                                    <svg className="swap-on fill-customBg-800" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
                                         <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
                                     </svg>
                                 </label>
@@ -191,7 +191,7 @@ function Header() {
                     {/*Millennial Website Logo  */}
 
                     <div className="navbar-center">
-                        <div className="avatar pr-4 md:pr-8 lg:pr-12 pt-1 md:pt-2 lg:mt-0 ">
+                        <div className="avatar pr-0 md:pr-8 lg:pr-12 pt-1 md:pt-2 lg:mt-0 ">
                             <Link to={"/"} style={{
                                 backgroundImage: `url(${Logo})`,
                                 backgroundSize: `cover`,
@@ -206,10 +206,10 @@ function Header() {
 
                     {/* Visible for Small & Medium Device &&  Hidden from Large Device   */}
 
-                    <div className="flex items-center md:gap-8 justify-end lg:hidden mr-4 gap-2 pr-0">
+                    <div className="flex items-center md:gap-8 justify-end lg:hidden mr-3 md:mr-4 gap-2 pr-0">
 
                         {/* Search Button Icon for Small & Medium Devices */}
-                        <button onClick={toggleSearchBar} className="btn btn-ghost btn-circle">
+                        <button onClick={toggleSearchBar} className="w-5 btn btn-ghost btn-circle">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-7 lg:w-12 lg:h-12"
@@ -284,9 +284,9 @@ function Header() {
                         {/* Login Icon SVG */}
                         <div>
                             {
-                                user && <Link onClick={handleLogOut} className="flex items-center pr-3 no-underline hover:text-black" to={"/login"}>
+                                user && <Link onClick={handleLogOut} className="flex items-center  pr-0 md:pr-3 no-underline hover:text-black" to={"/login"}>
                                     <svg
-                                        className="w-6 h-4 md:w-8 md:h-6"
+                                        className="w-5 h-4 md:w-8 md:h-6"
                                         version="1.1"
                                         id="Layer_1"
                                         xmlns="http://www.w3.org/2000/svg"
@@ -322,12 +322,12 @@ function Header() {
                             }
 
                             {
-                                !user && <Link onClick={handleLogOut} className="flex items-center pr-3 no-underline hover:text-black" to={"/login"}>
+                                !user && <Link onClick={handleLogOut} className="flex items-center  pr-0 md:pr-3 no-underline hover:text-black" to={"/login"}>
 
 
 
                                     <svg
-                                        className="w-6 h-4 md:w-8 md:h-6"
+                                        className="w-5 h-4 md:w-8 md:h-6"
                                         version="1.1"
                                         id="Layer_1"
                                         xmlns="http://www.w3.org/2000/svg"

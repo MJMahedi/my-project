@@ -47,7 +47,7 @@ const Footer = () => {
                     <Link to={"/terms-conditions"} className="link link-hover">Terms & Conditions</Link>
                     <Link to={"/privacy-policy"} className="link link-hover">Privacy Policy</Link>
                     <Link to={"/return-policy"} className="link link-hover">Return & Cancellation Policy</Link>
-                    <Link to={"/"} className="link link-hover">Career</Link>
+                    <Link to={"/career"} className="link link-hover">Career</Link>
 
 
 
@@ -66,7 +66,7 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <h6 className="footer-title text-info text-lg">Customer Service</h6>
-                    <Link to={"/"} className="link link-hover">How to Order</Link>
+                    <Link to={"/howtoorder"} className="link link-hover">How to Order</Link>
                     <Link to={"/Shipping_and_Delivery"} className="link link-hover">Shipping & Delivery</Link>
                     <Link to={"/size-guide"} className="link link-hover">Size & Care Guide</Link>
                     <Link to={"/FAQs"} className="link link-hover">FAQs</Link>
@@ -145,7 +145,7 @@ const Footer = () => {
                             <p><Link to={"/terms-conditions"} className="link link-hover">Terms & Conditions</Link></p>
                             <p> <Link to={"/privacy-policy"} className="link link-hover">Privacy Policy</Link></p>
                             <p><Link to={"/return-policy"} className="link link-hover">Return & Cancellation Policy</Link></p>
-                            <p><Link to={"/"} className="link link-hover">Career</Link></p>
+                            <p><Link to={"/career"} className="link link-hover">Career</Link></p>
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@ const Footer = () => {
                             <hr className="py-1" />
 
                             <p>
-                                <Link to={"/"} className="link link-hover">How to Order</Link>
+                                <Link to={"/howtoorder"} className="link link-hover">How to Order</Link>
                             </p>
                             <p>
                                 <Link to={"/Shipping_and_Delivery"} className="link link-hover">Shipping & Delivery</Link>
