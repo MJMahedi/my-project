@@ -5,7 +5,7 @@ const Footer = () => {
       
 
 
-            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg bg-opacity-80 text-md p-6">
+            <div className="hidden footer sm:grid grid-cols-3 justify-items-center  bg-customBg-600 text-black text-md p-6">
                 <div className="bg-customBg pt-4 px-4 rounded-md">
                     <h3 className="flex items-center text-sky-900 text-md font-semibold  gap-2"> <a href="">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20"
@@ -74,7 +74,7 @@ const Footer = () => {
                 </nav>
             </div>
             {/* Small Device  */}
-            <div className="sm:hidden footer justify-items-center bg-customBg bg-opacity-80 text-md p-6">
+            <div className="sm:hidden footer justify-items-center bg-customBg text-md p-6">
                 <div className="bg-customBg py-4 px-12 rounded-md">
                     {/* Heading */}
                     <h3 className="flex items-center text-sky-900 text-sm font-semibold gap-2">
@@ -179,7 +179,7 @@ const Footer = () => {
                                 <Link to={"/Shipping_and_Delivery"} className="link link-hover">Shipping & Delivery</Link>
                             </p>
                             <p>
-                                <Link to={"/"} className="link link-hover">Size & Care Guide</Link>
+                                <Link to={"/size-guide"} className="link link-hover">Size & Care Guide</Link>
                             </p>
                             <p>
                                 <Link to={"/FAQs"} className="link link-hover">FAQs</Link>
@@ -216,7 +216,7 @@ const Footer = () => {
                         <p className='tracking-widest text-sky-950'>
 
                             ©  {new Date().getFullYear()} MILLENNIAL | All rights reserved <br />
-                            <span className='tracking-wide text-gray-500  text-[13px]'>
+                            <span className='tracking-wide text-black  text-[13px]'>
                                 Developed by Maruf & Mahedi
                             </span>
                         </p>

@@ -23,7 +23,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
         setIsButtonDisabled(
             !customerFirstName.trim() ||
             !customerLastName.trim() ||
-            
+
             !customerPhone.trim() ||
             !customerAddress.trim()
         );
@@ -89,7 +89,7 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
                 setShowModal(false);
                 dispatch({ type: 'EMPTY_BASKET' });
                 localStorage.removeItem('basket'); // Clear basket from localStorage
-                navigate('/'); // Redirect to homepage
+                navigate('/thankyou'); // Redirect to homepage
             })
             .catch((error) => {
                 console.error('Error sending email:', error);
@@ -97,67 +97,73 @@ const OrderConfirmation = ({ basket, setShowModal }) => {
             });
     };
 
-    return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white rounded-lg shadow-lg p-4 w-full max-w-md">
-            
-                <h2 className="text-2xl font-semibold mb-2 text-center mt-4">Confirm Your Order</h2>
+    return (<>
+    
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="bg-customBg-600 rounded-lg shadow-lg p-4 w-full max-w-md">
 
+            <h2 className="text-2xl font-semibold mb-2 text-center mt-4">Confirm Your Order</h2>
+
+          <div className='px-4'>
+          <div className='flex gap-2'>
                 <input
                     type="text"
                     value={customerFirstName}
                     onChange={(e) => setCustomerFirstName(e.target.value)}
                     placeholder="Your First Name"
-                    className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-customBg"
+                    className="required w-full mb-4 px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400"
                 />
                 <input
                     type="text"
                     value={customerLastName}
                     onChange={(e) => setCustomerLastName(e.target.value)}
                     placeholder="Your Last Name"
-                    className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-customBg"
+                    className="w-full mb-4 px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400"
                 />
-                <input
-                    type="email"
-                    value={customerEmail}
-                    onChange={(e) => setCustomerEmail(e.target.value)}
-                    placeholder="name@example.com"
-                    className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-customBg"
-                />
-                <input
-                    type="tel"
-                    value={customerPhone}
-                    onChange={(e) => setCustomerPhone(e.target.value)}
-                    placeholder="Enter your phone number"
-                    className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-customBg"
-                />
-                <input
-                    type="text"
-                    value={customerAddress}
-                    onChange={(e) => setCustomerAddress(e.target.value)}
-                    placeholder="Enter your Address"
-                    className="w-full mb-4 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-customBg"
-                />
-
-                <div className="flex justify-end gap-4">
-                    <button
-                        onClick={() => setShowModal(false)}
-                        className="bg-rose-900 text-white px-4 py-2 rounded-md hover:bg-customBg-900 transition-all"
-                    >
-                        Cancel !!
-                    </button>
-                    <button
-                        onClick={handleOrderConfirmation}
-                        disabled={isButtonDisabled}
-                        className={`px-4 py-2 rounded-md text-white transition-all ${isButtonDisabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e49b0f] hover:bg-customBg-900'
-                            }`}
-                    >
-                        Confirm
-                    </button>
-                </div>
-              
             </div>
+            <input
+                type="email"
+                value={customerEmail}
+                onChange={(e) => setCustomerEmail(e.target.value)}
+                placeholder="name@example.com"
+                className="w-full  mb-4 px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400"
+            />
+            <input
+                type="tel"
+                value={customerPhone}
+                onChange={(e) => setCustomerPhone(e.target.value)}
+                placeholder="Enter your phone number"
+                className="w-full mb-4 px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400"
+            />
+            <input
+                type="text"
+                value={customerAddress}
+                onChange={(e) => setCustomerAddress(e.target.value)}
+                placeholder="Enter your Address"
+                className="w-full mb-4 px-4 py-2 rounded-md border border-[#e49b0f] focus:outline-none focus:ring-2 focus:ring-sky-400"
+            />
+          </div>
+
+            <div className="flex justify-end gap-4">
+                <button
+                    onClick={() => setShowModal(false)}
+                    className="bg-rose-900 text-white px-4 py-2 rounded-md hover:bg-customBg-900 transition-all"
+                >
+                    Cancel !!
+                </button>
+                <button
+                    onClick={handleOrderConfirmation}
+                    disabled={isButtonDisabled}
+                    className={`px-4 py-2 rounded-md text-white transition-all ${isButtonDisabled ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#e49b0f] hover:bg-customBg-900'
+                        }`}
+                >
+                    Confirm
+                </button>
+            </div>
+
         </div>
+    </div></>
+
     );
 };
 

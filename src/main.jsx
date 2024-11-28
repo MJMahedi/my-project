@@ -56,6 +56,7 @@ const router = createBrowserRouter([
       { path: "/kids", element: <Kids /> }, // Route "/kids"
       { path: "/winter", element: <Winter /> }, // Route "/winter"
       { path: "/minas-dream", element: <MinasDream /> }, // Route "/mina's-dream"
+      // { path: "/minas-dream", element: <MinasDream /> }, // Route "/mina's-dream"
       { path: "/shoping-cart", element: <Shoping_cart /> }, // Route "/shoping-cart"
       { path: "/whish-list", element: <Whish_list /> }, // Route "/Whish List"
       { path: "/payment", element: <Payment /> }, // Route "/payment"
@@ -73,6 +74,7 @@ const router = createBrowserRouter([
       { path: "/howtoorder", element: <HowToOrder /> }, // Route "/Return Policy"
       { path: "/Shipping_and_Delivery", element: <Shipping_and_Delivery /> }, // Route "/Shipping & Delivery"
       { path: "/FAQs", element: <FAQs /> }, // Route "/FAQs"
+      { path: "/thankyou", element: <Thankyou /> }, // Route "/FAQs"
 
 
     ]

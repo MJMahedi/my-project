@@ -182,7 +182,10 @@ function Header() {
                                     </details>
                                 </li>
                                 <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
-                                    <Link to="/minas-dream" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Mina's-Dream</Link>
+                                    <Link to="/category-products/couple goals" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Couple Goals</Link>
+                                </li>
+                                <li className="transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 duration-300">
+                                    <Link to="/minas-dream" className="mb-1 bg-gray-50 hover:bg-gray-100 p-2 rounded cursor-pointer shadow-sm">Mina's Dream</Link>
                                 </li>
                             </ul>
                         </div>
@@ -246,7 +249,7 @@ function Header() {
 
                                     {/* Search Icon SVG inside input */}
                                     <svg
-                                        className="absolute right-3 w-4 h-4 text-gray-500 dark:text-gray-400 cursor-pointer mr-10"
+                                        className="absolute right-3 w-4 h-4 text-gray-500 dark:text-black-400 cursor-pointer mr-10"
                                         aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -363,7 +366,7 @@ function Header() {
                                 onClick={navigateToResults} // Add onClick handler
                             >
                                 <svg
-                                    className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                    className="w-4 h-4 text-gray-500"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -572,6 +575,21 @@ function Header() {
                             </span>
                         </Link></div>
                     <div className="mr-[2px]">
+                        <Link to={"/category-products/couple goals"}
+                            className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
+                            href="#"
+                        >
+                            <span
+                                className="absolute inset-x-0 top-0 h-0 bg-gradient-to-tr from-sky-300 to-yellow-600 transition-all group-hover:h-full group-active:bg-sky-500"
+                            ></span>
+
+                            <span
+                                className="relative text-sm font-medium text-sky-900 transition-colors group-hover:text-white"
+                            >
+                                Couple Goals
+                            </span>
+                        </Link></div>
+                    {/* <div className="mr-[2px]">
                         <Link to={"/category-products/kids"}
                             className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"
                             href="#"
@@ -585,7 +603,7 @@ function Header() {
                             >
                                 Kid's
                             </span>
-                        </Link></div>
+                        </Link></div> */}
                     <div className="mr-[2px]">
                         <Link
                             className="group relative inline-block overflow-hidden px-4 lg:px-8 py-2"

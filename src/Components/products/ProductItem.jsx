@@ -47,7 +47,7 @@ const ProductItem = ({ item }) => {
   };
 
   return (
-    <div className="product-item w-[180px] h-[304px] md:w-[190px] md:h-[310px] lg:w-[200px] lg:h-[324px] border-2 bg-customBg-300 border-customBg-800 rounded-md text-center font-normal relative group overflow-hidden">
+    <div className="product-item sm:w-[180px] sm:h-[300px] md:w-[190px] md:h-[310px] lg:w-[200px] lg:h-[324px] border-2 bg-customBg-300 border-customBg-600 rounded-md text-center font-normal relative group overflow-hidden">
       <Link to={`/product/${item._id}`}>
         <div className="w-[auto] h-[auto]">
           <img

@@ -46,8 +46,7 @@ function Product() {
     });
   };
 
-  return (
-    <div>
+  return (  <div>
       <main className="py-3 lg:py-6 bg-customBg-500">
         <div className="container  mx-auto px-4 flex flex-col md:flex-row">
 

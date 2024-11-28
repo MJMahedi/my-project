@@ -22,7 +22,7 @@ const HowToOrder = () => {
             `}</style>
 
         <div className="bg-customBg bg-opacity-80 min-h-screen py-6 px-6 sm:px-12">
-            <div className="bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">
+            <div className=" bg-customBg bg-opacity-40 max-w-6xl mx-auto rounded-lg shadow-lg overflow-hidden">
                 <div className="relative">
                     <img
                         src={AboutImg}
@@ -34,7 +34,7 @@ const HowToOrder = () => {
                         <h1 className="text-4xl text-center text-white font-semibold">How To Order</h1>
                     </div>
                 </div>
-                <div className="py-4">
+                <div className="py-4 px-12">
                     <div className="order-info py-2">
 
                         <h1 className="leading-relaxed text-xl">

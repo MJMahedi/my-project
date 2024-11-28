@@ -14,11 +14,11 @@ const Best_Selling = () => {
     const uniqueCategories = [...new Set(products.map(item => item.category))];
     //  console.log(uniqueCategories);
     return (
-        <div className="bg-customBg bg-opacity-70">
+        <div className="bg-customBg-300">
 
-            <div className=" py-6">
-                <fieldset className="border-t-2 mx-2 border-gray-600 rounded-xl">
-                    <legend className="px-6 text-3xl md:text-2xl lg:text-3xl font-semibold text-center">Best Selling !</legend>
+            <div className="py-2">
+                <fieldset className="text-black border-t-2 mx-4 md:mx-8 lg:mx-12 border-gray-600 rounded-xl">
+                    <legend className="px-6 text-2xl md:text-2xl lg:text-3xl font-semibold text-center ">Best Selling</legend>
                 </fieldset>
             </div>
             <div className="w-[auto] h-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-2 lg:gap-5 mx-4 md:mx-8 lg:mx-16 relative">
@@ -41,7 +41,7 @@ const Best_Selling = () => {
                                
                                 <div className=" absolute bottom-0 w-full flex justify-center items-center">
 
-                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-15 tracking-wide md:tracking-widest text-customBg-900 font-semibold p-2 animate-bounce tracking-widest ">{category}</button>
+                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-50 tracking-wide md:tracking-widest text-xs px-1 text-white animate-bounce tracking-widest hover:bg-[#e49b0f] ">{category}</button>
                                 </div>
                             </Link>
                         </div>

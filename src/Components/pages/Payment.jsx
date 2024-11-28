@@ -7,10 +7,11 @@ import {
 import OrderConfirmation from './OrderConfmation';
 
 function Payment() {
-  const [showModal, setShowModal] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const { user, state, dispatch } = useStateValue();  // Destructuring `basket` and `user` directly
   const { basket, shippingCost } = state;
-  const [showConfirmation, setShowConfirmation] = useState(false);
+  
   const navigate = useNavigate();
 
 
@@ -25,15 +26,15 @@ function Payment() {
 
 
   // Show order confirmation modal
-  const handleShowOrderConfirmation = () => {
-    setShowConfirmation(true);
-  };
+  // const handleShowOrderConfirmation = () => {
+  //   setShowConfirmation(true);
+  // };
 
   // Handle order confirmation and WhatsApp redirect
-  const handleOrderConfirmation = () => {
-    dispatch({ type: "EMPTY_BASKET" });  // Clear the basket
-    // window.location.href = whatsappURL;  // Redirect to WhatsApp
-  };
+  // const handleOrderConfirmation = () => {
+  //   dispatch({ type: "EMPTY_BASKET" });  // Clear the basket
+  //   // window.location.href = whatsappURL;  // Redirect to WhatsApp
+  // };
   return (
     <div>
       <section className="bg-customBg-600 py-8 antialiased dark:bg-gray-900 md:py-16">
@@ -98,27 +99,37 @@ function Payment() {
                 <div className="flex justify-center">
                   <button
                     className="bg-[#e49b0f] text-white px-4 py-2 rounded-md hover:bg-customBg-900 transition-all"
-                    onClick={() => setShowModal(true)} // Trigger modal open
+                    onClick={() => setShowConfirmation(!showConfirmation)} // Trigger rendering of OrderConfirmation
                   >
                     Confirm Order
                   </button>
                 </div>
 
               </div>
+                            {/* Conditionally Render Order Confirmation */}
 
+              {showConfirmation && (
+                <div className="mt-4">
+                <OrderConfirmation
+                    basket={basket}
+                    shippingCost={shippingCost}
+                    setShowModal={setShowConfirmation}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
       {/* Order Confirmation Modal */}
-      {showModal && (
+      {/* {showModal && (
         <OrderConfirmation
           basket={basket}
           shippingCost={shippingCost} // Pass global shipping cost
           setShowModal={setShowModal} // Pass the function to close modal
         />
-      )}
+      )} */}
     </div>
   );
 }
