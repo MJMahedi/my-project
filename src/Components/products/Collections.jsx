@@ -13,7 +13,7 @@ const Collections = () => {
     const [showMoreCombo, setShowMoreCombo] = useState(false);
     const [showMoreKids, setShowMoreKids] = useState(false);
     const [showMoreMinasDream, setShowMoreMinasDream] = useState(false);
-    
+
 
     const addToBasket = (product) => {
         dispatch({
@@ -24,7 +24,7 @@ const Collections = () => {
 
     // Unique categories are already being logged if needed for future use
     const uniqueCategories = [...new Set(products.map(item => item.category))];
-    console.log(uniqueCategories);
+    // console.log(uniqueCategories);
 
     // Function to get the displayed products based on the showMore state
     const getDisplayedProducts = (categoryProducts, showMore) => (
@@ -50,10 +50,12 @@ const Collections = () => {
             </div>
 
             {/* Updated Section for Improved Responsiveness */}
+            {/* { title: 'Kids', category: 'kids', showMore: showMoreKids, setShowMore: setShowMoreKids }, */}
+
             {[{ title: 'Men', category: 'Men', showMore: showMoreMen, setShowMore: setShowMoreMen },
             { title: 'Women', category: 'Women', showMore: showMoreWomen, setShowMore: setShowMoreWomen },
-            { title: 'Couple Golas', category: 'Couple Goals', showMore: showMoreCombo, setShowMore: setShowMoreCombo },
-            { title: 'Kids', category: 'kids', showMore: showMoreKids, setShowMore: setShowMoreKids },
+            { title: 'Couple Goals', category: 'Couple Goals', showMore: showMoreCombo, setShowMore: setShowMoreCombo },
+          
             { title: "Mina's Dream", category: null, brand: "Mina's Dream", showMore: showMoreMinasDream, setShowMore: setShowMoreMinasDream }]
                 .map((section, index) => (
                     <div key={index}>
@@ -67,8 +69,8 @@ const Collections = () => {
                             >
                                 {getDisplayedProducts(
                                     section.category
-                                        ? products.filter(item => item.category === section.category)
-                                        : products.filter(item => item.brand === section.brand),
+                                        ? products.filter(item => item.category.toLowerCase() === section.category.toLowerCase())
+                                        : products.filter(item => item.brand.toLowerCase() === section.brand.toLowerCase()),
                                     section.showMore
                                 ).map(item => (
                                     <div
@@ -96,10 +98,10 @@ const Collections = () => {
                     </div>
                 ))}
         </div>
-//     );
-// }
+        //     );
+        // }
 
-// export default Collections;
+        // export default Collections;
 
 
         // <div className='bg-customBg bg-opacity-50'>

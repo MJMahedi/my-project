@@ -2,7 +2,8 @@
     {
         "_id": 1,
         "title": "Mens Premium Two-Tone High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -21,8 +22,8 @@
         "sku": "1001",
         "image": [
             "/assets/Men/menjacket1.jpg",
-            "/assets/Men/menjacket2.jpg",
             "/assets/Men/menjacket3.jpg",
+            "/assets/Men/menjacket2.jpg",
             "/assets/Men/menjacket4.jpg"
         ],
         "features": [
@@ -40,7 +41,8 @@
     {
         "_id": 2,
         "title": "Mens Premium Bomber Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "BestSelling",
         "productType": "Jacket",
@@ -78,7 +80,8 @@
     {
         "_id": 3,
         "title": "Mens Premium Jacquard High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -112,11 +115,11 @@
         "ratings": 5.0,
         "brand": "Millennial Clothing"
     },
-   
     {
         "_id": 4,
         "title": "Mens Premium Two-Tone Bomber Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -152,7 +155,8 @@
     {
         "_id": 5,
         "title": "Mens Premium High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -186,7 +190,8 @@
     {
         "_id": 6,
         "title": "Men's Premium Bomber Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -224,7 +229,8 @@
     {
         "_id": 7,
         "title": "Mens Premium High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -262,7 +268,8 @@
     {
         "_id": 8,
         "title": "Mens Premium High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -300,7 +307,8 @@
     {
         "_id": 9,
         "title": "Men’s Premium Two-Tone Bomber Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -336,7 +344,8 @@
     {
         "_id": 10,
         "title": "Mens Premium Two-Tone High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -373,7 +382,8 @@
     {
         "_id": 11,
         "title": "Men’s Premium Bomber Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -411,7 +421,8 @@
     {
         "_id": 12,
         "title": "Mens Premium Camo High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -449,7 +460,8 @@
     {
         "_id": 13,
         "title": "Mens Premium Camo High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -486,7 +498,8 @@
     {
         "_id": 14,
         "title": "Men’s Premium Bomber Jacket All Olive",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -523,7 +536,8 @@
     {
         "_id": 15,
         "title": "Women Premium Jacquard Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Women",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -560,7 +574,8 @@
     {
         "_id": 16,
         "title": "Mens Premium Two-Tone High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -593,7 +608,7 @@
     {
         "_id": 160,
         "title": "Millennial Signature Cap",
-        "collection": "accessories",
+        "season":"accessories",
         "category": "Accessories",
         "subCategory": "",
         "productType": "Accessories",
@@ -608,7 +623,6 @@
         "image": [
             "/assets/Men/cap1.jpg",
             "/assets/Men/cap2.jpg"
-           
         ],
         "features": [
             "Fog, Water, Wind, Dust Proof",
@@ -625,7 +639,7 @@
     {
         "_id": 161,
         "title": "Millennial Signature Cap",
-        "collection": "accessories",
+        "season":"accessories",
         "category": "Accessories",
         "subCategory": "",
         "productType": "Accessories",
@@ -656,7 +670,7 @@
     {
         "_id": 170,
         "title": "Kid's Coming Soon !!",
-        "collection": "regular",
+        "season":"regular",
         "category": "kids",
         "subCategory": "kids",
         "productType": "kids",
@@ -685,7 +699,8 @@
     {
         "_id": 17,
         "title": "Women Premium High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Women",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -720,7 +735,8 @@
     {
         "_id": 18,
         "title": "Mens Bomber Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -757,7 +773,8 @@
     {
         "_id": 19,
         "title": "Men's Premium High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -791,9 +808,53 @@
         "brand": "Mina's Dream"
     },
     {
+        "_id": 22,
+        "title": "Couples Signature Combo Jacket",
+       
+        "season":"winter",
+        "category": "Couple Goals",
+        "subCategory": "NewArrival",
+        "productType": "Jacket",
+        "size": [
+            "M*M (Men*Women)",
+            "M*L",
+            "M*XL",
+            "L*M",
+            "L*L",
+            "L*XL",
+            "Xl*M",
+            "Xl*L",
+            "Xl*XL"
+        ],
+        "description": [
+            "Fabrics: Microfiber Suskin PU Coatedd",
+            "Inner Fabrics: Microfiber Soft 210 T Taffeta",
+            "Zipper: Vislon Premium Zipper",
+            "Rib : 3/3 Solid Rib"
+        ],
+        "sku": "1022",
+        "image": [
+            "/assets/Combo/combo7.jpg",
+            "/assets/Combo/combo8.jpg",
+            "/assets/Combo/combo9.jpg"
+        ],
+        "features": [
+            "Fog, Water, Wind, Dust Proof",
+            "Stylish Design",
+            "Made with Care",
+            "Long Durability"
+        ],
+        "discount": 15,
+        "price": 4380,
+        "color": "Black Stripe & Frost Jacquard",
+        "ratings": 5.0,
+        "brand": "Millennial"
+    },
+    {
         "_id": 20,
         "title": "Couples Signature Combo Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -835,7 +896,8 @@
     {
         "_id": 21,
         "title": "Couples Signature Combo Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -875,51 +937,10 @@
         "brand": "Millennial"
     },
     {
-        "_id": 22,
-        "title": "Couples Signature Combo Jacket",
-        "collection": "winter",
-        "category": "Couple Goals",
-        "subCategory": "NewArrival",
-        "productType": "Jacket",
-        "size": [
-            "M*M (Men*Women)",
-            "M*L",
-            "M*XL",
-            "L*M",
-            "L*L",
-            "L*XL",
-            "Xl*M",
-            "Xl*L",
-            "Xl*XL"
-        ],
-        "description": [
-            "Fabrics: Microfiber Suskin PU Coatedd",
-            "Inner Fabrics: Microfiber Soft 210 T Taffeta",
-            "Zipper: Vislon Premium Zipper",
-            "Rib : 3/3 Solid Rib"
-        ],
-        "sku": "1022",
-        "image": [
-            "/assets/Combo/combo7.jpg",
-            "/assets/Combo/combo8.jpg",
-            "/assets/Combo/combo9.jpg"
-        ],
-        "features": [
-            "Fog, Water, Wind, Dust Proof",
-            "Stylish Design",
-            "Made with Care",
-            "Long Durability"
-        ],
-        "discount": 15,
-        "price": 4380,
-        "color": "Black Stripe & Frost Jacquard",
-        "ratings": 5.0,
-        "brand": "Millennial"
-    },
-    {
         "_id": 23,
         "title": "Couples Signature Combo Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Couple Goals",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -961,7 +982,8 @@
     {
         "_id": 24,
         "title": "Mens High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -996,7 +1018,8 @@
     {
         "_id": 25,
         "title": "Mens High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",
@@ -1031,7 +1054,8 @@
     {
         "_id": 26,
         "title": "Mens High Neck Jacket",
-        "collection": "winter",
+       
+        "season":"winter",
         "category": "Men",
         "subCategory": "NewArrival",
         "productType": "Jacket",

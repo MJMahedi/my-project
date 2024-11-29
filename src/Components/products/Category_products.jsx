@@ -52,7 +52,7 @@ function Category_products() {
   // const filteredProducts = products.filter(product => 
   //   product.category && product.category.toLowerCase() === category.toLowerCase()
   // );
-  
+
 
   const addToBasket = () => {
     // Push the item into the data Layer
@@ -90,8 +90,10 @@ function Category_products() {
     <div className='bg-customBg bg-opacity-50'>
       {/* <h1 className='text-center text-2xl font-semibold'>{category}</h1> */}
       <h1 className='text-center text-2xl font-semibold'>
-  {category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}
-</h1>
+      {category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}
+
+
+      </h1>
 
       {filteredProducts.length > 0 ? (
         <div className='w-full py-6 px-1 md:px-8 lg:px-12 flex justify-center'>

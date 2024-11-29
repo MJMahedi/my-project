@@ -9,7 +9,8 @@ function MinasDream() {
   // Filter products for Mina's Dream brand
   useEffect(() => {
     if (!loading && products.length > 0) {
-      const filteredProducts = products.filter(product => product.brand === "Mina's Dream");
+      // const filteredProducts = products.filter(product => product.brand === "Mina's Dream");
+      const filteredProducts = products.filter(product => /Mina/i.test(product.brand));
       setMinaProducts(filteredProducts);
     }
   }, [products, loading]); // Run the filter on products change

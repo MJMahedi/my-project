@@ -9,7 +9,9 @@ function Winter() {
   // Filter products for Mina's Dream brand
   useEffect(() => {
     if (!loading && products.length > 0) {
-      const filteredProducts = products.filter(product => product.collection === "winter");
+      // const filteredProducts = products.filter(product => product.collection === "winter");
+      const filteredProducts = products.filter(product => /winter/i.test(product.season));
+    
       setWinterProducts(filteredProducts);
     }
   }, [products, loading]); // Run the filter on products change

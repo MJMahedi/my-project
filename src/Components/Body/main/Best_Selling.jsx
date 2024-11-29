@@ -11,8 +11,21 @@ const Best_Selling = () => {
     const bestSellingProducts = products.filter(item => item.subCategory === 'BestSelling' || item.subCategory === 'NewArrival' );
     // Get unique categories from products
 
-    const uniqueCategories = [...new Set(products.map(item => item.category))];
+    // const uniqueCategories = [...new Set(products.map(item => item.category))];
+    const uniqueCategories = [
+        ...new Map(
+          products.map(item => [item.category.toLowerCase(), item.category])
+        ).values()
+      ];
     //  console.log(uniqueCategories);
+
+    const formatCategoryName = (category) => {
+        return category
+            .replace(/([a-z])([A-Z])/g, "$1 $2") // Handle camelCase to add space
+            .replace(/[_-]/g, " ")              // Replace underscores or dashes with spaces
+            .replace(/\b\w/g, char => char.toUpperCase()) // Capitalize the first letter of each word
+            .trim();                            // Remove any leading/trailing spaces
+    };
     return (
         <div className="bg-customBg-300">
 
@@ -32,7 +45,7 @@ const Best_Selling = () => {
                                 className="block relative w-full border-2 border-customBg-800 rounded-md"
                                 style={{
                                     paddingBottom: '133.33%', // 3:4 aspect ratio (100% * 4/3)
-                                    backgroundImage: `url(${item.image[0]})`, // Use item.image directly
+                                    backgroundImage: `url(${item.image[1]})`, // Use item.image directly
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat',
@@ -41,7 +54,7 @@ const Best_Selling = () => {
                                
                                 <div className=" absolute bottom-0 w-full flex justify-center items-center">
 
-                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-50 tracking-wide md:tracking-widest text-xs px-1 text-white animate-bounce tracking-widest hover:bg-[#e49b0f] ">{category}</button>
+                                    <button className="btn btn-sm bg-customBg-900 bg-opacity-50 tracking-wide md:tracking-widest text-xs px-1 text-white animate-bounce tracking-widest hover:bg-[#e49b0f] ">{formatCategoryName(category)}</button>
                                 </div>
                             </Link>
                         </div>
